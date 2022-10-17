@@ -1,0 +1,1 @@
+export { isServerSide } from '../common';

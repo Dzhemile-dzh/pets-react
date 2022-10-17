@@ -1,0 +1,106 @@
+.tips-and-naps-promo-article {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    background-color: $darkest-grey;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 16px;
+
+        @include mobile {
+            padding: 0 0 0 8px;
+        }
+    }
+
+    &__headline {
+        font-family: $font-utopia;
+        font-weight: normal;
+        color: $white;
+        text-align: left;
+        line-height: 22px;
+
+        @include large-desktop {
+            line-height: 26px;
+        }
+
+        @include mobile {
+            line-height: 20px;
+        }
+    }
+
+    &__image-container {
+        @include large-desktop {
+            width: 295px;
+            font-size: 22px;
+        }
+
+        @include mobile {
+            width: 155px;
+
+            > img {
+                width: 155px;
+            }
+        }
+    }
+
+    &__taxonomy {
+        margin-top: auto;
+        color: $white;
+    }
+
+    &__taxonomy-name {
+        color: $lighter-red;
+    }
+
+    @include desktop {
+        flex: 1.97;
+
+        &:not(&:first-child) {
+            margin-left: 16px;
+        }
+    }
+
+    @include large-desktop {
+        min-height: 360px;
+        font-size: 22px;
+    }
+
+    @include small-desktop {
+        min-height: 288px;
+        font-size: 18px;
+    }
+
+    @include tablet {
+        flex: 1;
+        font-size: 18px;
+        height: auto;
+        margin-left: 16px;
+        min-height: 300px;
+    }
+
+    @include mobile {
+        height: auto;
+        background-color: $black;
+        width: 100%;
+        flex-direction: row;
+        font-size: 16px;
+        padding: 12px 0;
+        border-top: solid 1px $darker-grey;
+    }
+
+    &--no-image {
+        height: auto;
+        min-height: 48%;
+        border-top: solid 2px $brand-primary;
+
+        &:nth-child(1) {
+            margin-bottom: 16px;
+        }
+    }
+}

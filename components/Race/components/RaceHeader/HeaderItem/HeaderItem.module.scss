@@ -1,0 +1,166 @@
+@import "styles/mixins/text-limit-with-dots-mixin";
+
+.header-item {
+    display: flex;
+
+    &--horizontal {
+        flex-direction: row;
+    }
+
+    &--vertical {
+        flex-direction: column;
+    }
+
+    @include desktop {
+        padding: 3px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: -4px 0;
+
+        &--racecard {
+            &:nth-child(1) {
+                width: 33%;
+            }
+
+            &:nth-child(2), &:nth-child(3), &:nth-child(9) {
+                width: 23.5%;
+            }
+
+            &:nth-child(4), &:nth-child(10) {
+                width: 19.5%;
+            }
+
+            &:nth-child(5), &:nth-child(6), &:nth-child(7) {
+                width: 23.5%;
+            }
+
+            &:nth-child(8) {
+                width: 10%;
+            }
+        }
+
+        &--result {
+            &:nth-child(1) {
+                width: 24%;
+            }
+
+            &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                width: 18%;
+            }
+
+            &:nth-child(7), &:nth-child(8), &:nth-child(9) {
+                width: 18%;
+            }
+
+            &:nth-child(5), &:nth-child(10) {
+                width: 22%;
+            }
+        }
+    }
+
+    @include tablet {
+        padding: 3px;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        &--racecard {
+            &:nth-child(1) {
+                width: 39%;
+            }
+
+            &:nth-child(2), &:nth-child(3), &:nth-child(9) {
+                width: 20.5%;
+            }
+
+            &:nth-child(4), &:nth-child(10) {
+                width: 19.5%;
+            }
+
+            &:nth-child(5), &:nth-child(6), &:nth-child(7) {
+                width: 20.4%;
+            }
+
+            &:nth-child(8) {
+                width: 19%;
+            }
+        }
+
+        &--result {
+            &:nth-child(1) {
+                left: -22px;
+                top: -4px;
+                position: relative;
+            }
+
+            &:nth-child(1), &:nth-child(6) {
+                width: 22%;
+            }
+
+            &:nth-child(5), &:nth-child(10) {
+                width: 33%;
+            }
+
+            &:nth-child(2), &:nth-child(3), &:nth-child(7) {
+                width: 14%;
+            }
+
+            &:nth-child(4), &:nth-child(8), &:nth-child(9) {
+                width: 14%;
+            }
+        }
+    }
+
+    @include mobile {
+        width: 50%;
+
+        &:first-child {
+            width: 100%;
+            font-family: $font-family;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+
+        &:nth-child(2), &:nth-child(4), &:nth-child(6) {
+            justify-content: flex-start;
+        }
+
+        &:nth-child(3), &:nth-child(5), &:nth-child(7) {
+            justify-content: flex-end;
+        }
+    }
+
+    &__label {
+        font: 14px $font-family;
+        margin-right: 4px;
+        white-space: nowrap;
+        color: $darker-grey;
+
+        @include mobile {
+            font-size: 12px;
+            color: $black;
+        }
+    }
+
+    &__value {
+        &:first-child {
+            overflow: unset;
+            font: 16px $font-family-semibold;
+        }
+
+        font: 14px $font-family;
+        color: $black;
+        max-width: 100%;
+
+        @include text-limit-with-dots;
+
+        @include mobile {
+            &:first-child {
+                overflow: unset;
+                font: 12px $font-family-semibold;
+            }
+
+            color: $black;
+            font: 12px $font-family;
+        }
+    }
+}

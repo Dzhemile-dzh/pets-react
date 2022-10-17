@@ -1,0 +1,96 @@
+.article-quote {
+    border-left: 2px solid $mid-grey;
+    padding: 30px 80px 0;
+    margin: 15px 0 45px;
+
+    @include tablet {
+        width: 580px;
+        padding: 30px 0 0 80px;
+        margin: 15px auto 45px;
+    }
+
+    @include mobile {
+        border: none;
+        padding: 0 16px;
+        margin: 30px 0;
+    }
+
+    // note: this structure comes from glide json_tree
+    section > div > * {
+        display: block;
+        text-align: unset;
+        font-family: $font-utopia;
+        font-style: italic;
+        line-height: 1.54;
+        font-size: 24px;
+        color: $black;
+        position: relative;
+
+        & + * {
+            margin-top: 24px;
+
+            @include mobile {
+                margin-top: 16px;
+            }
+        }
+
+        @include mobile {
+            font-size: 20px;
+            line-height: 1.85;
+            padding: 0 16px;
+        }
+
+        &:first-child::before, &:last-child::after {
+            content: "";
+            position: absolute;
+        }
+
+        &:first-child {
+            text-indent: 30px;
+
+            &::before {
+                background-image: url("/svgs/blockquote_start.svg");
+                background-size: cover;
+                width: 80px;
+                height: 57px;
+                margin: -2rem 0 0 -5.5rem;
+
+                @include mobile {
+                    width: 64px;
+                    height: 48px;
+                    margin: -1.5rem 0 0 -3.2rem;
+                    z-index: -1;
+                }
+            }
+        }
+
+        &:last-child::after {
+            background-image: url("/svgs/blockquote_end.svg");
+            width: 30px;
+            height: 23px;
+            margin: 0.5rem 0 0 1rem;
+
+            @include mobile {
+                margin: 0.3rem 0 0 0.5rem;
+            }
+        }
+    }
+
+    &__attribution, &__role {
+        display: block;
+        line-height: 22px;
+        text-align: right;
+    }
+
+    &__attribution {
+        font-family: $font-family-semibold;
+        font-size: 18px;
+        color: $black;
+    }
+
+    &__role {
+        font-family: $font-family;
+        font-size: 16px;
+        color: $dark-grey;
+    }
+}

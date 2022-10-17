@@ -1,0 +1,10 @@
+@import "styles/mixins/icon-mixin";
+
+.ui-icon {
+    @include icon-mixin;
+
+    &--offer {
+        width: 60px;
+        min-width: 60px;
+    }
+}

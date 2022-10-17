@@ -1,0 +1,113 @@
+.race-outcome {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+
+    &__item {
+        text-align: center;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            font-family: $font-family-semibold;
+            font-size: 12px;
+            z-index: 1;
+        }
+
+        &:first-child {
+            color: $white;
+
+            &::before {
+                content: "1st";
+            }
+
+            &::after {
+                content: "";
+                background: $brand-primary;
+                display: block;
+                position: absolute;
+                transform: skewX(-0.2rad);
+                z-index: 0;
+            }
+        }
+
+        &:nth-child(2)::before {
+            content: "2nd";
+        }
+
+        &:nth-child(3)::before {
+            content: "3rd";
+        }
+
+        @include tablet-desktop {
+            width: 50px;
+            min-width: 50px;
+
+            &:first-child {
+                &::after {
+                    height: 88px;
+                    width: 44px;
+                    top: -31px;
+                    left: 2px;
+                }
+            }
+
+            &::before {
+                top: -10px;
+                left: 18px;
+            }
+        }
+
+        @include mobile {
+            position: relative;
+            width: 40px;
+            min-width: 40px;
+
+            &:first-child {
+                &::after {
+                    height: 60px;
+                    width: 44px;
+                    top: -21px;
+                }
+            }
+
+            &::before {
+                top: -10px;
+                left: 14px;
+            }
+        }
+    }
+
+    &__horse {
+        font-family: $font-family-bold;
+        position: relative;
+        z-index: 1;
+
+        @include desktop {
+            font-size: 24px;
+        }
+
+        @include tablet {
+            font-size: 24px;
+        }
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+
+    @include desktop {
+        padding: 20px 0;
+    }
+
+    @include tablet {
+        padding: 20px 0;
+    }
+
+    @include mobile {
+        background-color: $light-grey;
+        padding: 20px 0 8px;
+        border-radius: 0 0 4px 4px;
+        justify-content: center;
+    }
+}

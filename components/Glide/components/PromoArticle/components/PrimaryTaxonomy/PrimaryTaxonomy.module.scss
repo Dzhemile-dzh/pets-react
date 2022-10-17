@@ -1,0 +1,41 @@
+.primary-taxonomy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $dark-grey;
+
+    &__last-updated-wrapper {
+        display: flex;
+        flex-direction: row;
+        padding-right: 8px;
+    }
+
+    &__last-updated-icon {
+        display: flex;
+        margin-right: 4px;
+        height: 18px;
+        width: 18px;
+    }
+
+    &__last-updated-time {
+        font-family: $font-family-semibold;
+        font-size: 12px;
+    }
+
+    &__name {
+        color: $brand-primary;
+        font-family: $font-family-semibold;
+        font-size: 14px;
+        padding-left: 8px;
+    }
+
+    &__delimiter {
+        width: 1px;
+        background-color: $dark-grey;
+        height: 17px;
+
+        &--white {
+            background-color: $white;
+        }
+    }
+}

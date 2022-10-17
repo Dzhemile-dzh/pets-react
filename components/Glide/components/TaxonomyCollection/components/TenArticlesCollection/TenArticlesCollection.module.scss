@@ -1,0 +1,73 @@
+@import "styles/mixins/container-mixin";
+
+.ten-articles-collection {
+    border-top: 2px solid $mid-grey;
+    margin-top: 80px;
+
+    @include tablet {
+        margin-top: 20px;
+    }
+
+    @include mobile {
+        margin-top: 0;
+    }
+
+    &__container {
+        @include container;
+
+        @include tablet-desktop {
+            padding-bottom: 24px;
+        }
+    }
+
+    &__header {
+        padding-top: 13px;
+
+        @include mobile {
+            background-color: $light-grey;
+            padding-top: 30px;
+        }
+    }
+
+    &__body {
+        @include mobile {
+            padding: 0 8px;
+
+            >a:first-child {
+                border-top: none;
+            }
+        }
+    }
+
+    &__articles {
+        @include desktop {
+            display: grid;
+            grid-column-gap: 18px;
+            grid-template-columns: calc(100% - 258px) 240px;
+        }
+
+        @include tablet {
+            display: grid;
+            grid-column-gap: 18px;
+            grid-template-columns: calc(100% - 258px) 240px;
+        }
+    }
+
+    &__articles-column {
+        display: flex;
+        flex-direction: column;
+
+        &:first-of-type > div {
+            padding: 16px 0;
+        }
+
+        &:last-of-type {
+            gap: 16px;
+        }
+    }
+}
+
+:export {
+    lightgrey: $light-grey;
+    fontutopiasemibold: $font-utopia-semibold;
+}

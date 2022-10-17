@@ -1,0 +1,57 @@
+@import "styles/mixins/container-mixin";
+
+.four-articles-collection {
+    margin-bottom: 15px;
+    border-top: 2px solid $mid-grey;
+
+    &__container {
+        @include container;
+    }
+
+    &__header {
+        padding-top: 13px;
+
+        @include mobile {
+            background-color: $light-grey;
+            padding-top: 30px;
+        }
+    }
+
+    &__body {
+        @include desktop {
+            display: flex;
+            margin: 0 -8px;
+        }
+
+        @include tablet {
+            display: flex;
+            margin: 0 -8px;
+        }
+
+        @include mobile {
+            padding: 0 8px;
+
+            >a:first-child {
+                border-top: none;
+            }
+        }
+
+        >a {
+            @include desktop {
+                flex: 1;
+                margin: 0 8px;
+            }
+
+            @include tablet {
+                flex: 1;
+                margin: 0 8px;
+            }
+        }
+    }
+}
+
+:export {
+    midgrey: $mid-grey;
+    white: $white;
+    fontutopiasemibold: $font-utopia-semibold;
+}

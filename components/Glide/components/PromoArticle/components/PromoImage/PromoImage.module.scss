@@ -1,0 +1,43 @@
+.promo-image {
+    &__url {
+        width: 100%;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    &__caption-and-credit {
+        font-family: $font-family;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        line-height: 16px;
+        background-color: $super-light-grey;
+        color: $black;
+        padding: 8px 16px;
+
+        @include mobile {
+            padding: 8px;
+        }
+
+        &--on-top {
+            background-color: $black-opacity-70;
+            color: $white;
+            grid-column: 1;
+            grid-row: 1;
+            height: fit-content;
+            z-index: 1;
+        }
+    }
+
+    &__caption {
+        @include tablet-desktop {
+            max-width: 80%;
+        }
+    }
+
+    &__credit {
+        text-align: end;
+    }
+}

@@ -1,0 +1,15 @@
+.no-racing-message {
+    background-color: $fast-orange;
+    font-size: 16px;
+    padding: 8px;
+    text-align: center;
+
+    &__no-racing-title {
+        font-size: 16px;
+        font-family: $font-family-semibold;
+    }
+
+    &__no-racing-subtitle {
+        font-size: 12px;
+    }
+}

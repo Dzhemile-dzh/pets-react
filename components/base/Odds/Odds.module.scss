@@ -1,0 +1,211 @@
+.odds {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 12%;
+
+    &--in-betslip {
+        display: flex;
+    }
+
+    @include desktop {
+        min-width: 80px;
+        justify-content: center;
+    }
+
+    @include mobile {
+        height: 100%;
+        justify-content: space-between;
+        max-width: 120px;
+    }
+
+    &__container {
+        position: relative;
+
+        @include mobile {
+            margin-bottom: 2px;
+        }
+
+        &--in-betslip {
+            display: block;
+        }
+    }
+
+    &__bet-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 63px;
+        max-width: 80px;
+        height: 48px;
+        margin: 0;
+        padding: 0 4px;
+        border-radius: 3px;
+        border: none;
+        background-color: $brand-primary;
+        color: $white;
+
+        &:focus {
+            outline: none;
+        }
+
+        &--has-price {
+            cursor: pointer;
+        }
+
+        &--in-betslip {
+            background-color: $black;
+
+            &::before {
+                content: "";
+                width: 6px;
+                height: 26px;
+                position: absolute;
+                top: 0;
+                left: -6px;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+                background-color: $go-green;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 1px;
+                width: 1px;
+                background-color: $go-green;
+            }
+        }
+
+        @include mobile {
+            height: 32px;
+        }
+    }
+
+    &__value {
+        font-size: 18px;
+        font-family: $font-family-bold;
+
+        &--in-betslip {
+            display: inline;
+        }
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+
+    &__in-betslip-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 12px;
+        font-family: $font-family-semibold;
+    }
+
+    &__fav-label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 16px;
+        position: absolute;
+        top: -8px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 12px;
+        font-family: $font-family-semibold;
+        border-radius: 8px;
+        border: solid 1px $brand-primary;
+        background-color: $white;
+        color: $black;
+
+        .odds__bet-button--in-betslip & {
+            border-color: $black;
+        }
+
+        &--in-betslip {
+            display: flex;
+        }
+
+        @include mobile {
+            width: 34px;
+            height: 13px;
+            color: $brand-primary;
+        }
+    }
+
+    &__historical {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 14px;
+        white-space: nowrap;
+        line-height: 1.25;
+
+        @include desktop {
+            margin-top: 4px;
+        }
+
+        @include tablet {
+            margin-top: 16px;
+        }
+
+        @include mobile {
+            font-size: 12px;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            margin-right: 5px;
+
+            &::after {
+                content: "";
+                display: block;
+                height: 0;
+                margin-left: 5px;
+                border-width: 3px 0 3px 4px;
+                border-style: solid;
+                border-color: transparent $black;
+            }
+
+            &:last-child {
+                margin-right: 0;
+
+                &::after {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    &__compare-link {
+        display: flex;
+        align-items: baseline;
+        font-family: $font-family-semibold;
+        font-size: 14px;
+        line-height: 1.25;
+        color: $brand-primary;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        svg {
+            margin-left: 3px;
+            transform: rotate(-90deg);
+        }
+
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+}

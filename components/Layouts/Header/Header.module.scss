@@ -1,0 +1,58 @@
+.header {
+    display: flex;
+    color: $black;
+    justify-content: space-between;
+
+    &__title {
+        font-family: $font-family-bold;
+        text-transform: uppercase;
+
+        @include mobile {
+            font-size: 16px;
+        }
+
+        @include tablet-desktop {
+            font-size: 24px;
+        }
+    }
+
+    &__icon-title {
+        font-size: 24px;
+        font-family: $font-family-bold;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    &__icon-container {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: -8px;
+        left: 0;
+    }
+
+    &__icon-title-text {
+        padding-left: 16px;
+        display: block;
+    }
+
+    &__link {
+        color: inherit;
+        display: flex;
+        align-items: center;
+    }
+
+    &__link-text {
+        @include mobile {
+            font-size: 14px;
+        }
+
+        @include tablet-desktop {
+            font-size: 16px;
+        }
+    }
+
+    &__link-icon {
+        margin-left: 4px;
+    }
+}

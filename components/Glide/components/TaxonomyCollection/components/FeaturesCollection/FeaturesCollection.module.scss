@@ -1,0 +1,55 @@
+@import "styles/mixins/container-mixin";
+
+.features-collection {
+    margin: 80px 0 100px;
+    border-top: 1px solid $mid-grey;
+
+    &__container {
+        @include container-new-breakpoints;
+    }
+
+    &__ad-placeholder {
+        >span {
+            padding: 8px 0;
+        }
+
+        >div {
+            height: 250px;
+            width: 300px;
+        }
+    }
+
+    &__body-primary-row {
+        display: flex;
+        gap: 32px;
+
+        @include small-desktop {
+            gap: 36px;
+        }
+
+        >div {
+            &:first-child {
+                flex-grow: 1;
+            }
+        }
+    }
+
+    &__body-secondary-row {
+        display: flex;
+        gap: 16px;
+        justify-content: space-between;
+        margin-top: 28px;
+
+        @include small-desktop {
+            margin-top: 32px;
+        }
+
+        >a {
+            min-height: 360px;
+        }
+    }
+}
+
+:export {
+    lightgrey: $light-grey;
+}

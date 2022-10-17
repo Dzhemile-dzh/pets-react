@@ -1,0 +1,82 @@
+.free-bets-er {
+    &__returns {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+
+        &--disabled {
+            opacity: 0.4;
+        }
+    }
+
+    &__returns-label {
+        font-family: $font-family;
+        font-size: 14px;
+        color: $black;
+    }
+
+    &__returns-currency {
+        font-family: $font-family-semibold;
+        font-size: 14px;
+        color: $black;
+        margin-right: 4px;
+    }
+
+    &__returns-value {
+        font-family: $font-family;
+        font-size: 14px;
+        color: $black;
+    }
+
+    &__toggle-free-bet-modal, &__remove-selected-free-bet {
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        margin: 3px 0 10px;
+
+        >span {
+            font-family: $font-family-semibold;
+            font-size: 14px;
+            display: flex;
+            align-items: baseline;
+
+            >div {
+                margin-left: 6px !important; // because of nextjs inline styles
+            }
+        }
+    }
+
+    &__toggle-free-bet-modal {
+        color: $brand-primary;
+        cursor: pointer;
+        align-items: baseline;
+        text-transform: initial;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+
+        &--disabled {
+            color: $grey;
+            pointer-events: none;
+        }
+    }
+
+    &__remove-selected-free-bet {
+        text-transform: uppercase;
+        color: $fast-orange-darker;
+
+        >button {
+            background-color: transparent;
+            color: inherit;
+            box-shadow: none;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+    }
+}

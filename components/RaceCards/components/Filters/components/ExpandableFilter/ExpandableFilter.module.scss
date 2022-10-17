@@ -1,0 +1,347 @@
+.filters {
+    background-color: $super-light-grey;
+    border-bottom: 1px solid $mid-grey;
+
+    &__content-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 0 8px;
+        padding: 8px 0;
+
+        @include mobile {
+            max-width: 472px;
+            margin: 0 auto;
+        }
+
+        @include tablet {
+            flex-direction: row;
+            height: 80px;
+            padding: 0;
+        }
+
+        @include desktop {
+            flex-direction: row;
+            height: 80px;
+            padding: 0;
+        }
+
+        @include large-desktop {
+            max-width: $breakpoint-desktop-m;
+            margin: 0 auto;
+        }
+    }
+
+    &__handicap {
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 23px;
+        }
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 23px;
+            height: 100%;
+        }
+    }
+
+    &__races, &__date, &__course {
+        margin-bottom: 8px;
+
+        @include tablet-desktop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-right: 1px solid $mid-grey;
+            margin-bottom: 0;
+            padding-right: 16px;
+        }
+    }
+
+    &__date, &__course {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 10px;
+        background-color: $filter-grey;
+        border-radius: 3px;
+
+        @include tablet-desktop {
+            flex: 1 0 auto;
+            background-color: transparent;
+            border-radius: 0;
+            padding-left: 16px;
+        }
+
+        &--focused {
+            margin-bottom: 0;
+            border-top: 1px solid $mid-grey;
+            border-right: 1px solid $mid-grey;
+            border-left: 1px solid $mid-grey;
+            border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
+            background-color: $white;
+
+            @include desktop {
+                z-index: 1;
+                border-bottom: 1px solid $white;
+                margin-bottom: -2px;
+            }
+
+            @include tablet {
+                z-index: 1;
+                border-bottom: 1px solid $white;
+                margin-bottom: -2px;
+            }
+        }
+    }
+
+    &__date-label, &__course-label {
+        display: flex;
+        align-items: flex-end;
+        align-items: center;
+
+        svg {
+            margin-right: 12px;
+
+            @include mobile {
+                margin-right: 8px;
+            }
+        }
+
+        span {
+            color: $black;
+            text-transform: uppercase;
+            font-family: $font-family-semibold;
+            font-size: 14px;
+            line-height: 15px;
+
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__date-value, &__course-value {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            color: $black;
+            font-family: $font-family-semibold;
+            font-size: 16px;
+            line-height: 20px;
+            margin: 0 16px;
+
+            @include mobile {
+                font-size: 14px;
+                margin-right: 4px;
+            }
+        }
+    }
+
+    &__races .slide-toggle {
+        @include desktop {
+            &__button {
+                width: 66px;
+            }
+        }
+
+        @include tablet {
+            &__button {
+                width: 75px;
+            }
+        }
+
+        @include mobile {
+            width: 100%;
+
+            &__button {
+                flex: 1 0 auto;
+                width: auto;
+            }
+        }
+    }
+
+    &__race-type {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include tablet-desktop {
+            border-right: 1px solid $mid-grey;
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+    }
+
+    &__race-type-flat {
+        margin-right: 30px;
+
+        span {
+            margin-top: 6px;
+        }
+    }
+
+    &__race-type-jumps {
+        span {
+            margin-top: 6px;
+        }
+    }
+
+    &__race-type-flat, &__race-type-jumps {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+
+        &:focus, &:active {
+            outline: none;
+        }
+
+        span {
+            color: $dark-grey;
+            text-transform: uppercase;
+            font-family: $font-family-semibold;
+            font-size: 12px;
+            line-height: 15px;
+        }
+    }
+
+    &__more {
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 79px;
+
+        span {
+            margin-right: 7px;
+            color: $dark-grey;
+            text-transform: uppercase;
+            font-family: $font-family-semibold;
+            font-size: 12px;
+            line-height: 15px;
+        }
+    }
+
+    &__more-content {
+        background-color: $white;
+        padding: 8px 0;
+        border-right: 1px solid $mid-grey;
+        border-bottom: 1px solid $mid-grey;
+        border-left: 1px solid $mid-grey;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        margin-bottom: 8px;
+
+        @include tablet-desktop {
+            border-top: 1px solid $mid-grey;
+            border-right: none;
+            border-bottom: none;
+            border-left: none;
+            border-radius: 3px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__more, &__date, &__course {
+        &--focused {
+            margin-bottom: 0;
+            border-top: 1px solid $mid-grey;
+            border-right: 1px solid $mid-grey;
+            border-left: 1px solid $mid-grey;
+            border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
+
+            @include tablet-desktop {
+                background-color: $white;
+                z-index: 1;
+                border-bottom: 1px solid $white;
+                margin-bottom: -2px;
+            }
+
+            @include mobile {
+                background-color: $white;
+            }
+
+            .ui-icon {
+                &__chevron {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 8px;
+
+        @include mobile {
+            height: 32px;
+
+            .ui-btn {
+                display: block;
+                padding: 0;
+                width: 32px;
+                height: 32px;
+
+                &:focus {
+                    outline: 0;
+                }
+
+                .ui-icon {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &__sorting {
+        @include mobile {
+            position: relative;
+
+            .slide-toggle {
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 1;
+            }
+        }
+    }
+
+    &__combined {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .ui-icon {
+            margin-right: 6px;
+        }
+    }
+
+    &__combined-label {
+        font-family: $font-family-semibold;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+}
+
+.filters-draw .slide-toggle {
+    @include mobile {
+        width: 100%;
+
+        &__button {
+            flex: 1 0 auto;
+            width: auto;
+        }
+    }
+}

@@ -1,0 +1,133 @@
+.secondary-navigation {
+    display: flex;
+    align-items: center;
+    background-color: $light-grey;
+    max-width: 100%;
+
+    &__wrapper {
+        width: 480px;
+        max-width: $breakpoint-desktop-m;
+        margin-left: auto;
+        margin-right: auto;
+
+        &--full-width {
+            width: 100%;
+        }
+
+        @include small-desktop {
+            padding: 0 16px;
+        }
+
+        @include tablet {
+            padding: 0 14px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style-type: none;
+        text-transform: uppercase;
+        padding: 0 8px;
+        margin: 4px 0;
+    }
+
+    &__list-item {
+        display: flex;
+        font-family: $font-family-semibold;
+        white-space: nowrap;
+        background-color: $white;
+        color: $dark-grey;
+        border-radius: 3px;
+        margin: 4px;
+        border: 1px solid $mid-grey;
+    }
+
+    &__list-item-link {
+        display: flex;
+        position: relative;
+        align-items: center;
+        font-size: 12px;
+        color: inherit;
+        padding: 8px;
+
+        @include tablet-desktop {
+            padding: 0;
+        }
+    }
+
+    &__list-item-active {
+        background-color: $black;
+        color: $white;
+    }
+
+    &__calendar {
+        display: flex;
+        cursor: pointer;
+        color: $white;
+        text-transform: uppercase;
+
+        &--opened {
+            position: absolute;
+            margin-bottom: 35px;
+
+            @include small-desktop {
+                margin-left: -20px;
+            }
+        }
+
+        svg {
+            margin-right: 8px;
+        }
+    }
+
+    @include tablet-desktop {
+        display: block;
+        height: 34px;
+        background-color: $black;
+
+        &__wrapper {
+            width: 100%;
+        }
+
+        &__list {
+            display: grid;
+            padding: 0;
+            margin: 0 0 0 8px;
+            grid-template-columns: repeat(9, minmax(auto, min-content));
+            grid-gap: 20px;
+            height: 34px;
+        }
+
+        &__list-item {
+            height: 34px;
+            align-items: center;
+            font-family: $font-family;
+            background-color: unset;
+            color: unset;
+            padding: unset;
+            margin: 0;
+            border: none;
+        }
+
+        &__list-item-link {
+            color: $white;
+            font-size: 14px;
+            height: 34px;
+        }
+
+        &__list-item-active-tab {
+            font-family: $font-family-semibold;
+            width: 100%;
+            bottom: 0;
+            position: absolute;
+            height: 3px;
+            border-bottom: 3px solid $white;
+        }
+
+        &__list-item-active {
+            font-family: $font-family-bold;
+        }
+    }
+}

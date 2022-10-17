@@ -1,0 +1,13 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $actual-black-opacity-60;
+    z-index: 1000;
+
+    @media only screen and (min-width: $breakpoint-tablet-m) {
+        background-color: $actual-black-opacity-20;
+    }
+}

@@ -1,0 +1,195 @@
+@import "styles/mixins/color-mixin";
+
+.bookmaker-offer-item {
+    margin-top: 8px;
+
+    @include desktop {
+        box-shadow: 0 2px 6px 1px $actual-black-opacity-10;
+        border-radius: 6px;
+        margin-bottom: 12px;
+        width: 300px;
+    }
+
+    &__header {
+        @include tablet {
+            padding: 6px 12px 6px 16px;
+        }
+
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $light-grey;
+        color: $black;
+        padding: 6px 8px;
+        cursor: pointer;
+
+        &--toggled {
+            padding: 10px 12px 10px 24px;
+        }
+
+        @include desktop {
+            border-radius: 6px;
+            background-color: $white;
+            padding: 6px 12px 9px;
+
+            &--toggled {
+                height: 48px;
+                padding: 0 18px;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+
+    &__header-details {
+        display: flex;
+        align-items: center;
+
+        h5 {
+            display: inline-block;
+            font-size: 14px;
+            margin: 0 8px 0 16px;
+
+            @include tablet {
+                font-size: 16px;
+            }
+        }
+
+        @include desktop {
+            align-items: flex-start;
+
+            h5 {
+                font-size: 14px;
+                line-height: 1.21;
+                margin: 1px 0 0;
+                max-width: 200px;
+            }
+        }
+    }
+
+    &__header-top-offer-container {
+        display: flex;
+        align-items: center;
+        color: $white;
+    }
+
+    &__header-top-offer {
+        font-family: $font-family-bold;
+        font-size: 14px;
+        margin-right: 16px;
+
+        @include desktop {
+            margin-right: 0;
+        }
+    }
+
+    &__header-chevron {
+        transform: rotate(90deg);
+
+        &--toggled {
+            transform: rotate(-90deg);
+        }
+    }
+
+    &__header-chevron-wrapper {
+        width: 22px;
+        height: 22px;
+    }
+
+    &__header-bookmaker-icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 28px;
+        width: 60px;
+
+        @include desktop {
+            width: 69px;
+            height: 32px;
+            border-radius: 3px;
+            margin-top: 3px;
+        }
+    }
+
+    &__header-icon-wrapper {
+        @include desktop {
+            margin-right: 11px;
+        }
+    }
+
+    &__header-offer {
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__header-tc-apply {
+        display: block;
+        font-size: 10px;
+        margin-top: 4px;
+        color: $dark-grey;
+    }
+
+    &__content {
+        border: solid 1px $mid-grey;
+        border-top: none;
+        padding: 14px 12px 21px;
+        background: $white;
+
+        @include mobile {
+            padding-top: 10px;
+            background: $light-grey;
+        }
+
+        h5 {
+            font-family: $font-family-bold;
+            font-size: 20px;
+            color: $black;
+            margin: 0 0 11px;
+        }
+
+        p {
+            color: $black;
+            font-size: 12px;
+            line-height: 1.25;
+            margin: 0 0 20px;
+        }
+
+        a {
+            padding: 7px 16px;
+            border-radius: 3px;
+            color: $white;
+            background: $brand-primary;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+        }
+
+        @include desktop {
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+
+            h5 {
+                line-height: 23px;
+            }
+
+            p {
+                margin: 0 0 15px;
+            }
+        }
+    }
+
+    &__content-top-offer {
+        color: $brand-primary;
+        font-size: 12px;
+        font-family: $font-family-bold;
+    }
+
+    @include bookmaker-color-modifiers;
+
+    &--betfair {
+        color: $black;
+    }
+}

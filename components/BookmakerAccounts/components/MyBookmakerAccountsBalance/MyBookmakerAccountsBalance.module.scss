@@ -1,0 +1,155 @@
+.mba-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    &__my-bets {
+        @include tablet {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__bookmaker-accounts {
+        @include tablet {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+.mba-balance {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+    &:first-child {
+        margin: 0 0 10px auto;
+    }
+
+    &__text, &__amount {
+        font-family: $font-family;
+        color: $black;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+    }
+
+    &__amount {
+        font-size: 22px;
+        text-align: right;
+    }
+
+    &__amount-free-bets {
+        font-family: $font-family-semibold;
+        font-size: 16px;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        >svg {
+            margin: 0 8px 0 0;
+
+            @include desktop {
+                position: relative;
+                top: 2px;
+            }
+
+            @include tablet {
+                margin: 2px 0 0 8px;
+            }
+        }
+    }
+
+    &__container-bookmaker-accounts-header {
+        width: 35%;
+
+        @include tablet {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .mba-balance__amount {
+            font-size: 24px;
+        }
+
+        .mba-balance__text {
+            font-family: $font-family;
+            font-size: 16px;
+        }
+    }
+
+    &__my-bets {
+        display: inline-flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @include desktop {
+            width: 40%;
+        }
+
+        @include tablet {
+            flex-direction: row-reverse;
+        }
+
+        .mba-balance {
+            &:first-child {
+                .mba-balance__amount {
+                    font-size: 24px;
+                }
+            }
+
+            @include tablet {
+                width: 50%;
+            }
+
+            &__text {
+                font-family: $font-family;
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__free-bets {
+        @include tablet {
+            align-items: flex-start;
+        }
+    }
+}
+
+.mba-list {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    @include desktop {
+        width: 65%;
+    }
+
+    @include tablet {
+        width: 70%;
+    }
+
+    &__my-bets {
+        width: 60%;
+        padding-bottom: 25px;
+
+        @include tablet {
+            width: 100%;
+            padding-bottom: 10px;
+        }
+    }
+
+    &__my-racing-post {
+        width: 45%;
+    }
+
+    &__bookmaker-accounts {
+        @include tablet {
+            width: 100%;
+            margin-bottom: 12px;
+        }
+    }
+}

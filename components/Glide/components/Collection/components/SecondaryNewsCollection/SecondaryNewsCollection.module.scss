@@ -1,0 +1,34 @@
+@import "styles/mixins/container-mixin";
+
+.secondary-news-collection {
+    margin-top: 25px;
+    width: 100%;
+
+    @include mobile {
+        margin-top: 0;
+        padding: 0 8px;
+    }
+
+    &__container {
+        @include container;
+    }
+
+    &__row {
+        display: flex;
+        margin: 0 -8px;
+
+        & + .secondary-news-collection__row {
+            margin-top: 25px;
+        }
+
+        >a {
+            flex: 1;
+            margin: 0 8px;
+        }
+    }
+}
+
+:export {
+    lightgrey: $light-grey;
+    fontutopiasemibold: $font-utopia-semibold;
+}

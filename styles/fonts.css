@@ -1,0 +1,62 @@
+@font-face{
+    font-family:'ProximaNovaA';
+    src:url('/fonts/proxima-regular/proxima_nova_a.eot?#iefix');
+    src:url('/fonts/proxima-regular/proxima_nova_a.eot?#iefix') format('eot'),
+        url('/fonts/proxima-regular/proxima_nova_a.woff2') format('woff2'),
+        url('/fonts/proxima-regular/proxima_nova_a.woff') format('woff'),
+        url('/fonts/proxima-regular/proxima_nova_a.ttf') format('truetype');
+    font-display:swap;
+}
+
+@font-face{
+    font-family:'ProximaNovaA-SemiBold';
+    src:url('/fonts/proxima-semibold/proxima_nova_a_semibold.eot?#iefix');
+    src:url('/fonts/proxima-semibold/proxima_nova_a_semibold.eot?#iefix') format('eot'),
+        url('/fonts/proxima-semibold/proxima_nova_a_semibold.woff2') format('woff2'),
+        url('/fonts/proxima-semibold/proxima_nova_a_semibold.woff') format('woff'),
+        url('/fonts/proxima-semibold/proxima_nova_a_semibold.ttf') format('truetype');
+    font-display:swap;
+}
+
+@font-face{
+    font-family:'ProximaNovaA-Bold';
+    src:url('/fonts/proxima-bold/proxima_nova_a_bold.eot?#iefix');
+    src:url('/fonts/proxima-bold/proxima_nova_a_bold.eot?#iefix') format('eot'),
+        url('/fonts/proxima-bold/proxima_nova_a_bold.woff2') format('woff2'),
+        url('/fonts/proxima-bold/proxima_nova_a_bold.woff') format('woff'),
+        url('/fonts/proxima-bold/proxima_nova_a_bold.ttf') format('truetype');
+    font-display:swap;
+    font-weight:bold;
+}
+
+
+@font-face{
+    font-family:'Utopia-Bold';
+    src:url('/fonts/utopia-bold/UtopiaStd-Bold.eot?#iefix');
+    src:url('/fonts/utopia-bold/UtopiaStd-Bold.eot?#iefix') format('eot'),
+        url('/fonts/utopia-bold/UtopiaStd-Bold.woff2') format('woff2'),
+        url('/fonts/utopia-bold/UtopiaStd-Bold.woff') format('woff'),
+        url('/fonts/utopia-bold/UtopiaStd-Bold.ttf') format('truetype');
+    font-display:swap;
+    font-weight:bold;
+}
+
+@font-face{
+    font-family:'Utopia-SemiBold';
+    src:url('/fonts/utopia-semibold/UtopiaStd-Semibold.eot?#iefix');
+    src:url('/fonts/utopia-semibold/UtopiaStd-Semibold.eot?#iefix') format('eot'),
+        url('/fonts/utopia-semibold/UtopiaStd-Semibold.woff2') format('woff2'),
+        url('/fonts/utopia-semibold/UtopiaStd-Semibold.woff') format('woff'),
+        url('/fonts/utopia-semibold/UtopiaStd-Semibold.ttf') format('truetype');
+    font-display:swap;
+}
+
+@font-face{
+    font-family:'Utopia';
+    src:url('/fonts/utopia-regular/UtopiaStd-Regular.eot?#iefix');
+    src:url('/fonts/utopia-regular/UtopiaStd-Regular.eot?#iefix') format('eot'),
+        url('/fonts/utopia-regular/UtopiaStd-Regular.woff2') format('woff2'),
+        url('/fonts/utopia-regular/UtopiaStd-Regular.woff') format('woff'),
+        url('/fonts/utopia-regular/UtopiaStd-Regular.ttf') format('truetype');
+    font-display:swap;
+}

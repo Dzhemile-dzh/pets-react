@@ -1,0 +1,71 @@
+@import "styles/mixins/container-mixin";
+
+.reports-previews-base {
+    background-color: $light-grey;
+    border-top: 2px solid $mid-grey;
+
+    @include mobile {
+        background-color: $white;
+    }
+
+    &__container {
+        @include container-new-breakpoints;
+    }
+
+    &__header {
+        padding-top: 13px;
+
+        @include mobile {
+            background-color: $light-grey;
+            padding-top: 30px;
+        }
+    }
+
+    &__body {
+        @include desktop {
+            display: flex;
+            padding-bottom: 80px;
+        }
+
+        @include tablet {
+            display: flex;
+            padding-bottom: 30px;
+        }
+
+        @include mobile {
+            padding: 0 8px;
+
+            >a:first-child {
+                border-top: none;
+            }
+        }
+
+        >a {
+            @include tablet-desktop {
+                flex: 1;
+                border-bottom: 1px solid $mid-grey;
+                min-height: 360px;
+
+                &:not(&:last-child) {
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
+
+    &__ad-placeholder {
+        margin-left: 106px;
+
+        > div {
+            @include tablet {
+                width: 220px;
+            }
+
+            @include desktop {
+                width: 300px;
+            }
+
+            min-height: 250px;
+        }
+    }
+}

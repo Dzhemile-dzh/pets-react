@@ -1,0 +1,78 @@
+@import "styles/mixins/next-image-mixin";
+@import "styles/mixins/container-mixin";
+
+.social-icons {
+    @include tablet {
+        border-top: 1px solid $mid-grey;
+        margin: 0 auto;
+    }
+
+    @include desktop {
+        border-top: 1px solid $mid-grey;
+    }
+
+    &__content {
+        @include container-new-breakpoints;
+
+        margin: 25px auto;
+        display: flex;
+
+        @include mobile {
+            margin-top: 42px;
+            display: block;
+        }
+
+        @include tablet {
+            margin: 25px 16px;
+        }
+    }
+
+    &__logos {
+        display: flex;
+        justify-content: center;
+
+        @include mobile {
+            padding-top: 22px;
+        }
+    }
+
+    &__logo {
+        @include next-image;
+
+        display: block;
+        position: relative;
+        width: 24px;
+        height: 24px;
+
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+
+        @include mobile {
+            width: 34px;
+            height: 34px;
+
+            &:not(:last-child) {
+                margin-right: 11px;
+            }
+        }
+    }
+
+    &__logo-rp {
+        width: 216px;
+
+        @include desktop {
+            display: flex;
+            margin-right: 47px;
+        }
+
+        @include tablet {
+            display: flex;
+            margin-right: 44px;
+        }
+
+        @include mobile {
+            margin: 0 auto;
+        }
+    }
+}

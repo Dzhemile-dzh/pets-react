@@ -1,0 +1,132 @@
+.bs-stake-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+        border: solid 1px $mid-grey;
+        border-radius: 3px;
+    }
+
+    &__button {
+        background-color: $countdown-label-grey;
+        padding: 0;
+        margin: 0;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: unset;
+
+        @include small-mobile {
+            width: 32px;
+        }
+
+        &:hover {
+            border-color: $mid-grey !important;
+        }
+
+        & svg {
+            margin-right: 0 !important;
+        }
+
+        &:active {
+            & svg {
+                fill: $white !important;
+            }
+        }
+
+        & span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &--decrease {
+            border-right: 1px solid $mid-grey;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        &--increase {
+            border-left: 1px solid $mid-grey;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+    }
+
+    &__field-wrapper {
+        width: 143px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        border: solid 1px $mid-grey;
+        border-radius: 3px;
+        align-items: center;
+
+        @include mobile {
+            width: 97px;
+            border: none;
+        }
+
+        .ui-icon {
+            height: 12px;
+            width: 17px;
+            margin: 0 8px;
+        }
+    }
+
+    &__field {
+        display: flex;
+        width: 95px;
+        height: 99%;
+        font-size: 16px;
+        font-family: $font-family;
+        color: $beacon-blue-darker;
+        border: none;
+        text-align: right;
+        padding: 0;
+        margin: 0 0 0 1px;
+
+        @include mobile {
+            padding-right: 4px;
+        }
+
+        &:active, &:focus {
+            outline: 0;
+        }
+
+        &:disabled {
+            background: $white;
+        }
+    }
+
+    &__button-remove {
+        border: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+
+        &:active, &:focus {
+            outline: 0;
+        }
+    }
+
+    &--error {
+        border-radius: 3px;
+        border: 1px solid $brand-primary;
+        box-shadow: 0 0 4px 0 $brand-primary;
+    }
+
+    &--error &__field {
+        color: $brand-primary;
+    }
+
+    &__icon {
+        margin: 0 8px;
+    }
+}

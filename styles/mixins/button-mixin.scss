@@ -1,0 +1,321 @@
+@mixin button-base {
+    align-items: center;
+    border-radius: 3px;
+    border: 1px solid;
+    display: flex;
+    font-family: $font-family-semibold;
+    font-size: 12px;
+    justify-content: space-between;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ui-icon {
+        margin-right: 6px;
+    }
+
+    // NOTE:
+    // Button's style types
+
+    &--primary {
+        background-color: $brand-primary;
+        border-color: $brand-primary;
+    }
+
+    &--primary, &--secondary {
+        color: $white;
+        fill: $white;
+    }
+
+    &--primary, &--tertiary {
+        padding: 12px 24px;
+    }
+
+    &--secondary {
+        background-color: $white;
+        border: 1px solid $mid-grey;
+        padding: 12px 23px;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            border-radius: 3px;
+            border: 1px solid $black;
+            background-color: $black;
+            content: "";
+            height: calc(100% - 4px);
+            left: 2px;
+            position: absolute;
+            z-index: -1;
+            top: 2px;
+            width: calc(100% - 4px);
+        }
+    }
+
+    &--tertiary, &--tertiary-icon, &--filter {
+        background-color: $white;
+        border-color: $mid-grey;
+    }
+
+    &--tertiary, &--tertiary-icon {
+        color: $black;
+        fill: $black;
+    }
+
+    &--tertiary-icon {
+        padding: 12px;
+        white-space: nowrap;
+    }
+
+    &--filter {
+        color: $dark-grey;
+        padding: 8px;
+
+        a {
+            color: $dark-grey;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    // NOTE:
+    // Button's sizes
+    &--tiny {
+        padding: 3px 8px;
+
+        &.ui-btn--secondary {
+            background-color: $black;
+            border: 1px solid $black;
+
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                display: none;
+            }
+
+            &:hover {
+                background: $filter-grey;
+                color: $black;
+            }
+
+            &:active {
+                background-color: $black;
+                color: $white;
+                fill: $white;
+            }
+        }
+
+        &.ui-btn--tertiary-icon {
+            height: 32px;
+            justify-content: center;
+            padding: 8px;
+
+            .ui-icon {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &--small {
+        padding: 6px 16px;
+
+        &.ui-btn--secondary {
+            padding: 6px 15px;
+        }
+
+        &.ui-btn--tertiary-icon {
+            height: 40px;
+            justify-content: center;
+            padding: 0;
+            width: 40px;
+
+            .ui-icon {
+                margin: 0;
+            }
+        }
+    }
+
+    &--large {
+        font-family: $font-family-bold;
+        font-size: 18px;
+        padding: 12px 16px;
+
+        &.ui-btn--secondary {
+            padding: 12px 15px;
+        }
+
+        &.ui-btn--tertiary-icon {
+            flex-direction: column;
+            font-family: $font-family-semibold;
+            font-size: 12px;
+            padding: 8px 4px;
+            width: 110px;
+
+            .ui-icon {
+                margin-bottom: 3px;
+                margin-right: 0;
+            }
+
+            span {
+                flex-direction: column;
+            }
+        }
+    }
+
+    // NOTE:
+    // Button's hover state
+    // Applying this check, because on mobile
+    // After you click on the button, the hover state stays after
+    // Even tho the button is not hovered
+    @media (hover: hover) and (pointer: fine) {
+        &:not(.ui-btn--active):not(:active):not(:disabled):hover {
+            &.ui-btn--primary {
+                background-color: $brand-primary-hover;
+                border-color: $brand-primary-hover;
+            }
+
+            &.ui-btn--secondary, &.ui-btn--tertiary, &.ui-btn--tertiary-icon, &.ui-btn--filter {
+                border-color: $black;
+            }
+
+            &.ui-btn--tertiary, &.ui-btn--filter {
+                background-color: $filter-grey;
+            }
+
+            &.ui-btn--filter {
+                color: $black;
+
+                a {
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    // NOTE:
+    // Button's active state
+
+    &--active {
+        &.ui-btn--primary {
+            background-color: $brand-primary-active;
+            border-color: $brand-primary-active;
+        }
+
+        &.ui-btn--secondary {
+            background-color: $black;
+            border-color: $black;
+        }
+
+        &.ui-btn--tertiary-icon, &.ui-btn--tertiary, &.ui-btn--filter {
+            background-color: $black;
+            border-color: $black;
+            color: $white;
+            fill: $white;
+
+            a {
+                color: $white;
+            }
+
+            .ui-icon {
+                fill: $white;
+            }
+
+            span {
+                position: relative;
+            }
+        }
+    }
+
+    &:active {
+        &.ui-btn--primary {
+            background-color: $brand-primary-active;
+            border-color: $brand-primary-active;
+        }
+
+        &.ui-btn--secondary {
+            background-color: $black;
+            border-color: $black;
+        }
+
+        &.ui-btn--tertiary-icon, &.ui-btn--tertiary, &.ui-btn--filter {
+            background-color: $black;
+            border-color: $black;
+            color: $white;
+            fill: $white;
+
+            a {
+                color: $white;
+            }
+
+            .ui-icon {
+                fill: $white;
+            }
+
+            span {
+                position: relative;
+            }
+        }
+    }
+
+    // NOTE:
+    // Button's disabled state
+    &:disabled {
+        &.ui-btn--primary {
+            background-color: $mid-grey;
+            border-color: $mid-grey;
+            color: $white;
+        }
+
+        &.ui-btn--secondary {
+            background-color: $mid-grey;
+            border-color: $mid-grey;
+            color: $white;
+
+            &:not(.ui-btn--tiny) {
+                background-color: $white;
+                border-color: $mid-grey;
+            }
+
+            &::before {
+                background-color: $mid-grey;
+                border-color: $mid-grey;
+                color: $white;
+            }
+        }
+
+        &.ui-btn--tertiary, &.ui-btn--tertiary-icon {
+            background: $light-grey;
+            border-color: $light-grey;
+            color: $grey;
+            fill: $grey;
+        }
+
+        &.ui-btn--tertiary-icon {
+            .ui-icon {
+                fill: $grey;
+            }
+
+            &.ui-btn--large {
+                background-color: $white;
+                border-color: $mid-grey;
+            }
+        }
+    }
+}

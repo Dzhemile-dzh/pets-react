@@ -1,0 +1,8 @@
+.layout {
+    display: flex;
+
+    &--fullwidth {
+        width: 100%;
+        background-color: $white;
+    }
+}

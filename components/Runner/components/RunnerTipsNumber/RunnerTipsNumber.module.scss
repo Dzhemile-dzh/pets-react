@@ -1,0 +1,87 @@
+.runner-tips-number {
+    background: $super-light-grey;
+    display: block;
+    position: absolute;
+    top: -6px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    width: auto;
+    align-items: baseline;
+    align-content: baseline;
+    color: $white;
+    height: 18px;
+
+    @include desktop {
+        margin-top: -1px;
+    }
+
+    @include tablet {
+        margin-top: -1px;
+    }
+
+    @include mobile {
+        margin-top: -3px;
+        width: auto;
+    }
+
+    span {
+        display: block;
+        justify-content: center;
+        align-content: baseline;
+        height: 100%;
+
+        @include mobile {
+            flex: 1 0 auto;
+        }
+    }
+
+    &__count {
+        background-color: $brand-primary;
+        border-bottom-left-radius: 9px;
+        border-top-left-radius: 9px;
+
+        @include tablet-desktop {
+            width: 32%;
+        }
+    }
+
+    &__count-runner {
+        justify-content: center;
+        display: flex;
+        padding: 2px 6px;
+    }
+
+    &__label {
+        display: block;
+        background: none;
+        color: $black;
+        padding: 0;
+        border-bottom-right-radius: 9px;
+        border-top-right-radius: 9px;
+        text-transform: uppercase;
+
+        @include tablet-desktop {
+            width: 54%;
+        }
+    }
+
+    &__label-runner {
+        display: flex;
+        background-color: $black;
+        color: $white;
+        padding: 2px 3px;
+    }
+
+    &__runner {
+        display: flex;
+        position: unset;
+        font-size: 12px;
+        font-family: $font-family;
+
+        @include mobile {
+            font-size: 10px;
+            font-family: $font-family-semibold;
+        }
+    }
+}

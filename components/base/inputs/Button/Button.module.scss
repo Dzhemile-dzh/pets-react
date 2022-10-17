@@ -1,0 +1,55 @@
+@import "styles/mixins/button-mixin";
+
+.ui-btn {
+    @include button-base;
+
+    &--primary-yellow {
+        padding: 12px 24px;
+        color: $black;
+        border-color: $fast-orange;
+        background-color: $fast-orange;
+    }
+
+    &--back {
+        background-color: $white;
+        color: $black;
+        border: none;
+    }
+
+    // NOTE:
+    // Button's hover state
+    // Applying this check, because on mobile
+    // After you click on the button, the hover state stays after
+    // Even tho the button is not hovered
+    @media (hover: hover) and (pointer: fine) {
+        &:not(.ui-btn--active):not(:active):not(:disabled):hover {
+            &.ui-btn--primary-yellow {
+                background-color: $fast-orange-dark;
+                border-color: $fast-orange-dark;
+            }
+        }
+    }
+
+    // NOTE:
+    // Button's active state
+    &--active, &:active {
+        &.ui-btn--primary-yellow {
+            background-color: $fast-orange-dark;
+            border-color: $fast-orange-dark;
+        }
+    }
+
+    // NOTE:
+    // Button's disabled state
+    &:disabled {
+        &.ui-btn--primary-yellow {
+            background-color: $mid-grey;
+            border-color: $mid-grey;
+            color: $white;
+        }
+
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
+}

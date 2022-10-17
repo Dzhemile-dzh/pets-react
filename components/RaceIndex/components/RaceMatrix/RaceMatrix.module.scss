@@ -1,0 +1,10 @@
+.race-matrix {
+    display: flex;
+    padding: 0 16px;
+    border-style: solid;
+    border-width: 1px;
+    border-image-source: linear-gradient(to bottom, $mid-grey, $white 49%, $white);
+    border-image-slice: 1;
+    flex-direction: column;
+    background: $white;
+}

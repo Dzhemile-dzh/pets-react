@@ -1,0 +1,10 @@
+%box-shadow {
+    box-shadow:
+        0 7px 8px -4px $actual-black-opacity-20,
+        0 13px 19px 2px $actual-black-opacity-14,
+        0 5px 24px 4px $actual-black-opacity-12;
+}
+
+%runner-box-shadow {
+    box-shadow: 0 2px 6px 1px $actual-black-opacity-10;
+}

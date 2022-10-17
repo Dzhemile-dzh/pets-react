@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "ADNLGFHKSN.ent.racingpost.janus",
+        "paths": [ "*" ]
+      },
+      {
+        "appID": "RS9E45N5W4.org.ssg.boilerplate",
+        "paths": [ "*" ]
+      }
+    ],
+  }
+}

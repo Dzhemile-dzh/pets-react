@@ -1,0 +1,65 @@
+@import "styles/mixins/text-limit-with-dots-mixin";
+
+.small-result {
+    height: 90px;
+    border: solid 1px $mid-grey;
+    box-shadow: 0 2px 6px 1px $actual-black-opacity-10;
+    border-radius: 6px;
+    padding: 8px 8px 12px 0;
+    font-size: 12px;
+    cursor: pointer;
+    color: $black;
+    background: $white;
+
+    @include large-desktop {
+        width: 173px;
+    }
+
+    @include small-desktop {
+        width: 157px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        height: 28px;
+        margin-bottom: 8px;
+        position: relative;
+    }
+
+    &__countdown {
+        position: absolute;
+        left: -6px;
+    }
+
+    &__runners {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    &__play-icon {
+        width: 16px;
+        height: 16px;
+        margin-left: 6px;
+
+        path {
+            fill: $brand-primary;
+        }
+    }
+
+    &__race-title {
+        padding-left: 8px;
+        font-size: 14px;
+        font-family: $font-family-bold;
+        display: block;
+
+        @include text-limit-with-dots;
+    }
+
+    &__race-details {
+        padding-left: 8px;
+
+        @include text-limit-with-dots;
+    }
+}

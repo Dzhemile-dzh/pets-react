@@ -1,0 +1,22 @@
+.calendar {
+    display: flex;
+    cursor: pointer;
+    color: $white;
+    text-transform: uppercase;
+    align-items: center;
+
+    &--opened {
+        position: absolute;
+        margin-bottom: 35px;
+
+        @include small-desktop {
+            margin-left: -20px;
+        }
+    }
+
+    &__icon {
+        margin-right: 8px;
+        width: 18px;
+        height: 18px;
+    }
+}

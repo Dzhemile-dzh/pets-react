@@ -1,0 +1,31 @@
+.free-bets {
+    &__wrapper {
+        padding: 16px;
+        background-color: $super-light-grey;
+        height: 100%;
+    }
+
+    &__thumb-container {
+        width: 44px;
+        height: 44px;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+    }
+
+    &__title-text {
+        font-size: 16px;
+        font-family: $font-family-semibold;
+        color: $black;
+        margin-left: 10px;
+    }
+
+    &__list {
+        margin-top: 20px;
+        padding: 0;
+        list-style-type: none;
+        background-color: $white;
+    }
+}

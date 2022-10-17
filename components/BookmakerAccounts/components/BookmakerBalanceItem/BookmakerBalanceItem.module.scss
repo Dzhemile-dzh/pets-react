@@ -1,0 +1,106 @@
+@import "styles/mixins/color-mixin";
+
+.bba-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include tablet {
+        justify-content: space-between;
+    }
+
+    &__container {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+
+        @include desktop {
+            padding-right: 9px;
+            width: 70%;
+        }
+
+        @include tablet {
+            padding-right: 9px;
+            width: 60%;
+        }
+
+        @include mobile {
+            padding-right: 18px;
+            width: 55%;
+        }
+
+        &--zero-balance {
+            @include desktop {
+                width: 50%;
+            }
+
+            @include tablet {
+                width: 65%;
+            }
+        }
+    }
+
+    &__name {
+        font-family: $font-family-semibold;
+        color: $black;
+        font-size: 14px;
+        margin-right: auto;
+        text-transform: capitalize;
+        line-height: 1.7;
+    }
+
+    &__balance {
+        font-family: $font-family-semibold;
+        color: $black;
+        font-size: 16px;
+    }
+
+    &__my-bets-balance, &__my-bets-name {
+        font-family: $font-family;
+    }
+
+    &__balance-zero {
+        color: $dark-grey;
+    }
+
+    &__chart {
+        margin: 0;
+        border: none;
+        height: 16px;
+        border-radius: 2px;
+
+        @include bookmaker-color-modifiers;
+
+        &--zero {
+            width: 1px;
+            border-radius: 2px;
+            background-color: $dark-grey;
+        }
+    }
+
+    &__chart-container {
+        width: 50%;
+
+        @include desktop {
+            width: 30%;
+        }
+
+        @include tablet {
+            width: 40%;
+        }
+
+        @include mobile {
+            width: 45%;
+        }
+
+        &--zero-balance {
+            @include desktop {
+                width: 0%;
+            }
+
+            @include tablet {
+                width: 0%;
+            }
+        }
+    }
+}

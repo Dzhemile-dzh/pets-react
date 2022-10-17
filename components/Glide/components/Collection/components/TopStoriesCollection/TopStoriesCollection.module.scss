@@ -1,0 +1,40 @@
+@import "styles/mixins/container-mixin";
+
+.top-stories-collection {
+    width: 100%;
+    display: grid;
+    grid-row-gap: 12px;
+
+    &__container {
+        @include container;
+    }
+
+    &__top-story-wrapper {
+        width: 100%;
+        position: relative;
+    }
+
+    &__articles {
+        width: 100%;
+
+        @include desktop {
+            display: grid;
+            grid-template-columns: repeat(3, 32%);
+            grid-gap: 16px;
+            justify-content: space-between;
+        }
+
+        @include tablet {
+            display: grid;
+            grid-template-columns: repeat(3, 32%);
+            grid-gap: 16px;
+            justify-content: space-between;
+        }
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            padding: 0 8px;
+        }
+    }
+}

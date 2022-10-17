@@ -1,0 +1,89 @@
+@import "styles/mixins/text-limit-with-dots-mixin";
+
+.race-item {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px $mid-grey solid;
+
+    &--result {
+        background-color: $light-grey;
+    }
+
+    &__result-indicator {
+        width: 6px;
+        height: 30px;
+        background-color: $brand-primary;
+        position: relative;
+        left: -4px;
+        border-radius: 3px;
+    }
+
+    &__start-time {
+        font-size: 14px;
+        font-weight: bold;
+        width: 49px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        margin-right: 15px;
+
+        &--result {
+            box-shadow: 1px 1px 0 0 $mid-grey;
+            border-radius: 3px;
+            background-color: $countdown-label-grey;
+            position: relative;
+            margin-right: 10px;
+            left: -4px;
+            height: 29px;
+        }
+    }
+
+    &__offer {
+        width: 35px;
+        height: 16px;
+        border-radius: 3px;
+        background-color: $offer-mint;
+        font-size: 12px;
+        font-weight: normal;
+        letter-spacing: -0.2px;
+        color: $black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__type {
+        @include text-limit-with-dots;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        margin-right: 18px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    &__title {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+
+        span {
+            @include text-limit-with-dots;
+        }
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        margin-right: 8px;
+    }
+
+    &__chevron-icon {
+        margin-right: 20px;
+    }
+}

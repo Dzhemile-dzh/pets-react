@@ -1,0 +1,60 @@
+@import "styles/mixins/text-limit-with-dots-mixin";
+
+.race-to-race {
+    display: flex;
+    align-items: center;
+    max-width: $breakpoint-desktop-m;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include small-desktop {
+        padding: 0 18px;
+    }
+
+    @include tablet {
+        padding-left: 14px;
+        padding-right: 18px;
+    }
+
+    @include large-desktop {
+        padding-right: 18px;
+    }
+
+    &__meeting-name {
+        font-size: 18px;
+        white-space: nowrap;
+        font-family: $font-family-semibold;
+        text-transform: uppercase;
+    }
+
+    &__races {
+        display: flex;
+        gap: 8px;
+        padding: 15px;
+    }
+
+    &__show-more {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        justify-items: center;
+    }
+
+    &__show-more-button {
+        & span {
+            @include text-limit-with-dots;
+
+            background-color: $white;
+            font-family: $font-family-semibold;
+            font-size: 12px;
+            text-transform: uppercase;
+            border: 1px solid $black;
+            padding: 6px;
+            border-radius: 3px;
+            height: 28px;
+            display: flex;
+            align-self: center;
+            align-items: center;
+        }
+    }
+}

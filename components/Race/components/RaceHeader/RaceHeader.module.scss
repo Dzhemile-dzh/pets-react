@@ -1,0 +1,467 @@
+.race-header {
+    position: relative;
+    color: $black;
+
+    @include desktop {
+        background-color: $light-grey;
+        background-repeat: no-repeat;
+        border-bottom: 1px solid $mid-grey;
+    }
+
+    @include tablet {
+        background-color: $light-grey;
+        background-repeat: no-repeat;
+        border-bottom: 1px solid $mid-grey;
+    }
+
+    &--result {
+        @include desktop {
+            background-image: url("/images/result-header.png");
+            background-position-y: calc(50% - 30px);
+            background-position-x: calc(100% + 630px);
+
+            @include large-desktop {
+                background-position-x: calc(50% + 710px);
+            }
+        }
+
+        @include tablet {
+            background-image: url("/images/result-header.png");
+            background-position-y: calc(50% - 30px);
+            background-position-x: calc(100% + 740px);
+        }
+    }
+
+    &--racecard {
+        @include desktop {
+            background-image: url("/images/race-index-header-red.png");
+            background-position-x: calc(100% - 38px);
+            background-size: 400px;
+
+            @include large-desktop {
+                background-position-x: calc(50% + 400px);
+            }
+        }
+
+        @include tablet {
+            background-image: url("/images/race-index-header-red.png");
+            background-position-x: calc(100% - 38px);
+            background-size: 400px;
+        }
+
+        @include mobile {
+            background-color: $super-light-grey;
+        }
+    }
+
+    &__heading {
+        position: relative;
+        line-height: normal;
+
+        @include tablet {
+            max-width: 60%;
+            display: flex;
+            flex-direction: row;
+            top: 23px;
+            left: -8px;
+        }
+
+        @include desktop {
+            max-width: 60%;
+            display: flex;
+            flex-direction: row;
+            top: 23px;
+            left: -8px;
+        }
+
+        @include mobile {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__upper-race-info {
+        display: flex;
+        position: relative;
+
+        @include desktop {
+            top: 14px;
+            margin-bottom: 17px;
+        }
+
+        @include tablet {
+            top: 14px;
+            margin-bottom: 17px;
+        }
+    }
+
+    &__bottom-race-info {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        @include desktop {
+            height: 34px;
+            margin-bottom: 17px;
+        }
+
+        @include tablet {
+            height: 34px;
+            margin-bottom: 17px;
+        }
+
+        @include mobile {
+            margin-top: 6px;
+        }
+    }
+
+    &__logo {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: -10px;
+        left: -5px;
+
+        @include mobile {
+            width: 10px;
+            height: 10px;
+            top: -2px;
+            left: -3px;
+        }
+    }
+
+    &__content-container {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        align-items: baseline;
+        justify-content: space-between;
+
+        @include desktop {
+            padding: 0 8px;
+
+            @include large-desktop {
+                max-width: $breakpoint-desktop-m;
+            }
+        }
+
+        @include mobile {
+            border-bottom: 1px solid $mid-grey;
+
+            .race-header--result & {
+                background-color: $light-grey;
+                background-image: url("/images/result-header-mobile.png");
+                background-repeat: no-repeat;
+                background-position-x: calc(50% + 300px);
+                background-position-y: center;
+                background-size: 500px auto;
+                max-width: $breakpoint-tablet-m;
+
+                @include all-mobile-tbr {
+                    background-position-x: calc(100% + 310px);
+                }
+            }
+
+            .race-header--racecard & {
+                background-color: $super-light-grey;
+                background-image: url("/images/race-index-header-red-mobile.png");
+                background-repeat: no-repeat;
+                background-position-x: 100%;
+                max-width: $breakpoint-tablet-m;
+                background-size: auto 140px;
+            }
+        }
+    }
+
+    &__content-main {
+        @include desktop {
+            width: 100%;
+            display: flex;
+            flex-flow: column wrap;
+
+            @media only screen and (max-width: $breakpoint-desktop-m + 68px) {
+                margin-left: 28px;
+            }
+        }
+
+        @include tablet {
+            position: relative;
+            margin-left: 36px;
+            width: 100%;
+            display: flex;
+            flex-flow: column wrap;
+        }
+
+        @include mobile {
+            width: 100%;
+            margin: 0 auto;
+            padding: 15px 16px 6px;
+            position: relative;
+
+            @include all-but-mobile-tbr {
+                width: $breakpoint-tablet-xs;
+            }
+        }
+    }
+
+    &__race-title {
+        font-family: $font-family;
+        line-height: normal;
+
+        @include tablet {
+            max-width: 40%;
+            font-size: 14px;
+            align-items: center;
+            display: flex;
+        }
+
+        @include desktop {
+            max-width: 40%;
+            font-size: 14px;
+            align-items: center;
+            display: flex;
+        }
+
+        @include mobile {
+            font-size: 12px;
+            display: flex;
+            margin-top: 10px;
+            max-width: 70%;
+        }
+    }
+
+    &__date {
+        font-family: $font-family-semibold;
+        text-transform: uppercase;
+        position: relative;
+
+        @include tablet {
+            font-size: 16px;
+            margin-left: 16px;
+            width: 255px;
+            top: -6px;
+        }
+
+        @include desktop {
+            font-size: 16px;
+            margin-left: 16px;
+            width: 255px;
+            top: -6px;
+        }
+
+        @include mobile {
+            font-size: 12px;
+            margin-left: 7px;
+            font-weight: lighter;
+        }
+    }
+
+    &__card-text {
+        font-family: $font-family-bold;
+        text-transform: uppercase;
+
+        @include desktop {
+            position: relative;
+            font-size: 16px;
+            left: 7px;
+            top: -6px;
+        }
+
+        @include tablet {
+            position: relative;
+            font-size: 16px;
+            left: 7px;
+            top: -6px;
+        }
+
+        @include mobile {
+            position: relative;
+            font-size: 12px;
+            margin-left: 4px;
+        }
+    }
+
+    &__name {
+        font-family: $font-family-bold;
+        font-size: 32px;
+
+        @include desktop {
+            margin-right: 19px;
+        }
+
+        @include tablet {
+            margin-right: 19px;
+        }
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+
+    &__time {
+        font-family: $font-family-bold;
+        font-size: 32px;
+        margin-right: 8px;
+
+        @include mobile {
+            font-size: 20px;
+            margin-right: 7px;
+        }
+    }
+
+    &__surface-code {
+        font-family: $font-family-bold;
+        font-size: 32px;
+
+        @include desktop {
+            margin-right: 30px;
+        }
+
+        @include tablet {
+            margin-right: 30px;
+        }
+
+        @include mobile {
+            font-size: 26px;
+            margin-left: 7px;
+        }
+    }
+
+    &__details-container {
+        @include tablet-desktop {
+            display: flex;
+            position: relative;
+            background: $white;
+            bottom: -2px;
+            margin: 0 auto;
+            border-bottom: 1px solid $mid-grey;
+            border-top: 1px solid $mid-grey;
+        }
+
+        @include mobile {
+            position: relative !important;
+            top: inherit !important;
+            margin: 0 auto !important;
+            padding: 12px 0;
+            background: $white;
+            border-radius: 4px;
+            border-bottom: 1px solid $mid-grey;
+
+            @include all-mobile-tbr {
+                border-radius: 0 !important;
+            }
+        }
+    }
+
+    &__details-main {
+        width: 100%;
+        display: flex;
+        padding: 14px 0;
+
+        @include desktop {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        @include tablet {
+            margin-left: 36px;
+        }
+    }
+
+    &__stream-container {
+        margin: 0 20px 0 5px;
+    }
+
+    &__countdown-container {
+        margin-right: 12px;
+    }
+
+    &__details {
+        display: flex;
+        flex: 1;
+        flex-flow: row wrap;
+        margin: 0 auto;
+
+        @include desktop {
+            @include large-desktop {
+                max-width: $breakpoint-desktop-m;
+            }
+
+            @media only screen and (max-width: $breakpoint-desktop-m + 68px) {
+                margin-left: 28px;
+            }
+
+            .race-header--result & {
+                margin: 0 20px 0 15px;
+            }
+        }
+
+        @include tablet {
+            .race-header--result & {
+                margin: 0 20px 0 15px;
+            }
+        }
+
+        @include mobile {
+            max-width: 480px;
+            padding: 0 16px;
+        }
+    }
+
+    &__streams {
+        margin: 0 20px 0 5px;
+    }
+
+    &__streams-label {
+        font: 14px $font-family;
+        margin-right: 4px;
+        white-space: nowrap;
+        color: $black;
+    }
+
+    &__streams-value {
+        font: 14px/17px $font-family-bold;
+        height: 17px;
+        color: $black;
+    }
+
+    &__streams-icon {
+        margin-left: 0;
+    }
+
+    &__weather {
+        align-items: center;
+        top: 6px;
+    }
+
+    &__distance-class-rated {
+        display: flex;
+
+        div {
+            margin-right: 4px;
+
+            // NOTE: adding the !important since otherwise the css
+            // from nth-child below overwrites the width
+            width: auto !important;
+        }
+
+        .race-header--result & {
+            width: 24%;
+
+            @include tablet {
+                width: 22%;
+            }
+        }
+
+        .race-header--racecard & {
+            width: 33%;
+
+            @include tablet {
+                width: 39%;
+            }
+        }
+    }
+}

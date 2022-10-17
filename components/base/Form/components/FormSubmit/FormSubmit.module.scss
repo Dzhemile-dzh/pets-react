@@ -1,0 +1,28 @@
+.form-submit {
+    width: 100%;
+    height: 48px;
+    font-family: $font-family-bold;
+    font-size: 18px;
+    color: $white;
+    border-radius: 3px;
+    border-color: none;
+    border-width: 0;
+    background-color: $brand-primary;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $brand-primary-hover;
+    }
+
+    &:active {
+        background-color: $brand-primary-active;
+    }
+
+    &:disabled {
+        background-color: $mid-grey;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

@@ -1,0 +1,39 @@
+.free-bet-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    margin: 0 19px;
+    font-family: $font-family-semibold;
+
+    &:not(:last-child) {
+        border-bottom: solid 1px $mid-grey;
+    }
+
+    &__amount {
+        color: $fast-orange-darker;
+        font-size: 14px;
+    }
+
+    &__expire {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__expire-date {
+        color: $dark-grey;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    &__expire-soon {
+        display: flex;
+        align-items: center;
+        color: $brand-primary;
+        font-size: 12px;
+        padding-top: 2px;
+    }
+
+    &__expire-soon-label {
+        padding-left: 4px;
+    }
+}

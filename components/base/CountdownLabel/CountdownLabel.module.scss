@@ -1,0 +1,57 @@
+.countdown-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+    height: 27px;
+    border-radius: 3px;
+
+    &__text {
+        font-family: $font-family-semibold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        text-align: center;
+        min-width: 68px;
+        margin: 0 auto;
+    }
+
+    &--upcoming {
+        color: $white;
+        background-color: $beacon-blue-darker;
+        border-left: 6px solid $beacon-blue;
+        border-right: 1px solid $beacon-blue-darkest;
+        border-bottom: 1px solid $beacon-blue-darkest;
+    }
+
+    &--result, &--void {
+        color: $black;
+        background-color: $countdown-label-grey;
+        border-right: 1px solid $mid-grey;
+        border-bottom: 1px solid $mid-grey;
+        border-left: 6px solid $brand-primary;
+    }
+
+    &--fast-results {
+        color: $black;
+        background-color: $countdown-label-grey;
+        border-left: 6px solid $fast-orange;
+        border-right: 1px solid $mid-grey;
+        border-bottom: 1px solid $mid-grey;
+        padding: 0 5px;
+        min-width: 100px;
+    }
+
+    &--next-off {
+        color: $white;
+        background-color: $go-green-darker;
+        border-right: 1px solid $go-green-darkest;
+        border-bottom: 1px solid $go-green-darkest;
+        border-left: 6px solid $go-green;
+    }
+
+    .detail__primary-group & {
+        left: -4px;
+    }
+}

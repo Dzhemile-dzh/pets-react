@@ -1,0 +1,35 @@
+.race-element {
+    width: 45px;
+    height: 28px;
+    color: $black;
+    font-family: $font-family-semibold;
+    border-radius: 3px;
+    border: 1px solid $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+
+    &--result {
+        border-left: 4px solid $brand-primary;
+    }
+
+    &--selected {
+        color: $white;
+        background-color: $black;
+    }
+
+    &--abandoned {
+        color: $grey;
+        background-color: $light-grey;
+        border: 1px solid $grey;
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+    }
+
+    & span {
+        font-family: $font-family-semibold;
+        font-size: 12px;
+    }
+}

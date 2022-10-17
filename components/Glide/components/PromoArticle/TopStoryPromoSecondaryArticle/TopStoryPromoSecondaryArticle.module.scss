@@ -1,0 +1,55 @@
+.top-story-secondary-promo-article {
+    flex-grow: 1;
+    height: 515px;
+    position: relative;
+
+    @include small-desktop {
+        height: 370px;
+    }
+
+    &__image-container {
+        height: 100%;
+
+        >img {
+            height: 100%;
+        }
+    }
+
+    &__content {
+        height: auto;
+        width: 100%;
+        background-color: $black-opacity-90;
+        padding: 12px 24px 18px 16px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    &__headline {
+        font-family: $font-utopia;
+        font-size: 36px;
+        line-height: 1.11;
+        color: $white;
+
+        @include small-desktop {
+            font-size: 28px;
+            line-height: 1.14;
+        }
+    }
+
+    &__taxonomy {
+        >div {
+            &:first-child {
+                color: $white;
+            }
+
+            &:nth-child(2) {
+                background-color: $white;
+            }
+        }
+
+        >span {
+            color: $lighter-red;
+        }
+    }
+}

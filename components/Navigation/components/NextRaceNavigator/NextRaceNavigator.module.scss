@@ -1,0 +1,168 @@
+.next-race {
+    display: flex;
+    max-width: 144px;
+    height: 40px;
+    border-radius: 4px;
+    border: solid 1px $mid-grey;
+    border-left: none;
+    align-items: center;
+
+    @include mobile {
+        border: none;
+        margin: 0 0 5px 16px;
+    }
+
+    &__link-wrapper {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__circle {
+        position: relative;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: solid 1px $white;
+        box-shadow: 0 0 4px 0 $actual-black-opacity-30;
+        top: 0;
+        margin-left: -20px;
+        left: 9px;
+        background-color: $white;
+        z-index: 2;
+
+        @include mobile {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__circle-outer * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 8px solid;
+        border-color: transparent $mid-grey transparent transparent;
+
+        @include mobile {
+            width: 38px;
+            height: 38px;
+        }
+
+        &:first-child {
+            transform: rotate(-135deg);
+        }
+
+        &:nth-child(2) {
+            transform: rotate(-45deg);
+            border-color: transparent $brand-primary transparent transparent;
+        }
+
+        &:nth-child(3) {
+            transform: rotate(0);
+            border-color: transparent $brand-primary transparent transparent;
+            z-index: 2;
+        }
+
+        &:nth-child(4) {
+            transform: rotate(45deg);
+        }
+
+        &:nth-child(5) {
+            transform: rotate(135deg);
+        }
+    }
+
+    &__circle-inner {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        left: 14px;
+        top: 13px;
+
+        @include mobile {
+            width: 21px;
+            height: 21px;
+        }
+
+        svg {
+            margin-left: 4px;
+            margin-top: 2px;
+        }
+    }
+
+    &__link-container {
+        width: 89px;
+        height: 32px;
+        border-radius: 3px 0 0 3px;
+        background-color: $brand-primary;
+        display: flex;
+
+        @include mobile {
+            border-radius: 3px;
+            width: 63px;
+        }
+    }
+
+    &__link-text {
+        margin-left: 18px;
+        margin-top: 6px;
+        font-family: $font-family-semibold;
+        color: $white;
+        font-size: 12px;
+
+        @include mobile {
+            margin-top: auto;
+            margin-bottom: auto;
+            line-height: 1;
+        }
+    }
+
+    &__dropdown {
+        width: 28px;
+        height: 32px;
+        border-radius: 0 4px 4px 0;
+        background-color: $black;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 4px;
+    }
+
+    &__dropdown-icon {
+        &--opened {
+            transform: rotate(180deg);
+        }
+
+        fill: $mid-grey;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__wrapper-tooltip {
+        max-width: 320px !important;
+        max-height: 210px !important;
+        padding: 0 !important;
+        margin: 18px 0 0 -2px !important;
+    }
+
+    &__wrapper-arrow {
+        left: 190px;
+        width: 3em !important;
+        height: 1.61em !important;
+
+        &--popper[x-placement*="bottom"] & {
+            margin-top: -1.46em !important;
+            margin-left: 11px !important;
+
+            &::before {
+                background-color: $white !important;
+                border: solid 1px $mid-grey !important;
+            }
+        }
+    }
+}

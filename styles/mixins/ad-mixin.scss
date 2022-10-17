@@ -1,0 +1,21 @@
+@mixin glide-ad-mixin {
+    border-top: 1px solid $mid-grey;
+    border-bottom: none !important;
+    height: 100%;
+
+    &__label {
+        font-family: $font-family;
+        font-size: 12px;
+        line-height: 1.83;
+        text-align: left;
+        color: $black;
+        display: block;
+    }
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        border: solid 1px $mid-grey;
+        background-color: $white;
+    }
+}

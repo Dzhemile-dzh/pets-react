@@ -1,0 +1,12 @@
+@import "styles/mixins/text-limit-with-dots-mixin";
+
+.tooltip {
+    box-shadow: 0 0 16px 1px $actual-black-opacity-20 !important;
+    border: solid 1px $mid-grey !important;
+    background-color: $light-grey !important;
+    color: inherit !important;
+
+    ::before {
+        background-color: $light-grey !important;
+    }
+}

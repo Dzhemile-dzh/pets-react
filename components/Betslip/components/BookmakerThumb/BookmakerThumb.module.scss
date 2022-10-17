@@ -1,0 +1,48 @@
+@import "styles/mixins/color-mixin";
+
+.bs-bookmaker-thumb {
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--small {
+        height: 32px;
+        width: 58px;
+
+        & svg {
+            width: 80%;
+            height: 80%;
+        }
+    }
+
+    &--large {
+        height: 40px;
+        width: 88px;
+
+        & svg {
+            width: 88px;
+        }
+    }
+
+    &--x-large {
+        height: 64px;
+        width: 102px;
+
+        & svg {
+            width: 88%;
+            height: 88%;
+        }
+    }
+
+    &--auto {
+        width: auto;
+        height: auto;
+
+        & svg {
+            width: auto;
+        }
+    }
+
+    @include bookmaker-color-modifiers;
+}

@@ -1,0 +1,16 @@
+.form-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $brand-primary;
+    font-size: 14px;
+    font-family: $font-family-semibold;
+
+    & svg path {
+        color: $brand-primary;
+    }
+
+    &__message {
+        margin-left: 4px;
+    }
+}

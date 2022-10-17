@@ -1,0 +1,58 @@
+.breaking-news-promo-article {
+    display: flex;
+    background-color: $brand-primary;
+    color: $white;
+    min-height: 200px;
+
+    @include mobile {
+        min-height: 130px;
+        padding: 16px 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 16px;
+
+        @include mobile {
+            padding: 0 8px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__header-icon {
+        display: flex;
+    }
+
+    &__header-title {
+        text-transform: uppercase;
+        font-size: 14px;
+        padding-left: 12px;
+        font-family: $font-family-bold;
+
+        @include mobile {
+            font-size: 12px;
+            padding-left: 4px;
+        }
+    }
+
+    &__headline {
+        font-family: $font-utopia-semibold;
+        font-weight: normal;
+        font-size: 24px;
+        margin: 0;
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+
+    &__primary-taxonomy {
+        color: $white;
+    }
+}

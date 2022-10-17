@@ -1,0 +1,130 @@
+.radio-button {
+    &__label {
+        font-family: $font-family-semibold !important;
+        font-size: 14px !important;
+        color: $black !important;
+    }
+
+    &__option:first-child {
+        margin-bottom: 16px;
+    }
+
+    .option-control {
+        height: 20px;
+
+        &__label {
+            // NOTE: adding !important in order to override
+            // style from mUI checkbox group
+            font-family: $font-family !important;
+        }
+    }
+}
+
+.customisation-panel-radio-button {
+    padding-top: 6px;
+
+    &__container {
+        padding: 15px 16px 25px;
+
+        @include mobile {
+            padding: 20px 16px 8px;
+        }
+    }
+
+    &--horizontal {
+        // NOTE: adding !important in order to override
+        // style from mUI checkbox group
+        flex-direction: row !important;
+        padding-top: 18px;
+
+        .option-control {
+            height: 32px;
+
+            &__label {
+                // NOTE: adding !important in order to override
+                // style from mUI checkbox group
+                font-family: $font-family !important;
+                color: $black;
+            }
+        }
+    }
+
+    &--vertical .option-control {
+        height: 32px;
+
+        &__label {
+            color: $black;
+
+            @include mobile {
+                // NOTE: adding !important in order to override
+                // style from mUI checkbox group
+                font-family: $font-family-semibold !important;
+            }
+        }
+    }
+
+    &__label {
+        text-transform: uppercase;
+    }
+
+    &__children {
+        padding: 8px 0 4px 27px;
+    }
+
+    &__description {
+        padding-bottom: 8px;
+        display: block;
+    }
+
+    &__option:first-child {
+        margin-bottom: 0;
+    }
+}
+
+.free-bets-modal-radio-button {
+    flex-wrap: nowrap !important;
+    overflow-y: auto;
+    padding-top: 16px;
+    max-height: 225px;
+
+    @include landscape-large {
+        max-height: 200px;
+    }
+
+    @include landscape-medium {
+        max-height: 160px;
+    }
+
+    @include landscape-small {
+        max-height: 120px;
+    }
+
+    &__option {
+        display: flex;
+        flex-direction: column-reverse;
+
+        &:first-child {
+            margin-bottom: 0;
+        }
+
+        &:not(&:first-child) {
+            margin-top: 27px;
+        }
+
+        >label {
+            margin-left: 0;
+
+            >span {
+                &:first-child {
+                    padding: 0 8px 0 0;
+                }
+
+                &:last-child {
+                    font-family: $font-family-semibold;
+                    font-size: 14px;
+                    color: $black;
+                }
+            }
+        }
+    }
+}

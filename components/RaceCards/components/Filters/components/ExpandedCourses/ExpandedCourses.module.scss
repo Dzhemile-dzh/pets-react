@@ -1,0 +1,86 @@
+.expanded-courses {
+    overflow-x: auto;
+    display: block;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 0 8px;
+
+    @include large-desktop {
+        max-width: 1280px;
+        padding: 0;
+    }
+
+    @include all-mobile-tbr {
+        flex-wrap: wrap;
+    }
+
+    @include small-tablet-tbr {
+        flex-wrap: wrap;
+    }
+
+    &__item-label {
+        font-family: $font-family-semibold;
+        color: $dark-grey;
+        font-size: 12px;
+        text-transform: uppercase;
+        padding: 8px 8px 8px 0;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid $mid-grey;
+        border-radius: 3px;
+        cursor: pointer;
+
+        &--selected {
+            background-color: $black;
+
+            .expanded-courses {
+                &__item-label {
+                    color: $white;
+                }
+            }
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:not(:active):not(:disabled):not(&--selected):hover {
+                border-color: $black;
+
+                .expanded-courses {
+                    &__item-label {
+                        color: $black;
+                    }
+
+                    &__checkbox {
+                        border-color: $black;
+                    }
+                }
+            }
+        }
+    }
+
+    &__item-wrapper {
+        display: inline-block;
+        padding-bottom: 8px;
+        margin-right: 8px;
+    }
+
+    &__checkbox {
+        background: $white;
+        width: 15px;
+        height: 15px;
+        margin: 8px;
+        border-radius: 3px;
+        display: inline;
+        flex-direction: row;
+        align-items: inherit;
+        justify-content: center;
+        border: 1px solid $mid-grey;
+    }
+
+    &__svg-icon {
+        display: flex;
+    }
+}

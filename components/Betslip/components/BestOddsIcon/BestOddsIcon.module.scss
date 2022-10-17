@@ -1,0 +1,20 @@
+.bs-best-odds-icon {
+    position: relative;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -5px;
+        width: 14px;
+        height: 9px;
+        border-radius: 3px;
+        background-color: $brand-primary;
+    }
+}

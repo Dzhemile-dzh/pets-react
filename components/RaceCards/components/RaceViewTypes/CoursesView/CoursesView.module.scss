@@ -1,0 +1,182 @@
+@import "styles/mixins/text-limit-with-dots-mixin";
+
+.course-view {
+    &__meeting-going-details {
+        font-family: $font-family;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.14;
+        color: $black;
+
+        @include mobile {
+            flex-grow: 1;
+            font-size: 12px;
+        }
+
+        >span {
+            text-transform: uppercase;
+
+            @include mobile {
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    &__meeting {
+        @include text-limit-with-dots;
+
+        max-width: 95%;
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+
+        @include mobile {
+            max-width: 90%;
+            display: inline-block;
+        }
+
+        &--abandoned {
+            justify-content: space-between;
+            max-width: 100%;
+
+            >span {
+                font-family: $font-family-semibold;
+                font-size: 16px;
+                line-height: 1.13;
+                text-transform: uppercase;
+                color: $black;
+
+                @include mobile {
+                    font-size: 12px;
+                    color: $darker-grey;
+                }
+            }
+        }
+
+        >h4 {
+            text-transform: uppercase;
+            color: $dark-grey;
+            font-size: 24px;
+            font-family: $font-family-semibold;
+
+            @include mobile {
+                font-size: 16px;
+                color: $black;
+            }
+        }
+
+        &--details {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            margin-left: 20px;
+
+            @include mobile {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                justify-content: flex-start;
+                margin-left: 0;
+            }
+
+            >span {
+                font-family: $font-family;
+                font-size: 14px;
+
+                &:first-child {
+                    line-height: 1.43;
+                    display: inline-flex;
+                    align-items: center;
+                    color: $dark-grey;
+                }
+
+                &:last-child {
+                    line-height: 1.14;
+                    color: $black;
+                    margin-left: auto;
+
+                    @include mobile {
+                        margin-left: 0;
+                    }
+                }
+
+                @include mobile {
+                    font-size: 12px;
+
+                    & + p {
+                        margin-top: 3px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__meeting-weather {
+        display: flex;
+        align-items: center;
+        min-width: 0;
+        top: initial;
+        margin-left: 3px;
+        font-family: $font-family;
+
+        >div {
+            margin-right: 5px;
+        }
+    }
+
+    &__meeting-additional-info {
+        padding: 4px 8px;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+
+        @include large-desktop {
+            max-width: 1280px;
+        }
+
+        @include mobile {
+            max-width: 472px;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            padding: 4px 16px;
+        }
+
+        >p + p {
+            margin-left: 16px;
+
+            @include mobile {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__meeting-non-runners {
+        min-height: 32px;
+        min-width: 130px;
+        background-color: $white;
+        border: 1px solid $mid-grey;
+        border-radius: 3px;
+        font-family: $font-family-semibold;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: $black;
+        padding: 0 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile {
+            max-width: 40%;
+            min-width: 120px;
+            font-size: 12px;
+        }
+    }
+
+    &__accordion-header {
+        background-color: $white;
+    }
+
+    &__accordion-button {
+        border: none;
+    }
+}

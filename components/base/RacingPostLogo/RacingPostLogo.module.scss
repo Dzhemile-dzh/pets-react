@@ -1,0 +1,35 @@
+.racing-post-logo {
+    &__letter {
+        &--black {
+            fill: $black;
+        }
+
+        &--red {
+            fill: $brand-primary-logo;
+        }
+
+        &--white {
+            fill: $white;
+        }
+    }
+
+    &__header {
+        height: 32px;
+        padding: 0.5rem 0 !important;
+        margin-right: 2rem;
+
+        @include mobile {
+            margin-right: 0;
+        }
+
+        svg {
+            width: 180px;
+            height: 20px;
+
+            @include mobile {
+                width: 102px;
+                height: 11px;
+            }
+        }
+    }
+}

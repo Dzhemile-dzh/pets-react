@@ -1,0 +1,20 @@
+.show-more-button {
+    border: none;
+    background: none;
+    text-align: center;
+    font-family: $font-family-semibold;
+    color: $brand-primary;
+    cursor: pointer;
+
+    &__icon {
+        margin-left: 4px;
+
+        &--opened {
+            transform: rotate(180deg);
+        }
+    }
+
+    &--not-focused {
+        outline: none;
+    }
+}

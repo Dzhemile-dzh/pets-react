@@ -1,0 +1,24 @@
+[
+  {
+    "cpu": ${FARGATE_CPU},
+  "image": "${DOCKER_IMAGE_NAME}",
+  "memory": ${FARGATE_MEMORY},
+  "name": "${APP_NAME}",
+  "networkMode": "awsvpc",
+  "portMappings": [
+  {
+    "containerPort": 8080,
+    "hostPort": 8080
+  }
+],
+  "logConfiguration": {
+  "logDriver": "awslogs",
+  "options": {
+    "awslogs-group": "${ENVIRONMENT}-${APP_NAME}",
+    "awslogs-region": "eu-west-1",
+    "awslogs-stream-prefix": "${ENVIRONMENT}-${APP_NAME}"
+  }
+},
+  "secrets": SECRET_PLACEHOLDER
+  }
+]

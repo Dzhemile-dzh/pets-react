@@ -1,0 +1,45 @@
+.filters-draw {
+    position: fixed;
+    bottom: 0;
+    z-index: 1001;
+    background-color: $white;
+    padding: 8px 8px 6px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+
+    @include small-tablet-tbr {
+        max-width: 472px;
+        left: 50%;
+        margin-left: calc(-472px / 2);
+    }
+
+    hr {
+        margin: 0 91px 15px;
+        border-radius: 2px;
+        border: 2.5px solid $dark-grey;
+        background-color: $dark-grey;
+    }
+
+    &__toggle {
+        margin-bottom: 16px;
+    }
+
+    &__apply-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    &__slide-toggle {
+        margin-bottom: 24px;
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__slide-toggle-button {
+        flex: 1 0 auto;
+        width: auto;
+    }
+}

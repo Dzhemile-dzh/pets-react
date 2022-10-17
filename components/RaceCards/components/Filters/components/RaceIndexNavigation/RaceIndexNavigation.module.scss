@@ -1,0 +1,51 @@
+.race-index-navigation {
+    @include desktop {
+        max-width: $breakpoint-desktop-m;
+        margin: 0 auto;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 8px;
+
+        @include desktop {
+            flex-wrap: nowrap;
+        }
+
+        @include tablet {
+            flex-wrap: nowrap;
+        }
+
+        @include large-desktop {
+            max-width: $breakpoint-desktop-m;
+            padding: 0;
+        }
+    }
+
+    &__item {
+        margin-right: 8px;
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include desktop {
+            margin-bottom: 0;
+        }
+
+        @include tablet {
+            margin-bottom: 0;
+        }
+    }
+
+    &__choose-date {
+        @include mobile {
+            color: $black;
+            margin: 0 8px;
+            width: calc(100% - 16px);
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,294 @@
+.my-bets {
+    &__content {
+        padding: 20px 8px 0;
+    }
+
+    &__login {
+        font-family: $font-family-semibold;
+        border-radius: 3px;
+        box-shadow: 0 2px 6px 1px $actual-black-opacity-10;
+        border: solid 1px $mid-grey;
+        font-size: 16px;
+        padding: 16px;
+    }
+
+    &__login-warning-container {
+        padding-bottom: 8px;
+
+        @include tablet {
+            padding-bottom: 25px;
+            padding-right: 10px;
+        }
+    }
+
+    &__login-warning-text {
+        font-family: $font-family-semibold;
+        font-size: 15px;
+        line-height: 1.4;
+        letter-spacing: -0.2px;
+        color: $black;
+        width: 300px;
+        margin-left: auto;
+
+        @include tablet {
+            width: 225px;
+        }
+    }
+
+    &__login-link {
+        margin-top: 20px;
+        font-family: $font-family-semibold;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $brand-primary;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    &__login-link-svg {
+        width: 6px;
+        height: 9px;
+        fill: $brand-primary;
+        transform: rotate(-90deg);
+        margin-left: 5px;
+    }
+
+    &__date {
+        font-family: $font-family-semibold;
+        color: $black;
+        text-transform: uppercase;
+        font-size: 14px;
+
+        @include desktop {
+            padding: 16px 0;
+        }
+
+        @include tablet {
+            padding: 16px 0;
+        }
+
+        @include mobile {
+            font-size: 16px;
+            margin-top: 19px;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__loader {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.my-bets-header {
+    background-color: $light-grey;
+    padding: 55px 70px 15px;
+    display: flex;
+    align-items: flex-end;
+    min-height: 185px;
+
+    @include tablet {
+        padding: 18px 15px 20px 20px;
+        min-height: 160px;
+    }
+
+    @include mobile {
+        padding: 20px 15px;
+        min-height: initial;
+        box-shadow: 0 1px 0 0 $actual-black-opacity-10;
+        display: block;
+    }
+
+    &__title {
+        position: relative;
+
+        @include tablet {
+            margin-left: 32px;
+        }
+
+        @include mobile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 16px;
+            font-family: $font-family-semibold;
+
+            svg {
+                vertical-align: middle;
+            }
+        }
+
+        >svg {
+            position: absolute;
+            width: 47px;
+            height: 47px;
+            top: -16px;
+            left: -30px;
+        }
+
+        >h1 {
+            font-family: $font-family-semibold;
+            font-size: 32px;
+            color: $black;
+        }
+    }
+
+    &__title-back-button {
+        @include mobile {
+            display: flex;
+        }
+    }
+
+    &__title-text {
+        @include mobile {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+
+            svg {
+                margin-right: 22px;
+            }
+        }
+    }
+
+    &__filters {
+        display: inline-flex;
+        margin-top: 20px;
+        width: 100%;
+        position: relative;
+
+        @include mobile {
+            padding: 8px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__left-side {
+        width: 65%;
+
+        @include small-desktop {
+            width: 55%;
+        }
+
+        @include tablet {
+            width: 60%;
+        }
+    }
+
+    &__right-side {
+        width: 35%;
+        position: relative;
+        text-align: right;
+
+        @include small-desktop {
+            width: 45%;
+        }
+
+        @include tablet {
+            width: 40%;
+        }
+    }
+
+    &__additional-actions {
+        text-align: left;
+
+        @include desktop {
+            >a {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+
+    &__manage-bookmakers {
+        font-family: $font-family-semibold;
+        color: $brand-primary;
+        font-size: 16px;
+        line-height: 1.5;
+
+        >svg {
+            fill: $brand-primary;
+            width: 9px;
+            height: 9px;
+            transform: rotate(270deg);
+            margin-left: 6px;
+        }
+    }
+
+    &__filter-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__slide-toggle {
+        width: auto;
+
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+}
+
+.my-bets-body {
+    padding: 0 72px;
+
+    @include tablet {
+        padding: 0 15px 0 20px;
+    }
+
+    @include mobile {
+        padding: 0 15px;
+    }
+
+    &__logged-in {
+        margin: 20px 0;
+    }
+
+    &__not-logged-in, &__no-content {
+        margin-top: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 165px;
+        border-radius: 3px;
+        border: solid 1px $mid-grey;
+
+        @include tablet {
+            margin-top: 15px;
+        }
+
+        @include mobile {
+            padding: 0 15px;
+        }
+
+        >p {
+            font-family: $font-family-semibold;
+            font-size: 16px;
+            line-height: 1.31;
+            letter-spacing: -0.21px;
+        }
+    }
+
+    &__login-link {
+        font: inherit;
+        color: $brand-primary;
+
+        >svg {
+            width: 9px;
+            height: 9px;
+            fill: $brand-primary;
+            transform: rotate(270deg);
+            margin-left: 5px;
+        }
+    }
+}

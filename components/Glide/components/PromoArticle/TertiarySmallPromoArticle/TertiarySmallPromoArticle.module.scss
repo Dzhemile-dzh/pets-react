@@ -1,0 +1,38 @@
+.tertiary-small-promo-article {
+    display: flex;
+    flex-direction: row;
+    min-height: 83px;
+    width: 100%;
+    border-top: 1px solid $mid-grey;
+    padding: 12px 0;
+
+    &__image-container {
+        width: 155px;
+    }
+
+    &__content {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: calc(100% - 155px);
+        padding-left: 16px;
+
+        @include mobile {
+            padding-left: 8px;
+        }
+    }
+
+    &__headline {
+        font-family: $font-utopia;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        color: $black;
+        margin: 0;
+
+        @include mobile {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}

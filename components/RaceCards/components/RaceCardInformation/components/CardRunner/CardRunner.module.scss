@@ -1,0 +1,127 @@
+.card-runner {
+    width: 50%;
+    display: inline-flex;
+    align-items: center;
+    background-color: $super-light-grey;
+    padding: 0 8px 3px 12px;
+
+    @include small-desktop {
+        width: 52%;
+    }
+
+    @include tablet {
+        width: 52%;
+        padding: 0 8px 3px 5px;
+    }
+
+    @include mobile {
+        width: 100%;
+        height: 35px;
+        padding: 5px 8px;
+    }
+
+    &__silk {
+        max-width: 39px;
+        margin-top: 5px;
+
+        @include mobile {
+            max-width: 27px;
+            margin-top: 0;
+        }
+    }
+
+    &__details {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-grow: 1;
+        position: relative;
+
+        @include mobile {
+            align-items: center;
+        }
+    }
+
+    &__info {
+        font-family: $font-family-semibold;
+        font-size: 14px;
+        color: $black;
+        margin-left: 8px;
+
+        @include tablet {
+            font-size: 13px;
+        }
+
+        >span {
+            color: $dark-grey;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        >a {
+            color: inherit;
+        }
+    }
+
+    &__country {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-family: $font-family;
+        padding-left: 2px;
+
+        @include mobile {
+            font-size: 10px;
+        }
+    }
+
+    &__odds-historical {
+        position: absolute;
+        left: 8px;
+        top: 24px;
+        margin-top: 0 !important;
+        font-size: 12px;
+    }
+
+    &__odds-bet-button {
+        min-width: 56px;
+        height: 36px;
+        margin-top: 2px;
+        flex-direction: column;
+
+        @include mobile {
+            min-width: 48px;
+            height: 24px;
+        }
+
+        &::before {
+            height: 17px;
+            top: 2px;
+
+            @include mobile {
+                height: 14px;
+            }
+        }
+
+        >span {
+            line-height: 1;
+
+            &:first-child {
+                font-size: 14px;
+
+                @include mobile {
+                    font-size: 11px;
+                    font-family: $font-family-semibold;
+                }
+            }
+
+            &:last-child {
+                position: relative;
+                font-size: 11px;
+
+                @include mobile {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

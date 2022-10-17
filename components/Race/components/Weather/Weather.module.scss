@@ -1,0 +1,56 @@
+.weather {
+    position: relative;
+    font-family: $font-family;
+    color: $black;
+    top: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    @include mobile {
+        top: 0;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+    }
+
+    &__degrees {
+        left: 0 !important;
+        margin: 0 7px;
+    }
+
+    &__image, &__description {
+        margin-left: 5px;
+    }
+
+    @include desktop {
+        min-width: 120px;
+    }
+
+    @include tablet {
+        min-width: 120px;
+    }
+
+    @include mobile {
+        &__root {
+            position: relative;
+            font-family: $font-family;
+        }
+
+        &__degrees {
+            position: relative;
+            left: 48px;
+        }
+
+        &__icon {
+            width: 8px;
+            height: 8px;
+            fill: $brand-primary;
+            margin-left: 4px;
+
+            &--opened {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+.weather {
+    &__root {
+        position: relative;
+        font-family: $font-family-semibold;
+        color: $black;
+
+        .race-header & {
+            top: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+
+            @include mobile {
+                height: 17px;
+                top: -7px;
+            }
+        }
+    }
+
+    &__degrees {
+        .race-header & {
+            left: 0 !important;
+            margin: 0 7px;
+        }
+    }
+
+    &__image {
+        .race-header & {
+            @include mobile {
+                position: relative;
+                top: 0;
+                width: 24px;
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include desktop {
+        &__root {
+            min-width: 120px;
+        }
+    }
+
+    @include tablet {
+        &__root {
+            min-width: 120px;
+        }
+    }
+
+    @include mobile {
+        &__root {
+            position: relative;
+            font-family: $font-family-semibold;
+        }
+
+        &__image {
+            position: absolute;
+            top: -14px;
+            width: 40px;
+            margin-right: 8px;
+        }
+
+        &__degrees {
+            position: relative;
+            left: 48px;
+        }
+
+        &__icon {
+            width: 8px;
+            height: 8px;
+            fill: $brand-primary;
+            margin-left: 4px;
+
+            &--opened {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

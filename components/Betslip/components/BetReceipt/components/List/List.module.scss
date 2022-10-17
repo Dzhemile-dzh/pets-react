@@ -1,0 +1,27 @@
+.bs-bet-receipt-list {
+    display: block;
+    overflow-y: auto;
+    height: 100%;
+    flex-grow: 1;
+
+    @include mobile {
+        @media (orientation: landscape) {
+            overflow: inherit;
+            height: auto;
+        }
+
+        height: auto;
+        overflow-y: unset;
+    }
+
+    &__singles, &__multiples {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__singles-list, &__multiples-list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+}

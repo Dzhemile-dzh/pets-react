@@ -1,0 +1,69 @@
+.meeting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $mid-grey;
+    height: 56px;
+    padding: 0 16px;
+    cursor: pointer;
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__meeting-icon {
+        display: flex;
+        margin-right: 16px;
+
+        svg {
+            fill: $beacon-blue-darker;
+        }
+    }
+
+    &__meeting-title-container {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-family: $font-family-semibold;
+    }
+
+    &__meeting-offer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 8px;
+        width: 35px;
+        height: 16px;
+        padding: 0 4px;
+        border-radius: 3px;
+        background-color: $offer-mint;
+        font-size: 12px;
+        font-weight: normal;
+        letter-spacing: -0.2px;
+        color: $black;
+    }
+
+    &__icon {
+        display: flex;
+
+        svg {
+            width: 24px;
+            height: 29px;
+            padding: 9px 6px 8px;
+        }
+
+        &--collapse {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__races {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+}

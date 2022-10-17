@@ -1,0 +1,21 @@
+@mixin container {
+    margin: 0 auto;
+    width: 100%;
+
+    @include desktop {
+        max-width: $breakpoint-desktop-xs;
+    }
+}
+
+@mixin container-new-breakpoints {
+    margin: 0 auto;
+    width: 100%;
+
+    @include large-desktop {
+        max-width: $large-desktop-content;
+    }
+
+    @include small-desktop {
+        max-width: $small-desktop-content;
+    }
+}

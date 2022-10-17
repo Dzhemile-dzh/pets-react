@@ -1,0 +1,83 @@
+.bs-options-footer {
+    width: 100%;
+    box-shadow: 0 0 6px 0 $actual-black-opacity-20;
+    border-top: solid 1px $mid-grey;
+    background-color: $super-light-grey;
+    padding: 8px 8px 23px;
+
+    &__main {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        width: 100%;
+    }
+
+    &__secondary {
+        width: 100%;
+
+        button {
+            margin-top: 15px;
+        }
+    }
+
+    &__place-bet-button, &__accept-odds-button {
+        margin: 0 auto;
+        width: 100%;
+        font-size: 20px;
+        justify-content: center;
+    }
+
+    &__main-group-label {
+        display: flex;
+        font-size: 12px;
+        font-family: $font-family-semibold;
+        color: $dark-grey;
+        text-transform: uppercase;
+    }
+
+    &__main-group-value {
+        display: flex;
+        font-size: 24px;
+        color: $black;
+        font-family: $font-family;
+    }
+
+    &__main-group {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        &:first-child {
+            border-right: solid 1px $mid-grey;
+        }
+
+        &:last-child {
+            .bs-options-footer__main-group-label, .bs-options-footer__main-group-value {
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    &__main-group-free-bets {
+        color: $fast-orange-darker;
+        font-family: $font-family-semibold;
+        font-size: 14px;
+        text-transform: uppercase;
+
+        >span {
+            display: inline-block;
+        }
+    }
+
+    &__est-returns-currency {
+        padding-right: 8px;
+    }
+
+    &__est-returns-value {
+        color: $beacon-blue-dark;
+
+        &--na {
+            color: $black;
+        }
+    }
+}

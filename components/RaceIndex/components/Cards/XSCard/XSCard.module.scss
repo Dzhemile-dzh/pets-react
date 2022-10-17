@@ -1,0 +1,49 @@
+@import "styles/mixins/text-limit-with-dots-mixin";
+
+.xscard {
+    display: flex;
+    position: relative;
+    width: 156px;
+    height: 90px;
+    border: solid 1px $mid-grey;
+    box-shadow: 0 2px 6px 1px $actual-black-opacity-10;
+    border-radius: 6px;
+    padding: 8px 8px 12px 0;
+    font-size: 12px;
+    cursor: pointer;
+    flex-direction: column;
+    background: $white;
+    margin-left: 5px; // because of the border 1 px + countdown left position
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        height: 27px;
+        margin-bottom: 10px;
+    }
+
+    &__countdown {
+        position: absolute;
+        left: -6px;
+    }
+
+    &__offer-icon {
+        position: relative;
+        left: 115px;
+    }
+
+    &__race-title {
+        padding-left: 8px;
+        font-size: 14px;
+        font-family: $font-family-bold;
+        display: block;
+
+        @include text-limit-with-dots;
+    }
+
+    &__race-details {
+        padding-left: 8px;
+
+        @include text-limit-with-dots;
+    }
+}

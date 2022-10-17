@@ -1,0 +1,250 @@
+.bs-multi-item {
+    padding: 15px 0 25px;
+    border-bottom: 1px solid $mid-grey;
+    list-style: none;
+
+    &__primary, &__betting, &__additional {
+        padding: 0 16px;
+    }
+
+    &__primary {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__additional {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__betting {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 16px 0 13px;
+
+        &--disabled {
+            opacity: 0.4;
+
+            input, button {
+                cursor: default;
+            }
+        }
+    }
+
+    &__bet-type > span {
+        text-transform: uppercase;
+    }
+
+    &__bet-type, &__bet-lines {
+        >span {
+            font-family: $font-family-semibold;
+            font-size: 16px;
+            color: $black;
+        }
+    }
+
+    &__odds {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        >span {
+            position: relative;
+            color: $black;
+            font-family: $font-family;
+            font-size: 12px;
+            width: 100px;
+
+            @include mobile {
+                width: 80px;
+            }
+        }
+
+        svg {
+            position: absolute;
+            top: -3px;
+            left: 53%;
+            transform: translateX(-50%);
+
+            @include mobile {
+                left: 66%;
+            }
+        }
+    }
+
+    // EW unavailable
+    &__odds-single-line {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        >span {
+            position: relative;
+            color: $black;
+            font-family: $font-family;
+            font-size: 12px;
+            margin-top: -3px;
+        }
+
+        svg {
+            position: absolute;
+            top: -3px;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__each-way-button {
+        width: 40px;
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: left;
+        margin-right: 8px;
+    }
+
+    &__additional-actions-button {
+        background-color: transparent !important;
+        color: $black !important;
+        border: none;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        font-family: $font-family-semibold;
+        font-size: 12px;
+        text-transform: uppercase;
+        padding: 4px 0;
+        cursor: pointer;
+        border-radius: 0;
+        border-bottom: 1px solid transparent !important;
+
+        &--active {
+            border-bottom: 1px solid $mid-grey !important;
+        }
+
+        >span > div {
+            margin-right: 5px !important;
+        }
+    }
+
+    &__bet-type {
+        display: flex;
+        align-items: center;
+    }
+
+    &__popover-wrapper {
+        position: relative;
+        margin-left: 10px;
+        cursor: pointer;
+
+        >span {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            color: $black;
+            background-color: $beacon-blue;
+            font-family: $font-family-semibold;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+    }
+
+    &__popover {
+        width: calc(100% - 32px);
+        padding: 16px;
+        border-radius: 3px;
+        position: absolute;
+        z-index: 10;
+        top: 32px;
+        background-color: $black;
+        font-size: 14px;
+        font-family: $font-family;
+        color: $white;
+        box-shadow: 0 0 3px 0 $actual-black-opacity-30;
+    }
+
+    &__popover-arrow::after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-top: 1px solid;
+        border-left: 1px solid;
+        background-color: $black;
+        transform: rotate(-45deg);
+        margin-top: 24px;
+        left: 1px;
+        z-index: 9;
+    }
+
+    &__best-odds-container {
+        position: relative;
+        max-width: 100px;
+    }
+
+    &__best-odds-icon {
+        position: absolute;
+        top: -3px;
+        right: 28px;
+    }
+
+    &__selection-list {
+        >ul {
+            @include mobile {
+                padding: 0 16px !important;
+            }
+
+            >li {
+                &::before {
+                    top: -32px;
+                    height: 49px;
+                }
+
+                &:first-child::before {
+                    height: 60px;
+                    top: -33px;
+
+                    @include mobile {
+                        top: -23px;
+                    }
+                }
+
+                &::after {
+                    top: 10px;
+                }
+            }
+        }
+
+        &--with-freebet {
+            >ul > li:first-child::before {
+                height: 77px;
+                top: -66px;
+
+                @include mobile {
+                    height: 67px;
+                    top: -56px;
+                }
+            }
+
+            >div::before {
+                height: 78px;
+                top: -63px;
+
+                @include mobile {
+                    height: 55px;
+                    top: -52px;
+                }
+            }
+        }
+    }
+}

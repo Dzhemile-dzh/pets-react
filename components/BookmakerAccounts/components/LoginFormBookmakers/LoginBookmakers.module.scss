@@ -1,0 +1,121 @@
+.bookmaker-login {
+    font-family: $font-family;
+    font-size: 14px;
+    line-height: 1.57;
+    color: $black;
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    box-shadow: 0 0 16px 1px $actual-black-opacity-20;
+    background-color: $light-grey;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $mid-grey;
+        min-height: 50px;
+
+        svg.close {
+            fill: $black;
+            margin-top: 13px;
+            width: 12px;
+            height: 12px;
+            cursor: pointer;
+        }
+    }
+
+    &--iframe {
+        height: 100%;
+
+        .bookmaker-login__header {
+            justify-content: flex-end;
+        }
+    }
+
+    &__username {
+        grid-column: span 2;
+        grid-row: 2;
+        margin-top: 1em;
+        line-height: 2;
+        margin-bottom: 16px;
+    }
+
+    &__password {
+        grid-column: span 2;
+        grid-row: 3;
+        line-height: 2;
+    }
+
+    &__details {
+        grid-column: span 2;
+        grid-row: 4;
+        display: flex;
+        cursor: pointer;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    &__login {
+        grid-column: span 2;
+        grid-row: 5;
+    }
+
+    &__login-button {
+        font-family: $font-family-bold;
+        font-size: 18px;
+        justify-content: center;
+        width: 100%;
+        height: 48px;
+        border-radius: 3px;
+        margin-top: 2em;
+    }
+
+    &__input {
+        width: 100%;
+        height: 48px;
+        border-radius: 3px;
+        border: solid 1px $mid-grey;
+        background-color: $white;
+        padding: 0 16px;
+        font-size: 16px;
+        line-height: 1.38;
+
+        &:focus {
+            background-color: $white !important;
+            outline: 0 !important;
+        }
+    }
+
+    &__textfield {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+
+        & svg {
+            fill: $grey !important;
+            margin-right: 0 !important;
+            position: absolute;
+            left: 90%;
+            cursor: pointer;
+        }
+
+        &:active, &:focus {
+            background-color: $white !important;
+        }
+    }
+
+    &__error {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $brand-primary;
+
+        & svg path {
+            color: $brand-primary;
+        }
+    }
+}

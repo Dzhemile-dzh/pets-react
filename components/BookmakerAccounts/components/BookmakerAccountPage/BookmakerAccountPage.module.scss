@@ -1,0 +1,244 @@
+@import "styles/mixins/text-limit-with-dots-mixin";
+@import "styles/mixins/color-mixin";
+
+$coral-logo-width: 168px;
+$ladbrokes-logo-width: 150px;
+$bet365-logo-width: 103px;
+$betway-logo-width: 103px;
+$betfair-logo-width: 143px;
+$williamhill-logo-width: 174px;
+$skybet-logo-width: 112px;
+$paddypower-logo-width: 143px;
+
+.ba-page {
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        justify-items: flex-end;
+        color: $white;
+        box-sizing: border-box;
+        padding: 15px 15px 0;
+        font-family: $font-family-semibold;
+
+        @include bookmaker-color-modifiers;
+    }
+
+    &__header-balance {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 28px;
+
+        span {
+            font-size: 14px;
+            font-family: $font-family;
+        }
+
+        span, em {
+            display: block;
+            margin: 0;
+            text-align: right;
+            font-style: normal;
+        }
+
+        &--williamhill {
+            width: calc(100% - #{$williamhill-logo-width});
+        }
+
+        &--coral {
+            width: calc(100% - #{$coral-logo-width});
+        }
+
+        &--ladbrokes {
+            width: calc(100% - #{$ladbrokes-logo-width});
+        }
+
+        &--bet365 {
+            width: calc(100% - #{$bet365-logo-width});
+        }
+
+        &--betway {
+            width: calc(100% - #{$betway-logo-width});
+        }
+
+        &--betfair {
+            width: calc(100% - #{$betfair-logo-width});
+        }
+
+        &--skybet {
+            width: calc(100% - #{$skybet-logo-width});
+        }
+
+        &--paddypower {
+            width: calc(100% - #{$paddypower-logo-width});
+        }
+    }
+
+    &__header-navigation, &__header-bookmaker-info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__header-navigation {
+        padding-bottom: 30px;
+    }
+
+    &__header-bookmaker-info {
+        padding-bottom: 3px;
+    }
+
+    &__header-back-button, &__header-logout-button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__header-back-button {
+        font-size: 18px;
+        flex: 1 0 auto;
+        width: 75%;
+
+        svg {
+            width: 14px;
+            height: 25px;
+            margin-right: 8px;
+        }
+    }
+
+    &__header-username {
+        @include text-limit-with-dots;
+
+        width: 100%;
+    }
+
+    &__header-logout-button {
+        font-size: 14px;
+        flex: 0 0 auto;
+        border: none;
+        background-color: transparent;
+        color: $white;
+        padding: 0;
+        text-transform: lowercase;
+
+        &:hover {
+            background-color: transparent !important;
+        }
+    }
+
+    &__header-logout-button-svg {
+        margin-right: 6px;
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__header-bookmaker-thumb {
+        &--skybet svg {
+            width: $skybet-logo-width;
+            height: 33px;
+        }
+
+        &--ladbrokes svg {
+            width: $ladbrokes-logo-width;
+            height: 33px;
+        }
+
+        &--williamhill svg {
+            width: $williamhill-logo-width;
+            height: 33px;
+        }
+
+        &--betfair svg {
+            width: $betfair-logo-width;
+            height: 39px;
+        }
+
+        &--coral svg {
+            width: $coral-logo-width;
+            height: 33px;
+        }
+
+        &--paddypower svg {
+            width: $paddypower-logo-width;
+            height: 33px;
+        }
+
+        &--bet365 {
+            width: $bet365-logo-width;
+            height: 33px;
+        }
+
+        &--888sport {
+            width: $paddypower-logo-width;
+            height: 33px;
+        }
+
+        &--tote {
+            width: $paddypower-logo-width;
+            height: 33px;
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+    }
+
+    &__list-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 17px 5px;
+        border-bottom: 1px solid $mid-grey;
+
+        svg {
+            margin-right: 17px;
+        }
+
+        &:last-child {
+            border: none;
+            flex-direction: column;
+            justify-content: flex-end;
+            justify-items: flex-end;
+
+            svg {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__list-item-text {
+        width: auto;
+        flex: 1 0 auto;
+        justify-items: flex-start;
+        font-family: $font-family-semibold;
+        margin-left: 17px;
+    }
+
+    &__list-item-info {
+        margin-right: 24px;
+        font-size: 14px;
+        font-family: $font-family-semibold;
+    }
+
+    &__list-item-chevron {
+        fill: $dark-grey;
+        width: 8px;
+        height: 12px;
+    }
+
+    &__list-item-checkbox-description {
+        padding-left: 30px;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    .MuiTypography-body1 {
+        font-size: 16px;
+    }
+}

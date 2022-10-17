@@ -1,0 +1,111 @@
+.tips-and-naps-promo-article {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 16px;
+        background-color: $darkest-grey;
+
+        @include mobile {
+            background-color: $black;
+            padding: 16px 8px 12px;
+        }
+
+        &--right {
+            height: auto;
+
+            @include tablet-desktop {
+                border-top: solid 2px $brand-primary;
+            }
+
+            @include large-desktop {
+                width: 496px;
+            }
+
+            @include small-desktop {
+                width: 482px;
+            }
+
+            @include tablet {
+                flex: 1;
+            }
+        }
+    }
+
+    &__headline {
+        font-family: $font-utopia;
+        font-weight: normal;
+        color: $white;
+        text-align: left;
+
+        @include large-desktop {
+            line-height: 32px;
+            padding-bottom: 16px;
+        }
+
+        @include small-desktop {
+            line-height: 26px;
+            padding-bottom: 32px;
+        }
+
+        @include tablet {
+            line-height: 26px;
+            padding-bottom: 16px;
+        }
+
+        @include mobile {
+            line-height: 28px;
+            padding-bottom: 32px;
+        }
+    }
+
+    &__image-container {
+        @include tablet {
+            flex: 2.18;
+        }
+    }
+
+    &__taxonomy {
+        margin-top: auto;
+        color: $white;
+    }
+
+    &__taxonomy-name {
+        color: $lighter-red;
+    }
+
+    @include small-desktop {
+        font-size: 22px;
+        flex: 4.1;
+    }
+
+    @include large-desktop {
+        font-size: 28px;
+        flex: 4.03;
+    }
+
+    @include tablet {
+        flex: 2.05;
+        font-size: 22px;
+        height: fit-content;
+    }
+
+    @include mobile {
+        background-color: $black;
+        font-size: 28px;
+        height: fit-content;
+    }
+
+    @include tablet-desktop {
+        &--right {
+            flex-direction: row;
+        }
+    }
+}

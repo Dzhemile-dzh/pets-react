@@ -1,0 +1,55 @@
+@import "styles/mixins/color-mixin";
+
+.login-layout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 16px;
+
+        @include bookmaker-color-modifiers;
+    }
+
+    &__header-label {
+        font-family: $font-family-semibold;
+        font-size: 18px;
+        letter-spacing: -0.2px;
+        color: $white;
+        text-transform: uppercase;
+        margin-left: 32px;
+
+        .login-layout__header--betfair & {
+            color: $black;
+        }
+    }
+
+    &__back-svg {
+        cursor: pointer;
+    }
+
+    &__back-button {
+        display: flex;
+    }
+
+    &__logo {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__logo-container {
+        width: 120px;
+        height: 20px;
+    }
+
+    &__body {
+        padding: 24px 16px;
+        width: 100%;
+        height: 100%;
+    }
+}

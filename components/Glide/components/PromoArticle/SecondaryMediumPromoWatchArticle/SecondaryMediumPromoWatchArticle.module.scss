@@ -1,0 +1,86 @@
+.secondary-medium-promo-article {
+    position: relative;
+    background-color: $light-grey;
+    display: flex;
+    flex-direction: column;
+    min-height: 480px;
+
+    @include mobile {
+        flex-direction: row;
+        background-color: transparent;
+    }
+
+    &__image-container {
+        @include mobile {
+            width: 148px;
+            height: 83px;
+        }
+    }
+
+    &__content-video-article {
+        padding: 15px 15px 50px;
+        flex-grow: 1;
+        position: relative;
+        background-color: $darker-grey;
+
+        @include mobile {
+            width: calc(100% - 148px);
+            padding: 0 0 0 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    &__headline-video-article {
+        font-family: $font-utopia-semibold;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        color: $white;
+        text-align: left;
+        margin: 0;
+
+        @include mobile {
+            font-family: $font-utopia;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &::before {
+            content: "";
+            display: inline-block;
+            background: transparent url("/svgs/video_white.svg") no-repeat;
+            width: 24px;
+            background-size: contain;
+            height: 24px;
+            position: relative;
+            top: 4px;
+            margin-right: 4px;
+        }
+    }
+
+    &__taxonomy-video-article {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+
+        @include mobile {
+            position: relative;
+            bottom: initial;
+            left: initial;
+        }
+
+        span {
+            color: $white;
+        }
+
+        svg path {
+            fill: $white;
+        }
+
+        >div:nth-child(2) {
+            background-color: $white;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+import React from 'react';
+import { screen, render } from '@testing-library/react';
+import * as redux from 'react-redux';
+import { TopStoryPromoSecondaryArticle } from './TopStoryPromoSecondaryArticle';
+import { imageId1Data } from '../../../../../tests/mocks';
+
+const props = {
+    promoImageUrl: 'url',
+    promoDetails: {
+        promo_title: 'title',
+    },
+    headline: 'headline',
+    updatedAt: '1w',
+    primaryTaxonomy: {
+        name: 'horses',
+    },
+    seo: {
+        title: 'Our top tipster',
+        url: 'url',
+    },
+}
+
+const propsNoSubTitle = {
+    promoImageUrl: 'url',
+    promoDetails: {},
+    headline: 'headline',
+    updatedAt: '1w',
+    primaryTaxonomy: {
+        name: 'horses',
+    },
+    seo: {
+        title: 'Our top tipster',
+        url: 'url',
+    },
+}
+
+describe('TopStoryPromoSecondaryArticle', () => {
+    test('renders TopStoryPromoSecondaryArticle with title', () => {
+        jest.spyOn(redux, 'useSelector')
+        // Mock for PromoImage
+            .mockReturnValueOnce(imageId1Data)
+
+        render(<TopStoryPromoSecondaryArticle {...props} />);
+
+        expect(screen.queryByText('title')).toBeInTheDocument();
+        expect(screen.queryByText('1w')).toBeInTheDocument();
+        expect(screen.queryByText('horses')).toBeInTheDocument();
+    });
+
+    test('renders TopStoryPromoSecondaryArticle without title', () => {
+        jest.spyOn(redux, 'useSelector')
+        // Mock for PromoImage
+            .mockReturnValueOnce(imageId1Data)
+
+        render(<TopStoryPromoSecondaryArticle {...propsNoSubTitle} />);
+
+        expect(screen.queryByText('headline')).toBeInTheDocument();
+        expect(screen.queryByText('1w')).toBeInTheDocument();
+        expect(screen.queryByText('horses')).toBeInTheDocument();
+    });
+})

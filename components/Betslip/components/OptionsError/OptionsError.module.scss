@@ -1,0 +1,28 @@
+.bs-options-error {
+    background-color: $brand-primary;
+    padding: 8px;
+
+    &__message {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-family: $font-family-semibold;
+        color: $white;
+        margin-bottom: 8px;
+
+        svg {
+            margin-right: 6px;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+
+    &__button {
+        width: 200px;
+        justify-content: center;
+        margin: 0 auto;
+    }
+}

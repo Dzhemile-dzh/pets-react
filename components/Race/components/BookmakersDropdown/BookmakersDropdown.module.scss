@@ -1,0 +1,173 @@
+.bookmakers-dropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    text-transform: uppercase;
+    font-family: $font-family-semibold;
+
+    @include mobile {
+        max-width: $breakpoint-tablet-xs;
+        margin: 0 auto;
+        padding: 10px 16px;
+    }
+
+    &__label {
+        font-size: 12px;
+        color: $dark-grey;
+    }
+
+    &__label-inner {
+        @include mobile {
+            font-size: 10px;
+            color: $dark-grey;
+        }
+    }
+
+    &__selected-name {
+        font-size: 12px;
+        color: $black;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 12px 0 8px;
+        border-radius: 3px;
+        border: solid 1px $mid-grey;
+        width: 124px;
+        padding: 8px 0 8px 8px;
+        height: 32px;
+        position: relative;
+        background: $white;
+        cursor: pointer;
+
+        @include mobile {
+            padding: 0 0 3px 8px;
+        }
+
+        &--opened {
+            border-bottom: none;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+
+    &__selected-bookmaker {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__list {
+        position: absolute;
+        top: 30px;
+        background: $white;
+        z-index: 1;
+        left: -1px;
+        margin: 0;
+        padding: 0;
+        right: -1px;
+        border-width: 1px;
+        border-color: $mid-grey;
+        border-style: solid;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    &__list-options {
+        padding: 0 4px;
+        margin: 0;
+        width: 100%;
+    }
+
+    &__list-option {
+        list-style: none;
+        font-size: 12px;
+        margin: 0;
+        padding: 4px;
+
+        &:hover {
+            background-color: $black;
+            border-radius: 3px;
+            color: $white;
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:first-child {
+            margin-top: 10px;
+        }
+
+        &:last-child {
+            margin-bottom: 4px;
+        }
+    }
+
+    &__icon {
+        margin-right: 6px;
+
+        &--opened {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__bookmakers-page {
+        @include mobile {
+            padding: 0;
+            max-width: 134px;
+        }
+    }
+
+    &__bookmakers-page-label-inner {
+        @include mobile {
+            margin-right: auto;
+            margin-top: 2px;
+        }
+    }
+
+    &__bookmakers-page-list {
+        @include mobile {
+            border-top: none;
+        }
+    }
+
+    &__bookmakers-page-container {
+        width: 172px;
+        height: 36px;
+        border-radius: 3px;
+        border: solid 1px $mid-grey;
+        background-color: $white;
+
+        svg {
+            width: 12px;
+            height: 10px;
+
+            @include mobile {
+                margin-bottom: 10px;
+            }
+        }
+
+        @include mobile {
+            width: 134px;
+            height: 36px;
+            flex-direction: column;
+            margin-right: 0;
+        }
+    }
+
+    &__bookmakers-page-selected-name, &__bookmakers-page-list-option {
+        font-size: 14px;
+        font-family: $font-family-semibold;
+        text-transform: capitalize;
+    }
+}

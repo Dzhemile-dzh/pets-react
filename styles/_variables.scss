@@ -1,0 +1,125 @@
+// Fonts - default font
+$font-family: "ProximaNovaA",sans-serif;
+$font-family-semibold: "ProximaNovaA-SemiBold",sans-serif;
+$font-family-bold: "ProximaNovaA-Bold",sans-serif;
+
+// Fonts - glide font
+$font-utopia: "Utopia", serif;
+$font-utopia-semibold: "Utopia-SemiBold", serif;
+$font-utopia-bold: "Utopia-Bold", serif;
+
+// Colors - black-white
+$white: #fff;
+$body-background-color: #fdfdfd;
+$super-light-grey: #fafafa;
+$light-grey: #f5f5f5;
+$filter-grey: #ecebeb;
+$countdown-label-grey: #ededed;
+$mercury-grey: #e6e6e6;
+$regular-gray: #d8d8d8;
+$mid-grey: #d9d9d9;
+$grey: #aaa;
+$dark-grey: #797676;
+$label-grey: #657180;
+$darker-grey: #474747;
+$darkest-grey: #2f2f2f;
+$black: #171717;
+
+// Colors with opacity
+$actual-black-opacity-10: rgba(0 0 0 / 10%);
+$actual-black-opacity-12: rgba(0 0 0 / 12%);
+$actual-black-opacity-14: rgba(0 0 0 / 14%);
+$actual-black-opacity-15: rgba(0 0 0 / 15%);
+$actual-black-opacity-20: rgba(0 0 0 / 20%);
+$actual-black-opacity-25: rgba(0 0 0 / 25%);
+$actual-black-opacity-30: rgba(0 0 0 / 30%);
+$actual-black-opacity-50: rgba(0 0 0 / 50%);
+$actual-black-opacity-60: rgba(0 0 0 / 60%);
+$black-opacity-70: rgba(23 23 23 / 70%);
+$black-opacity-90: rgba(23 23 23 / 90%);
+$brown-opacity-20: rgba(121 85 85 / 20%);
+$grey-opacity-10: rgba(16 22 26 / 10%);
+$light-grey-opacity-0: rgba(245 245 245 / 0%);
+$red-opacity-30: rgba(209 31 37 / 30%);
+$red-opacity-40: rgba(209 31 37 / 40%);
+
+// Colors - brand
+$brand-primary: #d11f25;
+$brand-primary-hover: #af1a1f;
+$brand-primary-active: #871216;
+$brand-primary-logo: #ed1c24;
+
+// Colors - orange
+$fast-orange: #f2af00;
+$fast-orange-dark: #db7e00;
+$fast-orange-darker: #b95e05;
+
+// Colors - green
+$go-green: #7abd1b;
+$go-green-dark: #6aa50a;
+$go-green-darker: #578319;
+$go-green-darkest: #466b12;
+
+// Colors - blue
+$beacon-blue: #11c9c4;
+$beacon-blue-dark: #00a09b;
+$beacon-blue-darker: #008481;
+$beacon-blue-darkest: #006c69;
+
+// Colors - brand secondary
+$brand-secondary: #007fa3;
+$brand-secondary-hover: #015269;
+$brand-secondary-active: #003241;
+
+// Colors - misc
+$offer-mint: #a4e7ce;
+$spinner-cyan: #4f98a3;
+$light-red: #e30014;
+$lighter-red: #ed4b51;
+$grey-blue-color: #28323f;
+
+// Breakpoints - mobile
+$breakpoint-mobile-xs: 320px;
+$breakpoint-mobile-s: 359.9px;
+$breakpoint-mobile-m: 360px;
+$breakpoint-mobile-l: 479.9px;
+
+// Breakpoints - tablet
+$breakpoint-tablet-xs: 480px;
+$breakpoint-tablet-s: 767.9px;
+$breakpoint-tablet-m: 768px;
+$breakpoint-tablet-l: 1023.9px;
+
+// Breakpoints - desktop
+$breakpoint-desktop-xs: 1024px;
+$breakpoint-desktop-s: 1279.9px;
+$breakpoint-desktop-m: 1280px;
+
+// Content width that combined with margin: auto is centered on page
+$large-desktop-content: 1248px;
+$small-desktop-content: 992px;
+$tablet-content: 736px;
+
+// NOTE: bookmakers and betslip variables
+$color-888sport: #ff5400;
+$color-bet365: #00835b;
+$color-betfair: #ffb80c;
+$color-betway: #000;
+$color-coral: #0845aa;
+$color-ladbrokes: #f01e28;
+$color-paddypower: #004833;
+$color-skybet: #05256d;
+$color-tote: #f1101a;
+$color-williamhill: #00153d;
+
+// NOTE: bookmaker's balance variables
+$balance-color-888sport: $color-888sport;
+$balance-color-bet365: $color-bet365;
+$balance-color-betfair: #ffb800;
+$balance-color-betway: $color-betway;
+$balance-color-coral: #3078c5;
+$balance-color-ladbrokes: #ee1a19;
+$balance-color-paddypower: #117057;
+$balance-color-skybet: #0d296e;
+$balance-color-tote: $color-tote;
+$balance-color-williamhill: #00133d;

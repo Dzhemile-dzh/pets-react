@@ -1,0 +1,83 @@
+.bs-options-list {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: auto;
+    position: relative;
+
+    &__betslip-loading {
+        opacity: 0.3;
+    }
+
+    &__singles, &__multiples {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        width: 100%;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        height: calc(100% - 60px);
+    }
+
+    &__wrapper-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+    &__add-another-selection {
+        padding: 20px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+
+        & > button {
+            padding: 6px 10px;
+            width: 200px;
+            height: 28px;
+            border: 1px solid $mid-grey;
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            font-size: 12px;
+            color: $black;
+            text-transform: uppercase;
+            font-family: $font-family-semibold;
+            background-color: $white;
+            cursor: pointer;
+        }
+    }
+
+    &__spinner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+    }
+
+    &__free-bets-warning {
+        display: inline-block;
+        width: 100%;
+        background-color: $fast-orange-darker;
+        padding: 10px 22px;
+        color: $white;
+        font-family: $font-family-semibold;
+        text-align: center;
+    }
+}

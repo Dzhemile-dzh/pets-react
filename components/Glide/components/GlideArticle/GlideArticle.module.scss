@@ -1,0 +1,175 @@
+@import "styles/mixins/container-mixin";
+
+.glide-article {
+    @include container-new-breakpoints;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 32px;
+
+    @include mobile {
+        padding-top: 16px;
+    }
+
+    &__main-body {
+        flex-grow: 1;
+
+        @include desktop {
+            padding-right: 32px;
+        }
+
+        @include tablet {
+            padding: 0 16px;
+        }
+
+        >span {
+            display: block;
+        }
+    }
+
+    &__headline {
+        font-family: $font-utopia-semibold;
+        color: $black;
+        font-size: 36px;
+        line-height: 44px;
+        padding-bottom: 16px;
+
+        @include large-desktop {
+            font-size: 48px;
+            line-height: 56px;
+            padding-bottom: 16px;
+        }
+
+        @include mobile {
+            font-size: 28px;
+            line-height: 32px;
+            padding: 0 16px 16px;
+        }
+    }
+
+    &__standfirst {
+        font-family: $font-utopia;
+        color: $black;
+        font-size: 18px;
+        line-height: 22px;
+        padding-bottom: 32px;
+
+        @include large-desktop {
+            font-size: 22px;
+            line-height: 26px;
+        }
+
+        @include mobile {
+            padding: 0 16px 16px;
+        }
+    }
+
+    &__promo-image {
+        display: grid;
+        align-items: end;
+        padding-bottom: 16px;
+
+        @include large-desktop {
+            padding-bottom: 32px;
+        }
+
+        @include mobile {
+            padding: 16px 0 0;
+        }
+    }
+
+    &__content {
+        font-family: $font-utopia;
+        color: $black;
+        font-size: 18px;
+        line-height: 24px;
+        display: flex;
+        flex-direction: column-reverse;
+
+        @include large-desktop {
+            align-items: flex-start;
+            flex-direction: row;
+        }
+
+        @include tablet-small-desktop {
+            margin-top: 4px;
+        }
+
+        @include mobile {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: $font-family-bold;
+            font-size: 24px;
+            line-height: 28px;
+            color: $black;
+            padding-bottom: 16px;
+            margin: 0;
+
+            @include mobile {
+                padding: 0 16px 16px;
+            }
+        }
+    }
+
+    &__content-details {
+        flex-grow: 1;
+
+        @include large-desktop {
+            padding-right: 16px;
+        }
+
+        >p {
+            padding-bottom: 24px;
+
+            @include mobile {
+                padding: 0 16px 16px;
+            }
+        }
+
+        >ul, ol {
+            margin: 0 0 24px;
+
+            @include mobile {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &__content-additions {
+        @include large-desktop {
+            border-left: 1px solid $mid-grey;
+            padding-left: 16px;
+            min-width: 240px;
+        }
+
+        @include tablet-small-desktop {
+            border-bottom: 1px solid $mid-grey;
+            width: 100%;
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+        }
+
+        @include mobile {
+            background-color: $light-grey;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__content-additions-date {
+        font-family: $font-family;
+        font-size: 12px;
+        line-height: 16px;
+        color: $black;
+        display: block;
+    }
+
+    &__ad-placeholder {
+        width: 300px;
+        max-height: 600px;
+    }
+}

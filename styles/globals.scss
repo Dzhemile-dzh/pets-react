@@ -1,0 +1,268 @@
+@import "styles/mixins/text-limit-with-dots-mixin";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: $font-family;
+    font-size: 14px;
+    height: 100%;
+    margin: 0;
+}
+
+#__next {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: $font-family-semibold;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+// hide content that should be read only by sreen reader
+.reader-only {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    left: 0;
+    top: 0;
+
+    &__parent {
+        position: relative;
+    }
+}
+
+.app-overlay {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $actual-black-opacity-60;
+    z-index: 1000;
+
+    @media only screen and (min-width: $breakpoint-tablet-m) {
+        background-color: $actual-black-opacity-20;
+    }
+
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+}
+
+.MuiTooltip-tooltip {
+    box-shadow: 0 0 16px 1px $actual-black-opacity-20 !important;
+    border: solid 1px $mid-grey !important;
+    background-color: $light-grey !important;
+    color: inherit !important;
+
+    ::before {
+        background-color: $light-grey !important;
+    }
+}
+
+.react-calendar {
+    width: 100%;
+    max-height: 486px;
+    max-width: 100%;
+    border: solid 1px $mid-grey;
+    border-radius: 3px;
+    background: $white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.125em;
+    position: absolute;
+    z-index: 100;
+
+    @include mobile {
+        position: relative;
+        margin-bottom: 8px;
+        border: none;
+    }
+
+    @include tablet {
+        left: -218px;
+    }
+
+    button {
+        margin: 0;
+        border: 0;
+        outline: none;
+    }
+
+    &__navigation {
+        display: block !important;
+        text-align: center;
+        height: 44px;
+        margin-bottom: 1em;
+
+        &__label {
+            font-family: $font-family-semibold !important;
+            font-size: 12px !important;
+            margin: 0 25px !important;
+            text-align: center;
+            background-color: transparent !important;
+            color: $black !important;
+            text-transform: uppercase !important;
+        }
+
+        button {
+            min-width: 44px;
+            background: none;
+        }
+
+        button:disabled {
+            background-color: $light-grey;
+        }
+
+        button:hover {
+            @media (hover: hover) and (pointer: fine) {
+                background: $mercury-grey;
+            }
+        }
+
+        &__prev-button, &__next-button {
+            font-weight: bold;
+            margin-top: 7px !important;
+            min-width: 32px !important;
+            height: 32px;
+            border-radius: 3px;
+            border: solid 1px $mid-grey !important;
+        }
+    }
+
+    button:enabled:hover {
+        cursor: pointer;
+    }
+
+    &__month-view__days {
+        &::before {
+            content: " ";
+            display: block;
+            border-bottom: 1px solid $mid-grey;
+            min-width: 290px;
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__month-view {
+        &__weekdays {
+            font-family: $font-family-semibold !important;
+            font-size: 14px !important;
+            text-transform: capitalize !important;
+            height: 43px;
+            line-height: 50%;
+            text-align: center;
+
+            &__weekday {
+                padding: 0.5em;
+
+                * {
+                    text-decoration: unset;
+                }
+            }
+        }
+
+        &__days__day {
+            line-height: 50% !important;
+            height: 43px;
+            font-family: $font-family;
+            font-size: 14px;
+        }
+
+        &__days__day--weekend {
+            color: $black !important;
+        }
+    }
+
+    &__tile {
+        max-width: 100%;
+        text-align: center;
+        padding: 0.75em 0.5em;
+        background: none;
+
+        &:disabled {
+            background-color: $light-grey;
+        }
+
+        &:enabled:hover, &:enabled:focus {
+            background-color: $mercury-grey;
+        }
+    }
+
+    &__tile--now {
+        font-family: $font-family-semibold;
+        line-height: 50%;
+        background-color: $white !important;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        cursor: auto;
+
+        abbr {
+            background-color: $light-grey !important;
+            border: solid 1px $mid-grey !important;
+            border-radius: 50%;
+            padding: 8px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $mercury-grey !important;
+            }
+        }
+    }
+
+    &__tile--now:hover {
+        background-color: $white !important;
+    }
+
+    &__navigation__arrow {
+        text-align: center;
+        line-height: 50%;
+    }
+}
+
+.linear-background {
+    background-image: linear-gradient(to bottom, $light-grey 33%, $light-grey-opacity-0);
+}
+
+// Temporary solution until common styles
+// Remove after
+.container-max-width {
+    max-width: 1008px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}

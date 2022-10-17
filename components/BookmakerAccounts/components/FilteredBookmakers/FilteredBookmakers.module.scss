@@ -1,0 +1,133 @@
+.my-racing-post {
+    &__all-bookmakers {
+        margin-top: 20px;
+    }
+
+    &__all-bookmakers-text {
+        font-family: $font-family-semibold;
+        color: $black;
+        font-size: 16px;
+
+        @include mobile {
+            font-size: 18px;
+            margin-left: 8px;
+        }
+    }
+
+    &__bookies {
+        padding: 0;
+        margin-top: 8px;
+
+        li {
+            margin-bottom: 8px;
+            min-height: 56px;
+        }
+    }
+
+    &__recent-bookmakers {
+        margin-top: 13px;
+
+        @include mobile {
+            margin-top: 26px;
+        }
+    }
+
+    &__recent-bookmakers-text {
+        font-family: $font-family-semibold;
+        color: $black;
+        font-size: 16px;
+
+        @include mobile {
+            font-size: 18px;
+            margin-left: 8px;
+        }
+    }
+}
+
+.bookmaker-accounts {
+    &__all-bookmakers-text, &__recent-bookmakers-text {
+        display: flex;
+        font-family: $font-family-semibold;
+        color: $black;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    &__all-bookmakers {
+        margin-top: 32px;
+        margin-bottom: 124px;
+
+        @include mobile {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__all-bookmakers-text {
+        @include mobile {
+            font-family: $font-family-semibold;
+            color: $black;
+            font-size: 18px;
+            margin-left: 8px;
+        }
+    }
+
+    &__recent-bookmakers {
+        @include mobile {
+            margin-top: 26px;
+        }
+    }
+
+    &__recent-bookmakers-text {
+        @include mobile {
+            font-family: $font-family-semibold;
+            color: $black;
+            font-size: 18px;
+            margin-left: 8px;
+        }
+    }
+
+    &__bookies {
+        padding: 0;
+
+        @include all-but-mobile-tbr {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        li {
+            float: left;
+            min-height: 72px;
+            width: calc(50% - 8px);
+            margin-bottom: 16px;
+
+            @include desktop {
+                padding: 16px;
+            }
+
+            @include tablet {
+                float: unset;
+                width: 100%;
+                padding: 16px;
+            }
+
+            @include mobile {
+                min-height: 56px;
+                float: unset;
+                width: 100%;
+            }
+
+            .ba-item__buttons {
+                button:nth-last-child(1) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        li:nth-child(odd) {
+            @include desktop {
+                margin-right: 16px;
+            }
+        }
+    }
+}

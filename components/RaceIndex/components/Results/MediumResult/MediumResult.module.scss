@@ -1,0 +1,75 @@
+@import "styles/mixins/text-limit-with-dots-mixin";
+
+.medium-result {
+    display: flex;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px 1px $actual-black-opacity-10;
+    border: solid 1px $mid-grey;
+    width: 320px;
+    padding-top: 12px;
+    flex-direction: column;
+    margin-left: 8px;
+    margin-right: 8px;
+    background: $white;
+
+    &__header {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__countdown {
+        height: 27px;
+        left: -4px;
+        position: relative;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        height: 30px;
+        color: $black;
+        line-height: 1rem;
+        padding-right: 8px;
+        width: calc(100% - 110px);
+        flex-grow: 1;
+    }
+
+    &__course {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        font-family: $font-family-bold;
+    }
+
+    &__course-name {
+        @include text-limit-with-dots;
+
+        height: 16px;
+    }
+
+    &__race {
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+        font-family: $font-family;
+    }
+
+    &__race-title {
+        @include text-limit-with-dots;
+
+        max-width: 80%;
+
+        @include small-mobile {
+            max-width: 100%;
+        }
+    }
+
+    &__winners {
+        display: flex;
+        flex-direction: column;
+        margin: 8px;
+        padding: 4px;
+        background-color: $super-light-grey;
+        border-radius: 3px;
+    }
+}

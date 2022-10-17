@@ -1,0 +1,237 @@
+.my-racing-post {
+    &__content {
+        overflow: auto;
+        margin-bottom: 20px;
+
+        @include desktop {
+            width: calc(100% - 360px);
+        }
+    }
+
+    &__container {
+        background-color: $body-background-color;
+    }
+
+    &__wrapper {
+        max-width: $breakpoint-desktop-m;
+        margin-top: 24px;
+
+        @include desktop {
+            margin: 30px auto 0;
+            display: flex;
+        }
+
+        @include tablet {
+            padding: 0 8px 0 16px;
+        }
+
+        @include mobile {
+            margin: 0;
+            padding: 0;
+        }
+
+        .racing-post-profile-container {
+            margin-left: auto;
+        }
+    }
+
+    &__my-bookmakers {
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+        margin-top: 8px;
+        margin-bottom: 20px;
+        width: 100%;
+        max-height: 590px;
+        border-radius: 3px;
+        box-shadow: 0 2px 6px 1px $actual-black-opacity-10;
+        border: solid 1px $mid-grey;
+        overflow: auto;
+
+        @include desktop {
+            min-width: 642px;
+        }
+
+        @include tablet {
+            overflow: unset;
+            max-height: unset;
+        }
+
+        @include mobile {
+            overflow: unset;
+            max-height: unset;
+        }
+
+        @include mobile {
+            overflow: unset;
+            margin: 0;
+            border: unset;
+            box-shadow: unset;
+            background-color: $super-light-grey;
+        }
+    }
+
+    &__my-bookmakers-title-button {
+        width: 40px;
+        height: 24px;
+        cursor: pointer;
+
+        svg {
+            width: 40px;
+            height: 24px;
+        }
+    }
+
+    &__my-bookmakers-title-link {
+        margin-left: auto;
+    }
+
+    &__my-bookmakers-title {
+        display: flex;
+        margin: 17px 17px 0 23px;
+    }
+
+    &__my-bookmakers-title-text {
+        font-size: 18px;
+        font-family: $font-family-semibold;
+        color: $dark-grey;
+    }
+
+    &__my-bookmakers-wrapper {
+        @include desktop {
+            margin: 21px 32px 0 26px;
+        }
+
+        @include tablet {
+            margin: 21px 32px 0 26px;
+        }
+
+        @include mobile {
+            margin: 0 8px;
+        }
+    }
+
+    &__my-bookmakers-wrapper-logged-in {
+        @include desktop {
+            margin: 21px 32px 0 23px;
+        }
+
+        @include tablet {
+            margin: 21px 32px 0 23px;
+        }
+    }
+
+    &__my-bookmakers-accounts {
+        @include mobile {
+            margin: 0 16px;
+            background-color: $white;
+        }
+    }
+
+    &__my-bookmakers-log-in-text {
+        font-size: 14px;
+        line-height: 1.5;
+        color: $black;
+        font-family: $font-family;
+    }
+
+    &__my-bookmakers-buttons {
+        margin-bottom: 24px;
+        margin-top: 20px;
+
+        @include mobile {
+            margin-top: 32px;
+            margin-bottom: 18px;
+        }
+    }
+
+    @include mobile {
+        &__my-bookmakers-ba-log-in {
+            display: flex;
+            background-color: $light-grey;
+            height: 48px;
+            padding: 0 8px 0 16px;
+            align-items: center;
+        }
+
+        &__my-bookmakers-ba-log-in-text {
+            color: $black;
+            font-family: $font-family-semibold;
+            font-size: 15px;
+            margin-right: auto;
+        }
+
+        &__my-bookmakers-ba-log-in-btn {
+            padding: 0;
+            min-width: 58px;
+            height: 32px;
+            color: $black;
+            font-family: $font-family-semibold;
+            font-size: 12px;
+
+            span {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    &__my-recent-bets-container {
+        margin-top: 8px;
+
+        @include desktop {
+            margin-bottom: 92px;
+        }
+
+        @include tablet {
+            margin-top: 16px;
+            margin-bottom: 92px;
+        }
+
+        @include mobile {
+            margin-top: 0;
+            margin-bottom: 29px;
+        }
+    }
+
+    &__odds {
+        display: flex;
+        max-width: 100%;
+        height: 55px;
+        align-items: center;
+
+        @include desktop {
+            min-width: 642px;
+            border-radius: 3px;
+            box-shadow: 0 2px 6px 1px $actual-black-opacity-10;
+            border: solid 1px $mid-grey;
+            background-color: $white;
+        }
+
+        @include mobile {
+            height: 36px;
+            margin-right: 8px;
+            margin-top: 10px;
+            float: right;
+        }
+    }
+
+    &__odds-text {
+        font-size: 18px;
+        font-family: $font-family-semibold;
+        color: $black;
+        margin-right: 15px;
+
+        @include desktop {
+            margin-left: 23px;
+            color: $dark-grey;
+        }
+    }
+
+    &__odds-prices-text {
+        font-family: $font-family;
+        color: $black;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+}

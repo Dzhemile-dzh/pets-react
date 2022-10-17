@@ -1,0 +1,110 @@
+const unsettledBetHistoryCommon = {
+    unsettledBetHistoryPagination: {
+        pageSize: 1,
+        hasNext: false,
+    },
+    unsettledBetHistoryErrors: null,
+    isUnsettledBetHistoryLoading: false,
+}
+
+export const emptyUnsettledBetHistory = {
+    ...unsettledBetHistoryCommon,
+    unsettledBetHistoryBets: [],
+}
+
+export const unsettledBetHistorySingle = {
+    ...unsettledBetHistoryCommon,
+    unsettledBetHistoryBets: [
+        {
+            bookmakerName: 'williamhill',
+            betId: 'O/11822704/0032368/F',
+            type: 'Single',
+            stake: '0.86',
+            freeBetStake: null,
+            numberOfLines: 1,
+            stakePerLine: '0.86',
+            totalStake: '0.86',
+            date: '2021-09-14',
+            time: '08:24',
+            currencySign: '',
+            isEachWay: false,
+            isMultipleBetFromDiffRaces: false,
+            estimatedReturns: '2.58',
+            cashOutAmount: '0.73',
+            isCashOutAvailable: true,
+            selections: [
+                {
+                    selectionId: '3333748715',
+                    selectionName: 'Radiyka',
+                    eventName: '1:30 Punchestown',
+                    eventTime: '13:30',
+                    eventDate: '2021-09-14',
+                    oddsDecimal: 2,
+                    isEachWay: false,
+                    oddsFractionalNumerator: 2,
+                    oddsFractionalDenominator: 1,
+                    eachWayTermsPlaces: null,
+                    eachWayTermsNumerator: null,
+                    eachWayTermsDenominator: null,
+                    result: null,
+                },
+            ],
+        },
+    ],
+};
+
+export const unsettledBetHistoryMultiples = {
+    ...unsettledBetHistoryCommon,
+    unsettledBetHistoryBets: [
+        {
+            bookmakerName: 'williamhill',
+            betId: 'O/11822704/0033076/F',
+            type: 'Double',
+            stake: '0.06',
+            freeBetStake: null,
+            numberOfLines: 1,
+            stakePerLine: '0.03',
+            totalStake: '0.06',
+            date: '2021-10-11',
+            time: '09:07',
+            currencySign: '£',
+            isEachWay: true,
+            isMultipleBetFromDiffRaces: true,
+            estimatedReturns: '0.35',
+            cashOutAmount: null,
+            isCashOutAvailable: false,
+            selections: [
+                {
+                    selectionId: '3375476237',
+                    selectionName: 'Lord Of The Glen',
+                    eventName: '1:20 Musselburgh',
+                    eventTime: '13:20',
+                    eventDate: '2021-10-11',
+                    oddsDecimal: 4,
+                    isEachWay: true,
+                    oddsFractionalNumerator: 4,
+                    oddsFractionalDenominator: 1,
+                    eachWayTermsPlaces: null,
+                    eachWayTermsNumerator: null,
+                    eachWayTermsDenominator: null,
+                    result: 'Lost',
+                },
+                {
+                    selectionId: '3375474526',
+                    selectionName: 'Eastern Sheriff',
+                    eventName: '1:50 Musselburgh',
+                    eventTime: '13:50',
+                    eventDate: '2021-10-11',
+                    oddsDecimal: 0.9090909090909091,
+                    isEachWay: true,
+                    oddsFractionalNumerator: 10,
+                    oddsFractionalDenominator: 11,
+                    eachWayTermsPlaces: null,
+                    eachWayTermsNumerator: null,
+                    eachWayTermsDenominator: null,
+                    result: 'Won',
+                },
+            ],
+        },
+    ],
+}

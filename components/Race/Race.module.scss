@@ -1,0 +1,25 @@
+.race {
+    color: $black;
+
+    &__container {
+        background-color: $body-background-color;
+        padding-bottom: 24px;
+    }
+
+    &__info {
+        @include mobile {
+            background-color: $light-grey;
+        }
+    }
+
+    &__race-to-race {
+        background-color: $light-grey;
+        border-bottom: 1px solid $mid-grey;
+    }
+}
+
+.race-form {
+    button {
+        margin: auto;
+    }
+}

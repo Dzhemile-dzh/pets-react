@@ -1,0 +1,53 @@
+.feature-module-small-promo-article {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 380px;
+
+    &--gray-background {
+        background-color: $light-grey;
+    }
+
+    &__image-container {
+        position: relative;
+    }
+
+    &__big-race {
+        width: 139px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $font-family-bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: $white;
+        background-color: $brand-primary;
+        position: absolute;
+        bottom: 15px;
+        left: 16px;
+    }
+
+    &__content {
+        padding: 15px 15px 65px;
+        flex-grow: 1;
+        position: relative;
+    }
+
+    &__headline {
+        font-family: $font-utopia;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        color: $black;
+        text-align: left;
+        margin: 0;
+    }
+
+    &__taxonomy {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+    }
+}

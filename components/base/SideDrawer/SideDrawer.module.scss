@@ -1,0 +1,36 @@
+.side-drawer {
+    &__header {
+        min-height: 56px;
+        background-color: $white;
+        box-shadow: 0 0 4px 0 $actual-black-opacity-30;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+    }
+
+    &__header-icon {
+        margin-right: 8px;
+        width: 12px;
+        height: 11px;
+
+        svg {
+            transform: rotate(90deg);
+            height: 12px;
+        }
+    }
+
+    &__header-title {
+        font-size: 14px;
+        font-family: $font-family-semibold;
+        text-transform: uppercase;
+        margin: auto;
+        position: relative;
+        left: -30px;
+        color: $black;
+    }
+
+    &__content {
+        background-color: $super-light-grey;
+        height: 100%;
+    }
+}

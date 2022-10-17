@@ -1,0 +1,13 @@
+.latest-races {
+    display: flex;
+    justify-content: space-between;
+
+    &__race {
+        width: 24%;
+        min-width: 150px;
+
+        &--five-races {
+            width: 19%;
+        }
+    }
+}

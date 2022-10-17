@@ -1,0 +1,97 @@
+.race-card {
+    &__information {
+        display: inline-flex;
+
+        @include desktop {
+            width: 55%;
+        }
+
+        @include tablet {
+            padding-left: 10px;
+            flex: 5;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            width: 100%;
+            margin-top: 10px;
+            padding: 0;
+            border-top: 1px solid $mid-grey;
+        }
+    }
+
+    &__information-details-row {
+        display: flex;
+        align-items: center;
+
+        @include mobile {
+            justify-content: space-between;
+        }
+
+        >p {
+            font-family: $font-family;
+            font-size: 14px;
+            line-height: 1.43;
+            color: $black;
+            display: inline-flex;
+            align-items: baseline;
+
+            @include mobile {
+                font-size: 12px;
+            }
+
+            & + p {
+                margin-left: 10px;
+            }
+
+            &:first-child > p:first-child {
+                font-family: $font-family-semibold;
+            }
+
+            >span {
+                color: $darker-grey;
+                display: inline-block;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &__information-abandoned {
+        @include mobile {
+            position: absolute;
+            margin-top: 0;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            border: none;
+        }
+    }
+
+    &__abandoned {
+        display: inline-flex;
+        align-items: center;
+        margin-left: auto;
+        font-family: $font-family-semibold;
+        font-size: 16px;
+        line-height: 1.13;
+        text-transform: uppercase;
+        color: $black;
+    }
+}
+
+.race-container__selectable {
+    width: 50%;
+
+    @include small-desktop {
+        width: 48%;
+    }
+
+    @include tablet {
+        width: 48%;
+    }
+
+    @include mobile {
+        width: 100%;
+        padding: 8px;
+    }
+}

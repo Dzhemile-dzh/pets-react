@@ -1,0 +1,12 @@
+.upcoming-races {
+    display: flex;
+
+    &__race:nth-child(n) {
+        width: 170px !important;
+        height: 95px;
+    }
+
+    a {
+        color: $black;
+    }
+}

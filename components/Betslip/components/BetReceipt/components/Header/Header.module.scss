@@ -1,0 +1,84 @@
+.bs-bet-receipt-header {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    background-color: $body-background-color;
+
+    @media not all and (min-resolution: 0.001dpcm) { // Safari only
+        @supports (-webkit-appearance:none) {
+            display: block;
+        }
+    }
+
+    &__text-1 {
+        position: relative;
+        padding: 0 16px;
+        margin-top: 16px;
+        color: $black;
+        font-family: $font-family-semibold;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+
+        .ui-icon {
+            &__partial {
+                margin-right: -10px;
+            }
+        }
+    }
+
+    &__text-2, &__text-3 {
+        color: $black;
+        font-family: $font-family;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    &__text-2 {
+        padding: 0 16px 0 48px;
+
+        svg {
+            margin-left: 4px;
+            height: 10;
+            width: auto;
+        }
+
+        @include small-mobile {
+            svg {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    &__text-3 {
+        border-top: 1px solid $mid-grey;
+        padding: 8px 8px 0;
+        margin: 16px 8px 11px;
+        display: flex;
+        align-items: flex-end;
+
+        svg {
+            margin-left: 4px;
+            height: 20px;
+            width: auto;
+            max-width: 34%;
+        }
+    }
+
+    &__close {
+        padding: 0;
+        position: absolute;
+        right: 16px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    &__divider {
+        background-color: $light-grey;
+        background-image: url("/images/bet-receipt-divider.svg");
+        width: 100%;
+        height: 32px;
+    }
+}

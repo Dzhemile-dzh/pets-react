@@ -1,0 +1,5 @@
+@import "styles/mixins/ad-mixin";
+
+.ad-placeholder {
+    @include glide-ad-mixin;
+}

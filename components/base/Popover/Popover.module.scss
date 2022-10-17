@@ -1,0 +1,23 @@
+.popover {
+    position: absolute;
+    z-index: 1;
+    background-color: $super-light-grey;
+    border: solid 1px $mid-grey;
+    box-shadow: 0 0 16px 1px $actual-black-opacity-20;
+
+    &--above {
+        bottom: 29px;
+    }
+
+    &--below {
+        top: 34px;
+    }
+
+    &--left {
+        right: 20px;
+    }
+
+    &--right {
+        left: 20px;
+    }
+}

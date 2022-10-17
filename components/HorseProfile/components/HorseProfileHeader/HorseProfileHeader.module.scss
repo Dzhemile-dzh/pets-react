@@ -1,0 +1,235 @@
+@import "styles/mixins/text-limit-with-dots-mixin";
+
+.horse-profile-header {
+    position: relative;
+    color: $black;
+
+    @include desktop {
+        background-color: $light-grey;
+        background-repeat: no-repeat;
+        background-size: 1100px auto;
+        border-bottom: 1px solid $mid-grey;
+        background-image: url("/images/racecard-header.png");
+        background-position-y: calc(50% - 74px);
+        background-position-x: calc(100% + 673px);
+
+        @include large-desktop {
+            background-position-x: calc(50% + 763px);
+        }
+    }
+
+    @include tablet {
+        background-image: url("/images/racecard-header.png");
+        background-position-y: calc(50% - 74px);
+        background-position-x: calc(100% + 707px);
+        background-color: $light-grey;
+        background-repeat: no-repeat;
+        background-size: 1100px auto;
+        border-bottom: 1px solid $mid-grey;
+    }
+
+    @include mobile {
+        background-color: $super-light-grey;
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        align-items: baseline;
+        justify-content: space-between;
+
+        @include desktop {
+            padding: 0 8px;
+
+            @include large-desktop {
+                max-width: $breakpoint-desktop-m;
+            }
+        }
+
+        @include mobile {
+            background: $white;
+        }
+    }
+
+    &__main {
+        display: flex;
+        width: 100%;
+        gap: 1.5em;
+        align-items: center;
+
+        @include desktop {
+            flex-wrap: wrap;
+            margin-bottom: 45px;
+            margin-top: 46px;
+        }
+
+        @include tablet {
+            flex-wrap: wrap;
+            margin: 46px 8px 45px;
+        }
+
+        @include mobile {
+            padding: 16px;
+            box-shadow: 0 1px 0 0 $mid-grey;
+            height: 72px;
+        }
+    }
+
+    &__horse-silk {
+        width: 66px;
+        height: 48px;
+    }
+
+    &__horse-profile {
+        display: flex;
+        flex-direction: column;
+
+        &--header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+
+    &__horse-icon {
+        position: absolute;
+        bottom: 86px;
+        left: 93px;
+        width: 16px;
+        height: 16px;
+    }
+
+    &__horse-title {
+        font-family: $font-family-semibold;
+        margin-left: 8px;
+        text-transform: uppercase;
+    }
+
+    &__horse-name {
+        font-family: $font-family-semibold;
+        font-size: 32px;
+        text-transform: uppercase;
+        margin-left: 4px;
+        display: flex;
+        gap: 4px;
+        line-height: 1;
+
+        @include mobile {
+            margin-left: 0;
+            font-size: 20px;
+        }
+
+        sup {
+            font-size: 16px;
+            font-family: $font-family;
+
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__details-container {
+        @include mobile {
+            width: 100%;
+        }
+
+        @include tablet-desktop {
+            position: absolute;
+            display: grid;
+            box-shadow: 0 2px 6px 1px $actual-black-opacity-10;
+            border: solid 1px $mid-grey;
+            border-radius: 3px;
+            width: calc(100% - 16px);
+            min-height: 48px;
+            background: $white;
+            left: 8px;
+            bottom: -24px;
+        }
+
+        @include desktop {
+            grid-template-columns: 10% minmax(10%, min-content) minmax(10%, min-content) minmax(10%, min-content);
+        }
+
+        @include tablet {
+            grid-template-columns: 14% minmax(11%, min-content) minmax(10%, min-content) minmax(10%, min-content);
+        }
+    }
+
+    &__detail {
+        display: flex;
+        padding: 12px;
+        height: 48px;
+        align-content: center;
+        gap: 0.3em;
+
+        @include mobile {
+            display: grid;
+            grid-template-columns: 84% 16%;
+            align-items: center;
+            box-shadow: 0 1px 0 0 $mid-grey;
+            padding: 16px;
+        }
+
+        @include large-mobile-tbr {
+            grid-template-columns: 76% 24%;
+        }
+
+        @include small-mobile {
+            grid-template-columns: 65% 35%;
+        }
+    }
+
+    &__detail-title {
+        color: $label-grey;
+
+        &--last-14-days {
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__detail-value {
+        gap: 0.3em;
+
+        @include text-limit-with-dots;
+
+        @include mobile {
+            display: flex;
+        }
+
+        &--last-14-days {
+            overflow: initial;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+
+        &--bold {
+            font-family: $font-family-semibold;
+            color: $black;
+
+            @include text-limit-with-dots;
+        }
+    }
+
+    &__detail-link {
+        @include text-limit-with-dots;
+
+        a {
+            @include text-limit-with-dots;
+        }
+    }
+
+    &__detail-svg {
+        text-align: center;
+    }
+}

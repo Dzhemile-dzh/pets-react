@@ -1,0 +1,242 @@
+.bs-bookmaker-item {
+    border-radius: 3px;
+    box-shadow: 0 2px 6px 1px $actual-black-opacity-10;
+    border: solid 1px $mid-grey;
+    background-color: var(--components-table-table-row-light);
+    margin-bottom: 8px;
+    padding: 4px;
+    padding-right: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &--selected {
+        box-shadow: 0 2px 6px 1px $actual-black-opacity-25;
+        border: solid 1px $beacon-blue-dark;
+    }
+
+    &__primary, &__secondary {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__secondary {
+        margin-top: 8px;
+        margin-left: 4px;
+        justify-content: space-between;
+    }
+
+    &__odds {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        & > svg {
+            margin-right: -6px;
+            margin-top: -2px;
+        }
+    }
+
+    .bs-bookmaker-thumb {
+        &--large {
+            width: 88px;
+
+            svg {
+                width: 88px;
+            }
+        }
+    }
+
+    &__balance {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__balance-currency {
+        font-family: $font-family;
+        font-size: 18px;
+        color: $black;
+        margin-right: 4px;
+    }
+
+    &__balance-amount {
+        font-family: $font-family;
+        font-size: 18px;
+        color: $beacon-blue-darker;
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 30px;
+        font-family: $font-family-semibold;
+        font-size: 14px;
+        color: $white;
+        padding: 0 6px;
+        border-radius: 10px;
+        background-color: $brand-primary;
+        margin-top: 4px;
+        margin-right: -9px;
+
+        &:only-child {
+            margin-right: 0;
+        }
+    }
+
+    &__offer-container {
+        width: 100%;
+        padding: 8px 9px;
+        margin-top: 8px;
+        background: $super-light-grey;
+    }
+
+    &__offer-first-display {
+        text-transform: uppercase;
+        font-size: 10px;
+    }
+
+    &__offer-title {
+        color: $brand-primary;
+        font-size: 14px;
+    }
+
+    &__offer-desc {
+        margin: 5px 0;
+    }
+
+    &__offer-label-container {
+        height: 100%;
+        display: flex;
+        box-sizing: border-box;
+        padding: 10px;
+        position: relative;
+        margin-left: 5px;
+    }
+
+    &__offer-label {
+        padding: 0 4px;
+        background: $offer-mint;
+        border-radius: 3px;
+        font-size: 12px;
+    }
+
+    &__each-way-text {
+        font-family: $font-family-semibold;
+        font-size: 12px;
+        color: $dark-grey;
+    }
+
+    &__terms {
+        display: flex;
+        justify-content: flex-end;
+        flex-flow: row wrap;
+    }
+
+    &__terms-text {
+        font-family: $font-family;
+        font-size: 12px;
+        text-align: right;
+        color: $black;
+        margin-left: 4px;
+    }
+
+    &__register-button, &__login-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+
+        span {
+            // prevent longer text from going on 2 rows
+            flex: 0 0 auto;
+        }
+
+        &:first-child {
+            margin-right: 4px;
+        }
+
+        &:last-child {
+            margin-left: 4px;
+        }
+    }
+
+    &__betting-wrapper {
+        margin-left: auto;
+    }
+
+    &__best-odds-icon {
+        position: relative;
+        top: -2px;
+        left: -1px;
+    }
+
+    &__balance-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 8px 0 0 8px;
+    }
+
+    &__bookmaker-thumbnail {
+        margin-bottom: auto;
+    }
+
+    &__free-bets {
+        position: relative;
+        display: flex;
+        padding-top: 14px;
+        padding-bottom: 6px;
+        align-items: center;
+        white-space: nowrap;
+        margin-right: 12px;
+    }
+
+    &__free-bets-amount, &__free-bets-label {
+        color: $dark-grey;
+        text-transform: uppercase;
+        font-family: $font-family-semibold;
+        margin-right: 4px;
+    }
+
+    &__free-bets-label {
+        font-size: 12px;
+    }
+
+    &__free-bets-icon {
+        height: 16px;
+        width: 16px;
+
+        &--active {
+            &::after {
+                position: absolute;
+                display: block;
+                z-index: 2;
+                content: "";
+                left: 93%;
+                width: 0;
+                height: 0;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-bottom: 8px solid $super-light-grey;
+                bottom: 5px;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    &__free-bets-icon-above {
+        top: auto;
+        bottom: -27px;
+
+        &::after {
+            border-top: 8px solid $super-light-grey;
+            border-bottom: none;
+            top: 10px;
+        }
+    }
+}

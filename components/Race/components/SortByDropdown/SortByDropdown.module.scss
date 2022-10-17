@@ -1,0 +1,24 @@
+.customisation-panel {
+    &__dropdown {
+        height: 50px;
+    }
+
+    &__dropdown-chevron {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.customisation-bar {
+    &__dropdown {
+        position: relative;
+        width: 184px;
+        height: 32px;
+    }
+
+    &__dropdown-chevron {
+        width: 10px;
+        height: 18px;
+        margin-right: 6px;
+    }
+}

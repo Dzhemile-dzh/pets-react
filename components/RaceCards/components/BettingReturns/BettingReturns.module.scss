@@ -1,0 +1,70 @@
+.betting-returns {
+    width: 43%;
+    padding: 6px 12px;
+
+    @include tablet {
+        width: 45%;
+    }
+
+    &__no-results {
+        width: 43%;
+        padding: 6px 12px;
+
+        @include tablet {
+            width: 45%;
+        }
+
+        >p {
+            font-family: $font-family;
+            font-size: 14px;
+            font-weight: 500;
+            color: $dark-grey;
+            line-height: 1.5;
+            margin-top: 10px;
+            padding-right: 15px;
+        }
+    }
+
+    &__title {
+        font-family: $font-family-semibold;
+        font-size: 12px;
+        color: $black;
+        text-transform: uppercase;
+    }
+
+    >ul {
+        padding: 0;
+        margin: 7px 0 0;
+        list-style: none;
+
+        >li {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            &:first-child {
+                justify-content: flex-start;
+            }
+
+            >p {
+                display: inline-flex;
+                font-family: $font-family;
+                font-size: 12px;
+                line-height: 16px;
+                color: $darker-grey;
+
+                >span {
+                    color: $black;
+                    display: inline-block;
+                    margin-left: 2px;
+                }
+            }
+
+            &:nth-child(2), &:last-child {
+                >p:first-child {
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.template {
+    display: flex;
+    flex-direction: row;
+
+    @include mobile {
+        flex-direction: column;
+    }
+}

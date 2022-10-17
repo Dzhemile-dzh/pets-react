@@ -1,0 +1,44 @@
+.panel {
+    position: fixed;
+    z-index: 5000;
+    background-color: $actual-black-opacity-20;
+    overflow: hidden;
+    height: 100%;
+
+    &__header {
+        background-color: $light-grey;
+        display: flex;
+        flex-direction: column;
+        padding: 16px 0 14px;
+        border-radius: 12px 12px 0 0;
+        border-bottom: 1px solid $mid-grey;
+    }
+
+    &__content {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 328px;
+        height: 398px;
+        border-radius: 12px;
+        box-shadow: 0 0 30px 1px $brown-opacity-20;
+        background-color: $white;
+        z-index: 5000;
+    }
+
+    &__title {
+        font-family: $font-family-semibold;
+        font-size: 20px;
+        color: $black;
+        padding: 0 16px;
+    }
+
+    &__subtitle {
+        font-family: $font-family;
+        font-size: 14px;
+        color: $black;
+        margin-top: 6px;
+        padding: 0 16px;
+    }
+}

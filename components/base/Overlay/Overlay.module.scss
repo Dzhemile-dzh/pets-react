@@ -1,0 +1,21 @@
+.app-overlay {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $actual-black-opacity-60;
+    z-index: 1000;
+
+    @media only screen and (min-width: $breakpoint-tablet-m) {
+        background-color: $actual-black-opacity-20;
+    }
+
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+    pointer-events: none;
+    cursor: initial;
+}

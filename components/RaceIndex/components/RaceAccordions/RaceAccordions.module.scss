@@ -1,0 +1,32 @@
+.race-accordions {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $mid-grey;
+    box-shadow: 0 2px 6px 1px $actual-black-opacity-10;
+    border-radius: 6px;
+    background: $white;
+
+    &__button {
+        height: 52px;
+        display: flex;
+        font-family: $font-family-semibold;
+        font-size: 12px;
+        color: $dark-grey;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-bottom: 1px solid $mid-grey;
+
+        svg {
+            width: 9px;
+            margin-left: 8px;
+            fill: $brand-primary;
+        }
+
+        &--expanded {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

@@ -1,0 +1,193 @@
+.customisation-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5000;
+    background-color: $actual-black-opacity-20;
+    overflow: hidden;
+    height: 100%;
+
+    &__header {
+        background-color: $light-grey;
+        display: flex;
+        flex-direction: column;
+        padding: 16px 0 14px;
+        border-radius: 12px 12px 0 0;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 328px;
+        height: 398px;
+        border-radius: 12px;
+        box-shadow: 0 0 30px 1px $brown-opacity-20;
+        background-color: $white;
+        z-index: 5000;
+        padding-bottom: 16px;
+        text-transform: none;
+
+        @include mobile {
+            max-width: 320px;
+            min-height: 514px;
+        }
+    }
+
+    &__content-wrapper {
+        @include mobile {
+            // NOTE: adding the padding so that if the screen height is smaller
+            // and the buttons hide some of the content, content is scrollable
+            padding-bottom: 26%;
+            background-color: $super-light-grey;
+        }
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { // Internet explorer only
+        &__content {
+            height: 352px;
+        }
+    }
+
+    &__runner-info {
+        padding-bottom: 32px;
+        border-bottom: 1px solid $mid-grey;
+    }
+
+    &__title {
+        font-family: $font-family-semibold;
+        font-size: 20px;
+        color: $black;
+        line-height: 1.5rem;
+        padding: 0 16px;
+    }
+
+    &__subtitle {
+        font-family: $font-family;
+        font-size: 14px;
+        font-weight: normal;
+        color: $black;
+        line-height: 1rem;
+        margin-top: 6px;
+        padding: 0 16px;
+    }
+
+    &__divider-buttons {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+
+        @include mobile {
+            background-color: $super-light-grey;
+            z-index: 1;
+        }
+
+        @include all-but-mobile-tbr {
+            bottom: 16px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 16px 16px 0;
+        border-top: 1px solid $mid-grey;
+
+        @include mobile {
+            padding-top: 45px;
+        }
+    }
+
+    &__cancel-button, &__apply-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+    }
+
+    &__cancel-button {
+        margin-right: 4px;
+    }
+
+    &__apply-button {
+        margin-left: 4px;
+    }
+
+    &__odds {
+        padding: 16px 16px 14px;
+        border-bottom: 1px solid $mid-grey;
+    }
+
+    &__bookmaker-odds {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0 18px;
+    }
+
+    &__dropdown-chevron {
+        width: 12px;
+        height: 12px;
+    }
+
+    @include mobile {
+        &__content {
+            padding-top: 6px;
+            min-height: 455px;
+        }
+
+        &__subtitle::after {
+            margin-top: 6px;
+        }
+
+        &__buttons {
+            margin-bottom: 20px;
+        }
+
+        &__odds {
+            margin-top: 10px;
+        }
+
+        &__form-table {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__slide-toggle {
+        width: 86px;
+        height: 32px;
+        margin-left: auto;
+
+        @include mobile {
+            height: 40px;
+        }
+    }
+
+    &__slide-toggle-button {
+        min-width: 39px;
+        height: 24px;
+
+        @include mobile {
+            height: 32px;
+        }
+    }
+}
+
+.customisation-panel-radio-button {
+    &__children {
+        padding: 8px 0 4px 27px;
+    }
+
+    &__description {
+        padding-bottom: 8px;
+        display: block;
+    }
+}

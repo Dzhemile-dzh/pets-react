@@ -1,0 +1,82 @@
+.races-view-list {
+    list-style-type: none;
+    margin: -4px 0 0;
+    padding: 0;
+
+    @include mobile {
+        margin: 0 0 10px;
+    }
+
+    &__item {
+        @include mobile {
+            padding: 8px 0;
+        }
+    }
+
+    &__timeline {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        margin: 0 auto;
+        width: calc(100% - 16px);
+
+        @include mobile {
+            padding: 8px 0;
+
+            @include all-but-mobile-tbr {
+                max-width: $breakpoint-tablet-xs - 8px;
+            }
+        }
+
+        @include desktop {
+            @include large-desktop {
+                max-width: $breakpoint-desktop-m;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 38px;
+            width: calc(100% - 38px);
+            height: 1px;
+            background-color: $brand-primary;
+            box-shadow: 0 0 3px 1px $red-opacity-30;
+
+            @include mobile {
+                top: 8px;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: 38px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $brand-primary;
+            box-shadow: 0 0 3px 1px $red-opacity-30;
+
+            @include mobile {
+                top: 6px;
+            }
+        }
+    }
+
+    &__timeline-text {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        font-family: $font-family-bold;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: $brand-primary;
+        text-shadow: 0 0 3px $red-opacity-40;
+        width: 34px;
+    }
+}

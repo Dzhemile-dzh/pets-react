@@ -1,0 +1,136 @@
+.toggle {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+
+    &__label {
+        content: "Help with jargon";
+        font-family: $font-family-semibold;
+        text-align: right;
+        color: $dark-grey;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin: 0 6px 0 0;
+
+        @include mobile {
+            content: "Help";
+        }
+    }
+
+    &__background {
+        margin-left: 4px;
+        background-color: $mid-grey;
+        width: 48px;
+        height: 30px;
+        border-radius: 15px;
+        position: relative;
+        border: 1px solid $grey;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 4px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: $white;
+        border: 1px solid $grey;
+        position: absolute;
+        top: -2px;
+        right: 15px;
+        outline: none;
+        cursor: pointer;
+    }
+
+    &--on .toggle {
+        &__background {
+            background-color: $beacon-blue-dark;
+            border-color: $beacon-blue-dark;
+        }
+
+        &__button {
+            right: -1px;
+            border-color: $beacon-blue-dark;
+        }
+    }
+
+    .ui-icon {
+        margin: 0;
+    }
+}
+
+.filters-toggle {
+    &__label {
+        color: $black;
+        margin: 0 6px;
+    }
+
+    &__background {
+        width: 36px;
+        height: 23px;
+        border-radius: 12px;
+    }
+
+    &__button {
+        width: 24px;
+        height: 24px;
+        right: 11px;
+    }
+}
+
+.filters-draw-toggle {
+    justify-content: space-between;
+}
+
+.customisation-bar-toggle {
+    justify-content: space-between;
+
+    &__background {
+        margin-left: 0;
+        width: 36px;
+        height: 23px;
+    }
+
+    &__label {
+        color: $black;
+        margin-left: 10px;
+
+        @media only screen and (max-width: $breakpoint-mobile-s) {
+            width: 57px;
+        }
+    }
+
+    &__button {
+        width: 24px;
+        height: 24px;
+        right: 12px;
+    }
+}
+
+.customisation-panel-toggle {
+    justify-content: space-between;
+    padding-bottom: 13px;
+
+    &__background {
+        width: 36px;
+        height: 23px;
+    }
+
+    &__label {
+        font-size: 14px;
+        color: $black;
+    }
+
+    &__button {
+        width: 24px;
+        height: 24px;
+        top: -1px;
+
+        .toggle--on & {
+            right: -2px;
+        }
+    }
+}

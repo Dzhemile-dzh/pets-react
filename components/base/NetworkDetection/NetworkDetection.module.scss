@@ -1,0 +1,17 @@
+.network-detection {
+    background-color: $fast-orange;
+    height: 24px;
+    color: $black;
+    font-family: $font-family-semibold;
+    font-size: 14px;
+
+    >span {
+        display: flex;
+        margin: 0 auto;
+        padding: 0 8px;
+
+        @include desktop {
+            max-width: $breakpoint-desktop-m;
+        }
+    }
+}

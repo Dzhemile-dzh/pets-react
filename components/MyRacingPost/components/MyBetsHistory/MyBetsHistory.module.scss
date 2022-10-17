@@ -1,0 +1,416 @@
+@import "styles/mixins/text-limit-with-dots-mixin";
+
+@mixin selections-button {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    color: $black;
+    font-family: $font-family-semibold;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    >svg {
+        fill: $beacon-blue-dark;
+        margin-right: 5px;
+    }
+}
+
+.my-bets-history {
+    padding: 0;
+    margin: 0 0 35px;
+
+    &__item-freebet {
+        font-family: $font-family-semibold;
+        color: $fast-orange-darker;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    @include mobile {
+        &__logo-square {
+            width: 44px;
+            height: 44px;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            min-height: 60px;
+            border-radius: 3px;
+            border: 1px solid $mid-grey;
+            box-shadow: 0 2px 6px 0 $actual-black-opacity-10;
+
+            & + .my-bets-history__item {
+                margin-top: 10px;
+            }
+        }
+
+        &__item-wrapper {
+            padding: 8px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        &__item-details-left {
+            display: flex;
+            align-items: flex-start;
+            width: 55%;
+        }
+
+        &__item-details-right {
+            text-align: right;
+            width: 45%;
+        }
+
+        &__item-result, &__item-stake {
+            font-size: 14px;
+            line-height: 1.36;
+            display: block;
+        }
+
+        &__item-result {
+            &--open, &--won, &--lost {
+                font-family: $font-family-semibold;
+                text-transform: uppercase;
+            }
+
+            &--open {
+                color: $beacon-blue-darker;
+            }
+
+            &--won {
+                color: $go-green-dark;
+            }
+
+            &--lost {
+                color: $brand-primary;
+            }
+        }
+
+        &__item-stake {
+            font-family: $font-family;
+            color: $black;
+            margin-top: 2px;
+        }
+
+        &__item__race-details {
+            margin-left: 8px;
+
+            >h3 {
+                font-family: $font-family-semibold;
+                font-size: 16px;
+                line-height: 1.36;
+                color: $black;
+            }
+
+            >p {
+                display: block;
+                font-family: $font-family;
+                font-size: 14px;
+                line-height: 1.36;
+                color: $black;
+            }
+
+            >button {
+                @include selections-button;
+
+                justify-content: center;
+                margin-top: 10px;
+            }
+        }
+
+        &__race-details-selections {
+            padding-top: 20px;
+        }
+
+        &__receipt {
+            display: flex;
+            flex-direction: column;
+            min-height: 75px;
+            font-size: 12px;
+            color: $black;
+            background-color: $super-light-grey;
+            padding: 7px 8px 8px;
+
+            >button {
+                @include selections-button;
+
+                border-bottom: 1px solid $mid-grey;
+                min-height: 35px;
+                margin-bottom: 10px;
+            }
+        }
+
+        &__receipt-wrapper {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__receipt-left {
+            display: flex;
+            width: 40%;
+            align-items: flex-start;
+            flex-direction: column;
+            font-family: $font-family-semibold;
+        }
+
+        &__receipt-right {
+            display: flex;
+            width: 60%;
+            flex-direction: column;
+            align-items: flex-end;
+            font-family: $font-family;
+        }
+
+        &__receipt-additional-actions-button {
+            background-color: transparent !important;
+            color: $black !important;
+            border: none;
+            box-shadow: none;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            font-family: $font-family-semibold;
+            font-size: 12px;
+            text-transform: uppercase;
+            padding: 4px 0;
+            min-width: 120px;
+            cursor: pointer;
+            border-radius: 0;
+            border-bottom: 1px solid transparent !important;
+
+            >span {
+                display: flex;
+                gap: 5px;
+                flex-grow: 1;
+                justify-content: flex-start;
+            }
+
+            svg {
+                width: 17px;
+                height: 14px;
+                fill: $beacon-blue-dark;
+            }
+
+            &--active {
+                border-bottom: 1px solid $mid-grey !important;
+            }
+        }
+    }
+
+    @include desktop {
+        &__bookmaker-logo {
+            margin: 4px 0;
+        }
+
+        &__item {
+            display: flex;
+            flex-shrink: 0;
+            border-bottom: 1px solid $filter-grey;
+            padding: 12px 0;
+
+            & > div {
+                display: flex;
+                flex-direction: column;
+            }
+
+            & + .my-bets-history__item {
+                margin-top: 10px;
+            }
+        }
+
+        &__item-result-type {
+            margin-left: 16px;
+            width: 150px;
+
+            span {
+                @include text-limit-with-dots;
+            }
+        }
+
+        &__item-result {
+            color: $beacon-blue-darker;
+            font-size: 18px;
+        }
+
+        &__item-type {
+            font-size: 14px;
+            font-family: $font-family-semibold;
+            color: $dark-grey;
+            text-transform: uppercase;
+        }
+
+        &__item-selection-name {
+            >button {
+                @include selections-button;
+            }
+
+            font-size: 20px;
+            font-family: $font-family-semibold;
+        }
+
+        &__item-odds {
+            font-size: 16px;
+            font-family: $font-family-semibold;
+            color: $dark-grey;
+        }
+
+        &__item-stake-returns-label {
+            display: flex;
+            margin-left: auto;
+            margin-right: 16px;
+            font-size: 12px;
+            font-family: $font-family-semibold;
+            color: $dark-grey;
+
+            span {
+                @include text-limit-with-dots;
+
+                height: 25px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+        }
+
+        &__item-bet-amounts {
+            font-family: $font-family-semibold;
+            text-transform: uppercase;
+            color: $dark-grey;
+            margin-left: auto;
+
+            & > div {
+                display: flex;
+                align-items: center;
+                text-align: right;
+
+                & > span {
+                    font-size: 18px;
+
+                    &:first-child {
+                        font-size: 12px;
+                        margin-top: 2px;
+                        margin-right: 10px;
+                        width: 125px;
+                    }
+
+                    &:nth-child(2) {
+                        color: $black;
+                    }
+
+                    &:nth-child(3) {
+                        margin-left: 7px;
+                    }
+                }
+            }
+        }
+
+        &__item-bet-amounts-freebet {
+            color: $fast-orange-darker;
+        }
+    }
+
+    @include tablet {
+        &__bookmaker-logo {
+            margin: 4px 0;
+        }
+
+        &__item {
+            display: flex;
+            flex-shrink: 0;
+            border-bottom: 1px solid $filter-grey;
+            padding: 12px 0;
+
+            & > div {
+                display: flex;
+                flex-direction: column;
+            }
+
+            & + .my-bets-history__item {
+                margin-top: 10px;
+            }
+        }
+
+        &__item-race-details {
+            margin-left: 16px;
+        }
+
+        &__item-type {
+            font-size: 14px;
+            font-family: $font-family-semibold;
+            color: $dark-grey;
+            text-transform: uppercase;
+        }
+
+        &__item-selection-name {
+            >button {
+                @include selections-button;
+            }
+
+            font-size: 20px;
+            font-family: $font-family-semibold;
+        }
+
+        &__item-odds {
+            font-size: 16px;
+            font-family: $font-family-semibold;
+            color: $dark-grey;
+        }
+
+        &__item-type-stake {
+            margin-left: auto;
+            text-align: end;
+
+            span {
+                height: 25px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                @include text-limit-with-dots;
+            }
+        }
+
+        &__item-bet-amounts {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-family: $font-family-semibold;
+            text-transform: uppercase;
+            color: $dark-grey;
+
+            & > div {
+                display: flex;
+                align-items: center;
+                text-align: right;
+
+                & > span {
+                    font-size: 18px;
+
+                    &:first-child {
+                        font-size: 12px;
+                        margin-top: 2px;
+                        margin-right: 10px;
+                        width: 125px;
+                    }
+
+                    &:nth-child(2) {
+                        color: $black;
+                    }
+
+                    &:nth-child(3) {
+                        margin-left: 7px;
+                    }
+                }
+            }
+        }
+
+        &__item-bet-amounts-freebet {
+            color: $fast-orange-darker;
+        }
+    }
+}

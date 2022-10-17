@@ -1,0 +1,16 @@
+@mixin next-image {
+    // overriding next/image's css below
+
+    & > span:first-of-type {
+        display: flex !important;
+        position: relative !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    & > span:first-of-type > img {
+        position: relative !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}

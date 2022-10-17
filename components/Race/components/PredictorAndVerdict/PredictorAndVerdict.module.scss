@@ -1,0 +1,136 @@
+.predictor-verdict {
+    background-color: $super-light-grey;
+
+    @include mobile {
+        border-bottom: 1px solid $mid-grey;
+    }
+
+    &__heading {
+        display: flex;
+        align-items: baseline;
+
+        @include mobile {
+            padding: 0 8px 0 12px;
+        }
+
+        @media only screen and (max-width: $breakpoint-mobile-l) {
+            padding-left: 16px;
+        }
+    }
+
+    &__racing-post-logo {
+        margin-right: 9px;
+        top: 1px;
+        position: relative;
+    }
+
+    &__author {
+        font-family: $font-family;
+        text-transform: none;
+        font-style: italic;
+        margin-left: 4px;
+    }
+
+    &__title {
+        font-family: $font-family-semibold;
+        font-size: 12px;
+        text-transform: uppercase;
+
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+
+    &__text {
+        &--bold {
+            font-family: $font-family-semibold;
+        }
+    }
+
+    &__predictor {
+        @include desktop {
+            max-width: $breakpoint-desktop-m;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 8px;
+        }
+
+        @include tablet {
+            max-width: $breakpoint-tablet-l;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 8px;
+        }
+
+        @include mobile {
+            display: block;
+            background: $super-light-grey;
+        }
+    }
+
+    &__predictor-summary {
+        display: flex;
+
+        @include desktop {
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px 0;
+            width: 33%;
+        }
+
+        @include tablet {
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px 0;
+            width: 58%;
+        }
+
+        @include mobile {
+            padding: 8px 8px 0 16px;
+            justify-content: space-between;
+            font-family: $font-family-semibold;
+            text-transform: uppercase;
+        }
+    }
+
+    &__verdict {
+        margin: 0 auto;
+
+        @include desktop {
+            padding: 0 8px;
+            max-width: $breakpoint-desktop-m;
+        }
+
+        @include tablet {
+            padding: 0 8px;
+            max-width: $breakpoint-tablet-l;
+        }
+    }
+
+    &__border {
+        border-bottom: 1px solid $mid-grey;
+    }
+
+    &__comments {
+        @include desktop {
+            font-style: italic;
+            font-size: 12px;
+        }
+
+        @include tablet {
+            font-style: italic;
+            font-size: 12px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+
+    &__show-more-button {
+        margin-left: 8px;
+        font-size: 12px;
+    }
+}

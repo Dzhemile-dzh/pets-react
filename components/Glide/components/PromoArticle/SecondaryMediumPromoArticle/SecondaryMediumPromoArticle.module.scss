@@ -1,0 +1,41 @@
+.secondary-medium-promo-article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 480px;
+
+    &__content {
+        padding: 15px 15px 50px;
+        flex-grow: 1;
+        position: relative;
+
+        >span {
+            display: block;
+        }
+    }
+
+    &__headline {
+        font-weight: normal;
+        margin: 0;
+        color: $black;
+        text-align: left;
+        font-family: $font-utopia;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    &__subtitle {
+        font-family: $font-family;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+        color: $black;
+        margin-top: 10px;
+    }
+
+    &__taxonomy {
+        position: absolute;
+        bottom: 15px;
+    }
+}

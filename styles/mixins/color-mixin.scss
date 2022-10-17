@@ -1,0 +1,20 @@
+$bookmaker-colors: (
+    bet365: $color-bet365,
+    betfair: $color-betfair,
+    betway: $color-betway,
+    coral: $color-coral,
+    ladbrokes: $color-ladbrokes,
+    paddypower: $color-paddypower,
+    skybet: $color-skybet,
+    tote: $color-tote,
+    williamhill: $color-williamhill,
+    888sport: $color-888sport,
+);
+
+@mixin bookmaker-color-modifiers {
+    @each $name, $hex in $bookmaker-colors {
+        &--#{"" + $name} {
+            background-color: $hex;
+        }
+    }
+}

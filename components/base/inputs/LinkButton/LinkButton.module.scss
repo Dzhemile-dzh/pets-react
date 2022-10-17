@@ -1,0 +1,11 @@
+@import "styles/mixins/button-mixin";
+
+.ui-btn {
+    @include button-base;
+
+    // NOTE:
+    // Button's disabled state
+    &:disabled:hover {
+        cursor: auto;
+    }
+}

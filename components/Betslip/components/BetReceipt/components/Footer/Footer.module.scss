@@ -1,0 +1,65 @@
+.bs-bet-receipt-footer {
+    background-color: $light-grey;
+    border-bottom: solid 1px $mid-grey;
+
+    &__buttons {
+        display: flex;
+        margin-top: 8px;
+        margin-bottom: 26px;
+
+        @include mobile {
+            justify-content: center;
+        }
+    }
+
+    &__re-use-selection-btn, &__close-betslip-btn {
+        width: 164px;
+        height: 40px;
+        font-size: 12px;
+        font-family: $font-family-semibold;
+        margin-left: 8px;
+        margin-right: 8px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    &__main {
+        hr {
+            width: 95%;
+            height: 2px;
+            border-top: 1px solid $mid-grey;
+            border-bottom: 1px solid $white;
+            margin-top: 14px;
+            margin-bottom: 14px;
+        }
+
+        svg {
+            display: block;
+            margin: auto 10px auto 18px;
+        }
+    }
+
+    &__next-race-off, &__todays-races, &__latest-news {
+        display: flex;
+
+        span {
+            font-family: $font-family-semibold;
+            font-size: 16px;
+            color: $brand-primary;
+        }
+    }
+
+    &__latest-news {
+        padding-bottom: 16px;
+
+        .ui-icon__news {
+            width: 22px;
+            height: 22px;
+            margin: auto 10px auto 16px;
+        }
+    }
+
+    &__svg {
+        margin: auto 10px auto 18px;
+    }
+}

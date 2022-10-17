@@ -1,0 +1,38 @@
+.next-three-races {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family;
+    font-size: 14px;
+    color: $dark-grey;
+    background-color: $body-background-color;
+    min-width: 320px;
+    max-height: 210px;
+    padding: 14px 16px 16px;
+    box-shadow: 0 2px 6px 2px $actual-black-opacity-10;
+    border: solid 1px $mid-grey;
+    border-radius: 4px;
+
+    &__chevron-icon {
+        transform: rotate(-90deg);
+        fill: $brand-primary;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 20px;
+    }
+
+    &__link-title {
+        font-size: 12px;
+        color: $dark-grey;
+        font-family: $font-family-semibold;
+    }
+
+    &__divider {
+        height: 1px;
+        margin: 10px 0 8px;
+        background-color: $mercury-grey;
+    }
+}

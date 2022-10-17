@@ -1,0 +1,111 @@
+.drawer {
+    width: auto;
+
+    &__content {
+        width: 280px;
+    }
+
+    &__header {
+        background-color: $brand-primary;
+        min-height: 48px;
+    }
+
+    &__header-icon {
+        width: 32px;
+        height: 22px;
+    }
+
+    &__header-wrapper {
+        width: 100%;
+        align-items: center;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 17% 59% auto;
+        padding: 6px 19px 6px 16px;
+    }
+
+    &__header-race {
+        line-height: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        color: $white;
+    }
+
+    &__header-race-label {
+        font-family: $font-family-semibold;
+        text-transform: uppercase;
+    }
+
+    &__header-race-info {
+        font-weight: normal;
+        font-family: $font-family;
+    }
+
+    &__header-race-time {
+        text-align: end;
+        color: $white;
+        font-family: $font-family;
+        text-transform: uppercase;
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__list-item {
+        font-size: 14px;
+        font-family: $font-family;
+        color: $black;
+        height: 48px;
+        border-bottom: 1px solid $filter-grey;
+        display: flex;
+
+        .drawer__link-icon {
+            visibility: hidden;
+        }
+
+        &:first-child, &:last-child {
+            align-items: center;
+
+            .drawer__link-icon {
+                visibility: visible;
+                margin-right: 16px;
+            }
+        }
+    }
+
+    &__list-item-active {
+        background-color: $light-grey;
+    }
+
+    &__list-item-active-text {
+        font-family: $font-family-bold;
+    }
+
+    &__list-item-active-indicator {
+        width: 4px;
+        left: 0;
+        position: absolute;
+        height: 48px;
+        background-color: $brand-primary;
+    }
+
+    &__list-item-link {
+        display: grid;
+        flex-direction: column;
+        color: $black;
+        text-decoration: none;
+        background-color: transparent;
+        padding-left: 16px;
+        width: 100%;
+        align-items: center;
+    }
+
+    &__list-item-info {
+        font-size: 12px;
+        color: $darker-grey;
+    }
+}

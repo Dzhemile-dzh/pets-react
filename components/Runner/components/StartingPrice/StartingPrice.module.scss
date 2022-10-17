@@ -1,0 +1,17 @@
+.starting-price {
+    font: 18px/20px $font-family-bold;
+    color: $black;
+    flex: 1 0 auto;
+    text-align: right;
+
+    &__label {
+        font: 14px/15px $font-family;
+        color: $dark-grey;
+        margin-bottom: 6px;
+    }
+
+    &__fav {
+        margin-right: 9px;
+        color: $brand-primary;
+    }
+}

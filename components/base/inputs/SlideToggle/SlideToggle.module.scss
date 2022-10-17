@@ -1,0 +1,41 @@
+.slide-toggle {
+    display: flex;
+    align-items: center;
+    background: $white;
+    border-radius: 3px;
+    border: 1px solid $mid-grey;
+    padding: 3px;
+
+    &--horizontal {
+        flex-direction: row;
+    }
+
+    &--vertical {
+        flex-direction: column;
+    }
+
+    &__button {
+        font-size: 12px;
+        background-color: $white;
+        color: $dark-grey;
+        border: none;
+        border-radius: 3px;
+        height: 32px;
+        text-align: center;
+        cursor: pointer;
+        font-family: $font-family-semibold;
+        text-transform: uppercase;
+        max-width: 158px;
+        min-width: 86px;
+        white-space: nowrap;
+
+        &--active {
+            background-color: $black;
+            color: $white;
+        }
+
+        &:focus {
+            outline: 0;
+        }
+    }
+}

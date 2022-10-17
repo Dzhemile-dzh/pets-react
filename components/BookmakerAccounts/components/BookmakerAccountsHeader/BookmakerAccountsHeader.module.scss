@@ -1,0 +1,227 @@
+.bookmaker-accounts-header {
+    position: relative;
+    color: $black;
+    background-color: $light-grey;
+    border-bottom: 1px solid $mid-grey;
+    width: 100%;
+
+    .desktop, .tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include mobile {
+        background-color: $white;
+        border: none;
+        padding-left: 8px;
+        padding-right: 8px;
+
+        &__heading {
+            margin: 21px 0 17px;
+            display: flex;
+            position: inherit;
+            align-items: center;
+        }
+
+        &__title {
+            font-family: $font-family-semibold;
+            font-size: 18px;
+        }
+
+        &__balance {
+            display: flex;
+            flex-direction: column;
+            margin: 17px 16px 10px auto;
+        }
+
+        &__balance-text, &__balance-amount {
+            font-family: $font-family;
+            color: $black;
+            font-size: 14px;
+            text-align: right;
+        }
+
+        &__balance-amount {
+            font-size: 18px;
+        }
+
+        &__content {
+            border-bottom: 1px solid $mid-grey;
+        }
+
+        &__back-button {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            font-family: $font-family-semibold;
+            text-transform: uppercase;
+
+            svg {
+                transform: rotate(90deg);
+                margin-right: 8px;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+
+        @include tablet {
+            flex-direction: row;
+        }
+
+        @include desktop {
+            flex-direction: row;
+        }
+
+        @include tablet {
+            padding: 0;
+            width: 100%;
+        }
+
+        @include desktop {
+            @include large-desktop {
+                max-width: $breakpoint-desktop-m;
+                margin: 0 auto;
+            }
+
+            @media screen and (max-width: $breakpoint-desktop-s) {
+                width: 100%;
+                padding: 0 20px 0 15px;
+            }
+        }
+    }
+
+    &__left-side {
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 65%;
+            margin-top: 73px;
+        }
+
+        @include small-desktop {
+            width: 60%;
+        }
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 60%;
+            margin-top: 73px;
+        }
+    }
+
+    &__heading {
+        position: relative;
+
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 15px 8px 0 30px;
+        }
+
+        @media only screen and (min-width: $breakpoint-desktop-m + 86px) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        @include tablet {
+            margin-left: 42px;
+            max-width: 454px;
+        }
+    }
+
+    &__sub-heading {
+        position: relative;
+        margin: 35px auto 17px 0;
+
+        @include desktop {
+            @media only screen and (min-width: $breakpoint-desktop-m + 86px) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        @include tablet {
+            margin-left: 16px;
+        }
+    }
+
+    &__title {
+        font-family: $font-family-semibold;
+        text-transform: uppercase;
+
+        @include desktop {
+            font-size: 32px;
+        }
+
+        @include tablet {
+            font-size: 32px;
+        }
+
+        @include mobile {
+            margin-left: 20px;
+        }
+    }
+
+    &__sub-title {
+        font-family: $font-family-semibold;
+        color: $black;
+        font-size: 16px;
+    }
+
+    &__logo {
+        position: absolute;
+        width: 47px;
+        height: 47px;
+        top: -16px;
+        left: -30px;
+    }
+
+    &__right-side {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        margin-top: 73px;
+
+        @include small-desktop {
+            width: 40%;
+        }
+
+        @include tablet {
+            padding-right: 30px;
+        }
+
+        @include tablet {
+            width: 40%;
+        }
+    }
+
+    &__bet-history {
+        display: flex;
+        margin: auto 0 17px;
+        cursor: pointer;
+    }
+
+    &__bet-history-text {
+        font-family: $font-family-semibold;
+        color: $brand-primary;
+        font-size: 16px;
+    }
+
+    &__bet-history-svg {
+        width: 6px;
+        height: 9px;
+        fill: $brand-primary;
+        transform: rotate(-90deg);
+        position: relative;
+        top: 1px;
+    }
+}

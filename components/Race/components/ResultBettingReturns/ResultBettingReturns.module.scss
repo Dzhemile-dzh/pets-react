@@ -1,0 +1,161 @@
+.result-betting-returns {
+    border-bottom: 1px solid $mid-grey;
+    background-color: $super-light-grey;
+
+    &__accordion {
+        margin: 0 auto !important;
+
+        @include desktop {
+            padding-top: 0;
+        }
+
+        @include tablet {
+            padding-top: 0;
+        }
+
+        @include mobile {
+            max-width: 480px;
+        }
+    }
+
+    &__show-more-button {
+        font-family: $font-family-semibold;
+        font-size: 14px;
+        outline: none;
+    }
+
+    &__no-betting-info {
+        font-family: $font-family-semibold;
+        color: $black;
+        font-size: 16px;
+        text-align: center;
+        height: 40px;
+
+        @include desktop {
+            line-height: 40px;
+        }
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+
+        @include mobile {
+            padding: 0 8px 4px;
+            flex-direction: row;
+        }
+
+        .result-betting-returns__logo {
+            align-self: center;
+            fill: $brand-primary;
+            height: 16px;
+            width: 16px;
+            margin-right: 7px;
+        }
+    }
+
+    &__title {
+        font-family: $font-family-semibold;
+        color: $black;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-left: 8px;
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        max-width: $breakpoint-desktop-m;
+        flex-flow: row wrap;
+        margin: 0 auto;
+        padding: 0 8px 18px;
+
+        @include mobile {
+            padding: 6px 8px 18px;
+        }
+
+        @include tablet {
+            max-width: $breakpoint-tablet-l;
+        }
+    }
+
+    &__group {
+        @include desktop {
+            width: 43%;
+
+            &:nth-child(1) {
+                width: 27%;
+            }
+
+            &:nth-child(2) {
+                width: 30%;
+            }
+        }
+
+        @include tablet {
+            width: 34%;
+
+            &:nth-child(1), &:nth-child(3) {
+                width: 33%;
+            }
+        }
+
+        @include mobile {
+            &:nth-child(1) {
+                width: 61%;
+            }
+
+            &:nth-child(2) {
+                width: 39%;
+            }
+
+            &:nth-child(3) {
+                width: 85%;
+            }
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: baseline;
+            width: 95%;
+
+            &__placepot, &__quadpot {
+                width: 100%;
+            }
+
+            @include desktop {
+                margin: 2px 0;
+            }
+
+            @include tablet {
+                margin: 2px 0;
+            }
+
+            @include mobile {
+                &__value {
+                    overflow-wrap: break-word;
+                }
+
+                &__tote-win, &__tricast, &__trifecta {
+                    justify-content: flex-end;
+                }
+            }
+
+            &__label {
+                margin-right: 4px;
+                color: $dark-grey;
+                font: 12px/17px $font-family-semibold;
+                white-space: nowrap;
+                text-transform: uppercase;
+            }
+
+            &__value {
+                font-family: $font-family-bold;
+                color: $black;
+            }
+        }
+    }
+}

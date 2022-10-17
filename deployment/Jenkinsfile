@@ -1,0 +1,58 @@
+@Library('devops-ecs-deploy@feature/PLT-976')
+import com.spotlightsportsgroup.devops.ecsdeploy.*;
+
+appName = "hybrid-frontend-web"
+appNameShort = "hybrid-web"
+projectName = "janus"
+buildAccount = "287126650543"
+region = "eu-west-1"
+
+Environment[] environmentMap = [
+    new Environment(
+        name: "test1",
+        awsAccountId: "198733189248",
+        needsApproval: false,
+        url: "${appName}.ecs.dev.${projectName}.rp-cloudinfra.com",
+        deploymentAwsCredentialsId: "aws-janus-terraform-test1",
+        environmentBranch: "hybrid"
+    )
+]
+
+def unitTests = {
+    stage("Unit Tests") {
+        docker.image("${buildAccount}.dkr.ecr.${region}.amazonaws.com/${appName}:${env.GIT_COMMIT}")
+                .inside("-e GTM_ID=BUILD_GTM_KEY -e SEGMENT_KEY=BUILD_SEGMENT_KEY -u root"){
+            sh """
+                cd /usr/src/app
+                npm run test:unit
+                cp -rf /usr/src/app/coverage ${env.WORKSPACE}/
+                chown -R 1000:1000 ${env.WORKSPACE}/coverage
+            """
+        }
+        stash includes: "coverage/**", name: "coverage"
+    }
+}
+
+def sonarqubePrep = {
+    unstash "coverage"
+}
+
+branchDrivenPipeline projectName,
+    appName,
+    buildAccount,
+    "aws-janus-terraform-test1",
+    appNameShort: appNameShort,
+    awsRegion: region,
+    sonarqubePrepClosure: sonarqubePrep,
+    disableSonarqube: true,
+    fargateCpu: "512",
+    fargateMemory: "2048",
+    containerPort: "8080",
+    healthCheckEndpoint: "/favicon.ico",
+    environmentMap: environmentMap,
+    additionalBuildParameters: [
+        JANUS_JENKINS_PWRD: new BuildParameter(
+            type: BuildParameter.ParameterType.Secret,
+            value: "janus-jenkins-pwrd"
+        )
+    ]

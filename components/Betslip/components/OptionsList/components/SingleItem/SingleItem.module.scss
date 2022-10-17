@@ -1,0 +1,217 @@
+.bs-single-item {
+    padding: 12px 0;
+    border-bottom: 1px solid $mid-grey;
+    list-style: none;
+
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    &__primary, &__secondary,  &__betting, &__additional {
+        padding: 0 16px;
+    }
+
+    &__primary {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    &__secondary {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__additional {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        &--disabled {
+            opacity: 0.4;
+        }
+
+        .bs-single-item__each-way-button {
+            width: 40px;
+            padding-left: 0;
+            padding-right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            margin-right: 8px;
+        }
+    }
+
+    &__betting {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 8px 0 13px;
+
+        &--disabled {
+            opacity: 0.4;
+
+            input, button {
+                cursor: default;
+            }
+        }
+    }
+
+    &__runner {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: flex-start;
+    }
+
+    &__runner-number {
+        font-family: $font-family-bold;
+        font-size: 20px;
+        font-weight: bold;
+        font-stretch: normal;
+        letter-spacing: normal;
+        color: $dark-grey;
+    }
+
+    &__runner-name {
+        font-family: $font-family-semibold;
+        font-size: 18px;
+        color: $black;
+        margin: 0 4px;
+    }
+
+    &__odds {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        & > svg {
+            position: absolute;
+            right: -7px;
+            top: -7px;
+        }
+    }
+
+    &__delete-button {
+        padding: 0;
+        border: 0;
+
+        & svg {
+            margin-right: 0 !important;
+        }
+
+        &:active, &:focus {
+            background-color: $white !important;
+
+            & svg {
+                fill: $brand-primary !important;
+            }
+        }
+    }
+
+    &__course {
+        font-family: $font-family;
+        font-size: 14px;
+        color: $black;
+    }
+
+    &__best-odds-icon {
+        position: absolute;
+        right: -7px;
+        top: -7px;
+    }
+
+    &__price-button {
+        height: 40px;
+        width: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-family: $font-family-semibold;
+        border: 1px solid $mid-grey;
+        background-color: $white;
+        color: $dark-grey;
+        cursor: pointer;
+
+        &:active, &:focus {
+            outline: 0;
+        }
+
+        &:hover {
+            color: $white;
+        }
+
+        &:only-child {
+            border-radius: 3px !important;
+        }
+
+        &--starting-price {
+            width: 52px;
+            font-size: 16px;
+            border-right: 0;
+            border-bottom-left-radius: 3px;
+            border-top-left-radius: 3px;
+        }
+
+        &--odd {
+            min-width: 60px;
+            font-size: 14px;
+            border-left: 0;
+            border-bottom-right-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+
+        &--selected {
+            background-color: $brand-primary;
+            color: $white;
+            border: 0;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    &__win-only-label {
+        display: block;
+        font-family: $font-family-semibold;
+        font-size: 12px;
+        color: $black;
+        text-transform: uppercase;
+    }
+
+    &__win-only-sublabel {
+        display: block;
+        font-family: $font-family;
+        font-size: 14px;
+        color: $black;
+    }
+
+    &__each-way-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        font-family: $font-family;
+        font-size: 14px;
+    }
+
+    &__each-way-places {
+        color: $black;
+        font-size: 14px;
+    }
+
+    &__multilier {
+        color: $black;
+        font-family: $font-family-semibold;
+    }
+}

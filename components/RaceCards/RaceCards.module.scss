@@ -1,0 +1,95 @@
+.race-cards {
+    background-color: $body-background-color;
+
+    .accordion {
+        background-color: $body-background-color;
+
+        &:first-child {
+            border-top: 0;
+        }
+
+        &:last-child {
+            border-bottom: 1px solid $mid-grey;
+        }
+
+        &__header {
+            background-color: $super-light-grey;
+        }
+
+        &__body {
+            background-color: $body-background-color;
+        }
+
+        &__content {
+            padding: 13px 8px 11px;
+
+            @include desktop {
+                padding: 13px 0 11px;
+            }
+        }
+    }
+
+    @include mobile {
+        .accordion {
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+
+            &__body {
+                padding-top: 8px;
+                padding-bottom: 16px;
+            }
+
+            &__content {
+                display: flex;
+                align-items: center;
+                padding: 15px 8px 13px 16px;
+
+                @include desktop {
+                    max-width: $breakpoint-tablet-xs - 8px;
+                    padding-right: 0;
+                }
+
+                @include tablet {
+                    max-width: $breakpoint-tablet-xs - 8px;
+                    padding-right: 0;
+                }
+            }
+
+            &__show-more {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    @include tablet {
+        .accordion {
+            padding-top: 0;
+        }
+    }
+
+    &__no-races-message {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 70px;
+
+        >svg {
+            margin-bottom: 5px;
+        }
+
+        >span {
+            font-family: $font-family;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.43;
+            letter-spacing: normal;
+            color: $dark-grey;
+        }
+    }
+}

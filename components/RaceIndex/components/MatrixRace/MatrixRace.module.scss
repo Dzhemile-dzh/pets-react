@@ -1,0 +1,45 @@
+.matrix-race {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 80px;
+    align-items: center;
+    color: $black;
+    margin: 0 auto;
+
+    &--highlighted {
+        background-color: $go-green-darker;
+        border-radius: 3px;
+        color: $white;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-family: $font-family-semibold;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        svg {
+            margin-left: 4px;
+        }
+    }
+
+    &__offer {
+        height: 16px;
+        width: 31px;
+        font-size: 12px;
+        font-weight: normal;
+        margin-left: 4px;
+        margin-top: 2px;
+    }
+
+    &__subtitle {
+        font-size: 12px;
+
+        &--result {
+            color: $darker-grey;
+        }
+    }
+}

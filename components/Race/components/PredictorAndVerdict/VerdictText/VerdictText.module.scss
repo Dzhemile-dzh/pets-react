@@ -1,0 +1,22 @@
+.verdict {
+    font-family: $font-family;
+
+    @include all-but-mobile-tbr {
+        margin-bottom: 23px;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    @include mobile {
+        background: $super-light-grey;
+        font-size: 14px;
+        padding: 8px 8px 8px 16px;
+        margin: 0;
+    }
+
+    &__text {
+        &--bold {
+            font-family: $font-family-semibold;
+        }
+    }
+}

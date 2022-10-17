@@ -1,0 +1,7 @@
+.latest-results {
+    display: flex;
+
+    &__race:nth-child(n) {
+        width: 320px !important;
+    }
+}

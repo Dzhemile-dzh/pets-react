@@ -1,0 +1,101 @@
+.racing-post-profile {
+    max-width: 320px;
+    height: 590px;
+    border: solid 1px $mid-grey;
+    box-shadow: 0 2px 6px 1px $actual-black-opacity-10;
+    border-radius: 3px;
+    background-color: $white;
+
+    &__header-button {
+        width: 40px;
+        height: 24px;
+        cursor: pointer;
+        margin-left: auto;
+
+        svg {
+            width: 40px;
+            height: 24px;
+        }
+    }
+
+    &__wrapper {
+        margin: 16px 16px 24px 24px;
+    }
+
+    &__header {
+        display: flex;
+    }
+
+    &__profile {
+        font-size: 18px;
+        font-family: $font-family-semibold;
+        color: $dark-grey;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+        color: $black;
+    }
+
+    &__user-name {
+        margin-left: auto;
+        margin-right: auto;
+        font-family: $font-family-semibold;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    &__members-icon {
+        width: 96px;
+        height: 96px;
+        margin: 31px auto 0;
+    }
+
+    &__membership {
+        font-size: 16px;
+        font-family: $font-family-semibold;
+        margin: 20px auto 0;
+        line-height: 0;
+    }
+
+    &__membership-details {
+        font-size: 16px;
+        font-family: $font-family;
+        margin: 10px auto 0;
+    }
+
+    &__membership-button {
+        width: 272px;
+        height: 40px;
+        margin: 24px auto 0;
+
+        span {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__quick-stats {
+        margin-top: 84px;
+    }
+
+    &__stats {
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__stats-text {
+        font-size: 16px;
+        font-family: $font-family-semibold;
+        color: $black;
+    }
+
+    &__stat {
+        font-size: 14px;
+        font-family: $font-family;
+        color: $black;
+        margin-top: 4px;
+    }
+}

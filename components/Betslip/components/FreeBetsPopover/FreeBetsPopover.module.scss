@@ -1,0 +1,19 @@
+.free-bets-popover {
+    left: -94px;
+
+    @include mobile {
+        width: 92vw;
+    }
+
+    @include small-tablet-tbr {
+        width: 94vw;
+    }
+
+    @include tablet {
+        width: 328px;
+    }
+
+    @include desktop {
+        width: 328px;
+    }
+}

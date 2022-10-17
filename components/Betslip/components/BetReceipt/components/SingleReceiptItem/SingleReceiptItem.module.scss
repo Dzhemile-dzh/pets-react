@@ -1,0 +1,229 @@
+.bs-bet-receipt-single-item {
+    padding-top: 16px;
+    border-bottom: 1px solid $mid-grey;
+    list-style: none;
+
+    &__primary, &__secondary, &__betting, &__receipt-number {
+        padding: 0 16px;
+    }
+
+    &__primary {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    &__secondary {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    &__betting {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 16px;
+
+        &--with-free-bet {
+            height: 65px;
+            align-items: baseline;
+        }
+    }
+
+    &__race-data {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: flex-start;
+    }
+
+    &__dot {
+        width: 8px;
+        height: 8px;
+        background-color: $beacon-blue;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 8px;
+        align-self: center;
+    }
+
+    &__runner {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: flex-start;
+    }
+
+    &__runner-number {
+        font-family: $font-family-bold;
+        font-size: 20px;
+        font-weight: bold;
+        font-stretch: normal;
+        letter-spacing: normal;
+        color: $dark-grey;
+    }
+
+    &__runner-name {
+        font-family: $font-family-semibold;
+        font-size: 20px;
+        color: $black;
+        margin: 0 4px;
+    }
+
+    &__bet-type-label, &__bet-type-value {
+        font-family: $font-family-semibold;
+        font-size: 12px;
+        color: $dark-grey;
+        text-align: right;
+        text-transform: uppercase;
+    }
+
+    &__bet-type-label {
+        padding-right: 3px;
+    }
+
+    &__course {
+        font-family: $font-family-semibold;
+        font-size: 14px;
+        color: $black;
+    }
+
+    &__date {
+        font-family: $font-family;
+        font-size: 14px;
+        color: $black;
+        margin-left: 4px;
+    }
+
+    &__each-way {
+        display: flex;
+        flex-direction: row;
+        font-family: $font-family;
+        font-size: 14px;
+        text-align: right;
+        color: $black;
+    }
+
+    &__odds {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 10%;
+    }
+
+    &__odds-value {
+        position: relative;
+        font-family: $font-family-semibold;
+        font-size: 14px;
+        color: $white;
+        padding: 0 6px;
+        border-radius: 10px;
+        background-color: $brand-primary;
+    }
+
+    &__odds-label, &__stake-label, &__returns-label {
+        position: relative;
+        bottom: 6px;
+        font-family: $font-family;
+        font-size: 12px;
+        color: $black;
+    }
+
+    &__odds, &__stake, &__returns {
+        height: 40px;
+    }
+
+    &__best-odds-icon {
+        position: absolute;
+        top: -6px;
+        right: -7px;
+    }
+
+    &__odds-contents {
+        width: auto;
+        white-space: nowrap;
+    }
+
+    &__returns {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        width: 33%;
+    }
+
+    &__returns-value {
+        font-family: $font-family;
+        font-size: 18px;
+        text-align: right;
+        color: $beacon-blue-dark;
+    }
+
+    &__returns-currency, &__stake-currency {
+        font-family: $font-family;
+        font-size: 18px;
+        text-align: right;
+        color: $black;
+        margin-right: 4px;
+    }
+
+    &__stake {
+        padding-right: 6px;
+        text-align: right;
+        width: 40%;
+        border-right: solid 1px $mid-grey;
+        border-left: solid 1px $mid-grey;
+    }
+
+    &__stake-value {
+        font-family: $font-family;
+        font-size: 18px;
+        text-align: right;
+        color: $dark-grey;
+    }
+
+    &__free-bet-stake-value {
+        text-transform: uppercase;
+        color: $fast-orange-darker;
+        font-family: $font-family-semibold;
+        font-size: 12px;
+        display: block;
+    }
+
+    &__separator {
+        border-top: 1px solid $mid-grey;
+        margin: 8px 8px 0;
+    }
+
+    &__receipt-number {
+        margin: 3px 0;
+
+        @include mobile {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+
+    &__receipt-label {
+        padding-right: 8px;
+        font-family: $font-family-semibold;
+        font-size: 12px;
+        color: $dark-grey;
+        text-transform: uppercase;
+    }
+
+    &__receipt-value {
+        font-family: $font-family-semibold;
+        font-size: 12px;
+        color: $black;
+        text-transform: uppercase;
+
+        @include small-mobile {
+            word-break: break-word;
+        }
+    }
+}

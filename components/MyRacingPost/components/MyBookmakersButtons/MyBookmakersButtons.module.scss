@@ -1,0 +1,59 @@
+.my-bookmakers-buttons {
+    display: flex;
+    flex-direction: row;
+
+    &__add-bookmaker-btn {
+        margin-right: auto;
+    }
+
+    &__deposit-btn {
+        margin-right: 15px;
+
+        @include mobile {
+            margin-right: auto;
+        }
+    }
+
+    &__deposit-btn, &__withdraw-btn {
+        @include mobile {
+            display: flex;
+            align-items: center;
+
+            span {
+                text-transform: none;
+            }
+
+            button {
+                font-size: 16px;
+                color: $black;
+                fill: $black;
+                border: unset;
+                background-color: unset;
+                padding: 0;
+
+                &:disabled {
+                    background: none;
+
+                    &:active {
+                        background: none;
+                    }
+                }
+            }
+
+            @include small-mobile {
+                width: 110px;
+            }
+        }
+    }
+
+    &__deposit-btn-svg, &__withdraw-btn-svg {
+        width: 6px;
+        height: 9px;
+        fill: $brand-primary;
+        transform: rotate(-90deg);
+    }
+
+    &__deposit-btn-svg-zero, &__withdraw-btn-svg-zero {
+        fill: $grey;
+    }
+}

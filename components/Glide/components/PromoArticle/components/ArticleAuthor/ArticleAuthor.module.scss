@@ -1,0 +1,43 @@
+.article-author {
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+
+    &__image-container {
+        display: flex;
+        padding-right: 20px;
+    }
+
+    &__name {
+        font-family: $font-utopia;
+        color: $darker-grey;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    &__default-image {
+        background-color: $grey;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid $mid-grey;
+        display: flex;
+        align-items: center;
+    }
+
+    &__image-wrapper {
+        border: 2px solid transparent;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 54px;
+        height: 54px;
+        overflow: hidden;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px $mid-grey;
+    }
+
+    &__image {
+        width: auto;
+        height: 100%;
+    }
+}

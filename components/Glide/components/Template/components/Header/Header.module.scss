@@ -1,0 +1,62 @@
+.header {
+    display: flex;
+
+    @include mobile {
+        height: 90px;
+    }
+
+    &__container {
+        display: flex;
+
+        @include mobile {
+            width: 100%;
+            justify-content: space-between;
+            padding: 8px;
+            align-items: flex-end;
+        }
+    }
+
+    &__title {
+        display: flex;
+        position: relative;
+    }
+
+    &__icon {
+        display: flex;
+
+        @include mobile {
+            position: absolute;
+            top: -8px;
+            left: 0;
+        }
+    }
+
+    &__title-text {
+        display: flex;
+
+        @include mobile {
+            font-size: 22px;
+            margin-left: 18px;
+            font-family: $font-family-bold;
+            text-transform: uppercase;
+        }
+    }
+
+    &__link-container {
+        display: flex;
+    }
+
+    &__link {
+        display: flex;
+    }
+
+    &__link-text {
+        font-size: 14px;
+        color: $black;
+        padding-right: 4px;
+    }
+
+    &__link-icon > svg {
+        transform: rotate(-90deg);
+    }
+}

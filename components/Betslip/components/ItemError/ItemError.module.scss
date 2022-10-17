@@ -1,0 +1,24 @@
+.bs-single-item-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 0;
+    margin: 8px 0 0;
+    font-family: $font-family-semibold;
+    font-size: 14px;
+    line-height: 17px;
+
+    .ui-icon {
+        margin-right: 6px;
+    }
+
+    &--warning {
+        color: $black;
+        background-color: $fast-orange;
+    }
+
+    &--critical {
+        color: $white;
+        background-color: $brand-primary;
+    }
+}

@@ -1,0 +1,109 @@
+.race-index-header {
+    position: relative;
+    color: $black;
+    background-color: $light-grey;
+    border-bottom: 1px solid $mid-grey;
+
+    @include tablet-desktop {
+        height: 72px;
+    }
+
+    &__content {
+        display: flex;
+        margin: 0 auto;
+        height: 100%;
+        background-image: url("/images/race-index-header-red-desktop.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+
+        @include large-desktop {
+            max-width: $breakpoint-desktop-m;
+            background-position: calc(100% + 10px) 0;
+        }
+
+        @include tablet {
+            padding: 0;
+        }
+
+        @include mobile {
+            background-image: url("/images/race-index-header-red.png");
+            background-size: 277px auto;
+            background-position-x: calc(50% + 120px);
+            max-width: $breakpoint-tablet-m;
+            box-shadow: inset 0 1px 3px 0 $actual-black-opacity-20;
+        }
+    }
+
+    &__main {
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 15px 8px 0 36px;
+        }
+
+        @media only screen and (min-width: $breakpoint-desktop-m + 86px) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 15px 8px 0 36px;
+        }
+
+        @include mobile {
+            margin: 0 auto;
+            padding: 30px 0 8px 10px;
+            width: $breakpoint-tablet-xs;
+        }
+
+        &--todays-page {
+            @include mobile {
+                padding: 10px 0 28px 10px;
+
+                h1 {
+                    white-space: pre-wrap;
+                }
+            }
+        }
+    }
+
+    &__heading {
+        position: relative;
+
+        @include mobile {
+            height: 22px;
+        }
+    }
+
+    &__title {
+        font-family: $font-family-bold;
+        text-transform: uppercase;
+        font-size: 30px;
+
+        @include mobile {
+            font-size: 16px;
+            margin-left: 12px;
+            letter-spacing: 0.6px;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        width: 24px;
+        height: 50px;
+        top: -16px;
+        left: -16px;
+
+        @include mobile {
+            width: 14px;
+            height: 14px;
+            top: -3px;
+            left: 3px;
+        }
+    }
+}

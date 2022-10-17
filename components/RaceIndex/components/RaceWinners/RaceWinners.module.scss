@@ -1,0 +1,59 @@
+.race-winners {
+    margin: 0;
+    padding: 0;
+    background-color: $super-light-grey;
+    font-size: 14px;
+    font-family: $font-family;
+    list-style-type: none;
+
+    &__runner {
+        display: flex;
+        align-items: center;
+        padding: 4px 0;
+        justify-content: space-between;
+
+        &--first {
+            font-family: $font-family-semibold;
+        }
+    }
+
+    &__subscript {
+        font-size: 12px;
+    }
+
+    &__position {
+        min-width: 30px;
+    }
+
+    &__runner-details {
+        display: grid;
+        grid-template-columns: 30px 30px auto;
+        align-items: center;
+        gap: 4px;
+        width: 100%;
+    }
+
+    &__silk {
+        width: 25px;
+        height: 25px;
+    }
+
+    &__runner-country {
+        font-size: 12px;
+    }
+
+    &__info {
+        display: flex;
+    }
+
+    &__saddlecloth-number {
+        margin-right: 4px;
+    }
+
+    &__favourite {
+        color: $brand-primary;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-right: 4px;
+    }
+}
